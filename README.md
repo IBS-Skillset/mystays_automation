@@ -20,3 +20,6 @@
     npm install
     npx cypress open
     npx cypress run
+
+# To generate HTML reports 
+    node cucumberHTMLReport.js
