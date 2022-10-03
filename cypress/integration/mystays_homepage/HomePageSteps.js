@@ -1,6 +1,6 @@
 import { Given,When, Them, And, Then } from "cypress-cucumber-preprocessor/steps"
 import LoginPage from "../pages/SigninPage.js"
-import Common from "/Users/A-10765/IdeaProjects/mystays_automation_cypress9/cypress/integration/pages/Common.js";
+import Common from "../pages/Common.js";
 import SignInPage from "../pages/SigninPage.js";
 import HomePage from "../pages/HomePage.js";
 
