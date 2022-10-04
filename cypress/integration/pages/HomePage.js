@@ -1,15 +1,19 @@
 class HomePage{
     elements={
         usernameIcon:()=>cy.get('.text-white'),
+        languageSelectButton:()=>cy.get('.inpt-language'),
+
         destinationField:()=>cy.get('.flex > .w-full'),
+        firstLocation:()=>cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ'),
         dateInputField:()=>cy.get('.inputBox'),
         calendarIcon:()=>cy.get('.calenderIcon > .svg-image'),
         searchButton:()=>cy.get('.search-button'),
-        languageSelectButton:()=>cy.get('.inpt-language')
     }
-    typeLocation(location){
+    typeAndSelectLocation(location){
         this.elements.destinationField().should('be.visible').and('be.enabled')
         this.elements.destinationField().type(location)
+        cy.wait(10000)
+        this.elements.firstLocation().click()
         }
     selectDate(){
         this.elements.dateInputField().should('be.visible').and('be.enabled')

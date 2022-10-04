@@ -7,22 +7,12 @@ const signinPage=new SignInPage()
 const common=new Common();
 const homePage=new HomePage();
 
-Given('I can access to myStays.com',()=>{
-    cy.visit("/")
-    common.verifyBrandBanner()
-    common.verifyFooterPresent()
-})
 When('I enter username {string} and password {string}',(username,password)=>{
     signinPage.typeUsername(username)
     signinPage.typePassword(password)
 })
 And('I click on Sign In button',()=>{
     signinPage.clickSigninButton()
-})
-Then('I am on Home Page',()=>{
-    homePage.verifyHomePage()
-    cy.log("Successfully logged into application") //add home page launched validation
-
 })
 And('I click on Sign In button and verify {string} is displayed',(message)=>{
     signinPage.clickSigninButtonAndVerifyMessage(message)

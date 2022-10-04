@@ -1,18 +1,18 @@
 [
   {
-    "description": "    Testing myStays.com login functionality ",
+    "description": "    Testing myStays.com home page functionality ",
     "keyword": "Feature",
-    "name": "Home page validations",
+    "name": "Home Page",
     "line": 1,
-    "id": "home-page-validations",
+    "id": "home-page",
     "tags": [],
     "uri": "mystays_homepage.feature",
     "elements": [
       {
-        "id": "home-page-validations;verify-the-hotel-search-results-displayed",
+        "id": "home-page;verify-the-fields-displayed-in-home-page",
         "keyword": "Scenario",
-        "line": 18,
-        "name": "Verify the hotel search results displayed",
+        "line": 17,
+        "name": "Verify the fields displayed in home page",
         "tags": [],
         "type": "scenario",
         "steps": [
@@ -23,54 +23,84 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 601000000
+              "duration": 6142000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "I enter username \"testuser@gmail.com\" and password \"test@123!@#\"",
+            "name": "I login into myStays.com application using \"testuser@gmail.com\" and \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 872000000
+              "duration": 3190000000
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "Then ",
             "line": 7,
-            "name": "I click on Sign In button",
+            "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 100000000
+              "duration": 583000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 8,
-            "name": "I am on Home Page",
+            "name": "I enter location as 'PARIS' and click on Search button",
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 41490000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
+            "keyword": "And ",
             "line": 9,
-            "name": "I enter location as 'PARIS' and click on Search button",
+            "name": "I verify the destination field in Home page",
             "result": {
-              "status": "failed",
-              "duration": 4019000000,
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.flex > .w-full`, but never found it.\n    at HomePage.typeLocation (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:162:40)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:67:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:10725:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:10046:35)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "undefined",
+              "duration": 103000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I verify the Calendar displayed in Home page",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I verify the Search button displayed",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I verify the username displayed on top right",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I verify the language selection displayed on top",
+            "result": {
+              "status": "skipped"
+            }
           }
         ]
       }
