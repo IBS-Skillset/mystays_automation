@@ -7,9 +7,6 @@ const signinPage=new SignInPage()
 const common=new Common();
 const signupPage=new SignupPage()
 
-Given('I can access to myStays.com',()=>{
-    cy.visit("/")
-})
 When ('I click on Create account button in Sign In page',()=>{
     signinPage.clickCreateOneButton()
 
