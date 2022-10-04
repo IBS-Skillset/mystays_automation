@@ -23,7 +23,6 @@ And('I click on Sign In button',()=>{
 Then('I am on Home Page',()=>{
     homePage.verifyHomePage()
     cy.log("Successfully logged into application") //add home page launched validation
-
 })
 And('I click on Sign In button and verify {string} is displayed',(message)=>{
     signinPage.clickSigninButtonAndVerifyMessage(message)
