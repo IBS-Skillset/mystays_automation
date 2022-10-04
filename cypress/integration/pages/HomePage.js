@@ -23,7 +23,7 @@ class HomePage{
         this.elements.searchButton().should('be.visible').and('be.enabled')
         this.elements.searchButton().click();
     }
-    veifyHomePage(){
+    verifyHomePage(){
         cy.url().should('include', 'http://localhost:3000/')
 
     }

@@ -1,7 +1,7 @@
-Feature: Login functionality
+Feature: Login
     Testing myStays.com login functionality 
 
-Scenario Outline: As User, I can login into myStays.com using valid credentials
+Scenario Outline: As User, I can login into myStays.com application using valid credentials
     Given I can access to myStays.com
     When I enter username "<Username>" and password "<Password>" 
     And I click on Sign In button

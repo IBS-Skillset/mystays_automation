@@ -1,0 +1,7 @@
+#Folders
+/node_modules
+/cypress/reports/assets
+/cypress/videos
+/cypress/screenshots
+/cypress/reports/cucumber-json
+cypress/reports/features/
