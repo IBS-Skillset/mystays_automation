@@ -1,5 +1,13 @@
 Feature: Home page validations
     Testing myStays.com login functionality 
+
+Scenario: Verify the fields displayed in home page
+    Given I can access to myStays.com
+    When I enter username "<Username>" and password "<Password>" 
+    And I click on Sign In button
+    Then I am on Home Page
+    
+
 Scenario Outline: Verify the hotel search results displayed
 
     Given I can access to myStays.com

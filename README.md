@@ -23,3 +23,12 @@
 
 # To generate HTML reports 
     node cucumberHTMLReport.js
+
+# Project Structure
+    fixtures: It stores all the test data information. 
+    integration: All the test files(feature files, step defs, pages) are kept in this folder.
+    plugins: This folder includes index.js file.
+    reports: cucumber HTML report is generated here - index.html
+    support: It contains the function(index.js) to capture screenshots.
+    videos/screenshots: stores screenshots and executions videos of test run
+    cypress.json : configuration file. 

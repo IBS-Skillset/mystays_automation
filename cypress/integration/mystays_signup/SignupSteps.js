@@ -1,5 +1,4 @@
 import { Given,When, Them, And, Then } from "cypress-cucumber-preprocessor/steps"
-import LoginPage from "../pages/SigninPage.js"
 import Common from "../pages/Common.js";
 import SignInPage from "../pages/SigninPage.js";
 import SignupPage from "../pages/SignupPage.js";
@@ -31,7 +30,7 @@ Then('I verify the account is created with a message "User successfully created.
     common.verifyFooterPresent()
 })
 And('I am on Sign In page',()=>{
-    
+    cy.url().should('include', 'http://localhost:3000/signin')
 })
 And ('I click on Continue button and verify {string} is displayed',(message)=>{
     signupPage.clickContinueButtonAndVerifyValMessage(message)
