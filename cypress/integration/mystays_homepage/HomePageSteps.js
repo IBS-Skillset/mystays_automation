@@ -28,3 +28,15 @@ Then('I enter location as {string} and click on Search button',(location)=>{
     homePage.typeLocation(location)
     homePage.clickSearchButton()
 })
+And('I verify the destination field in Home page',()=>{
+    homePage.verifyDestinationField()
+})
+And('I verify the Calendar displayed in Home page',()=>{
+    homePage.verifyCalenderField()
+})
+And('I verify the Search button displayed',()=>{
+    homePage.verifySearchButton()
+})
+And('I verify the language selection displayed on top',()=>{
+    homePage.verifyLanguageSelectionField()
+})

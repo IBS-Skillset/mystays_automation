@@ -23,7 +23,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 18451000000
+              "duration": 641000000
             }
           },
           {
@@ -33,7 +33,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 955000000
+              "duration": 192000000
             }
           },
           {
@@ -43,7 +43,7 @@
             "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"test@123\" and \"9567911083\"",
             "result": {
               "status": "passed",
-              "duration": 2501000000
+              "duration": 1477000000
             }
           },
           {
@@ -53,7 +53,7 @@
             "name": "I click on Continue button",
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 4000000
             }
           },
           {
@@ -63,7 +63,7 @@
             "name": "I verify the account is created with a message \"User successfully created. Enter the password to proceed\"",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 26000000
             }
           },
           {
@@ -73,7 +73,7 @@
             "name": "I am on Sign In page",
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 3000000
             }
           }
         ]
@@ -93,7 +93,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 244000000
+              "duration": 176000000
             }
           },
           {
@@ -103,7 +103,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 250000000
+              "duration": 145000000
             }
           },
           {
@@ -113,7 +113,7 @@
             "name": "I enter valid \"test\" and \"Test\" and \"User\" and \"test@123\" and \"9567911083\"",
             "result": {
               "status": "passed",
-              "duration": 1876000000
+              "duration": 1241000000
             }
           },
           {
@@ -123,7 +123,7 @@
             "name": "I click on Continue button and verify \"Invalid email\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 166000000
+              "duration": 126000000
             }
           }
         ]
@@ -143,7 +143,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 163000000
+              "duration": 160000000
             }
           },
           {
@@ -153,7 +153,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 249000000
+              "duration": 133000000
             }
           },
           {
@@ -163,7 +163,7 @@
             "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"test@123\" and \"9\"",
             "result": {
               "status": "passed",
-              "duration": 2066000000
+              "duration": 1309000000
             }
           },
           {
@@ -198,7 +198,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 216000000
+              "duration": 221000000
             }
           },
           {
@@ -208,7 +208,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 244000000
+              "duration": 143000000
             }
           },
           {
@@ -217,14 +217,9 @@
             "line": 31,
             "name": "I click on Continue button and verify the message displayed",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(6) > .label > .errorMsg`, but never found it.\n    at SignupPage.clickContinueButtonAndVerifyMessage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:296:10)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:75:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10772:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10093:35)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 137000000
+            }
           }
         ]
       }
