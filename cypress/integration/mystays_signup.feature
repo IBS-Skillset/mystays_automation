@@ -1,4 +1,4 @@
-Feature: Signup functionality
+Feature: Signup
     Testing myStays.com Signup functionality 
 
 Scenario Outline: As a new user, I can create an account in myStays.com
