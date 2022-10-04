@@ -21,7 +21,7 @@ And('I click on Sign In button',()=>{
     signinPage.clickSigninButton()
 })
 Then('I am on Home Page',()=>{
-    homePage.veifyHomePage()
+    homePage.verifyHomePage()
     cy.log("Successfully logged into application") //add home page launched validation
 })
 Then('I enter location as {string} and click on Search button',(location)=>{

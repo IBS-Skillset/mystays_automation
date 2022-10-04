@@ -1,11 +1,11 @@
 
 const report = require("multiple-cucumber-html-reporter");
 report.generate({
-    jsonDir: "/Users/A-10765/IdeaProjects/mystays_automation_cypress9/cypress/reports/cucumber-json",
-	reportPath: "/Users/A-10765/IdeaProjects/mystays_automation_cypress9/cypress/reports",
+    jsonDir: "cypress/reports/cucumber-json/",
+	reportPath: "cypress/reports/",
     metadata: {
         browser: {
-            name: "chrome",
+            name: "Chrome",
             version: "105.0.5195.125",
         },
         device: "Mac",
