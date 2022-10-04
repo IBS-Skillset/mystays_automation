@@ -54,10 +54,10 @@ class SignupPage{
             const t = e.text()
             expect(t).to.contains("Please enter valid name")
          })
-         cy.get(':nth-child(6) > .label > .errorMsg').then(function(e){
-            const t = e.text()
-            expect(t).to.contains("*Password is required")
-         })
+        //  cy.get(':nth-child(6) > .label > .errorMsg').then(function(e){
+        //     const t = e.text()
+        //     expect(t).to.contains("*Password is required")
+        //  })
 
     }
     clickContinueButtonAndVerifyValMessage(message){
