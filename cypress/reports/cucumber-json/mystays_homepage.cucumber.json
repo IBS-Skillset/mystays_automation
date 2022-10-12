@@ -23,7 +23,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 6142000000
+              "duration": 6032000000
             }
           },
           {
@@ -33,7 +33,7 @@
             "name": "I login into myStays.com application using \"testuser@gmail.com\" and \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 3190000000
+              "duration": 3144000000
             }
           },
           {
@@ -43,7 +43,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 583000000
+              "duration": 611000000
             }
           },
           {
@@ -52,9 +52,15 @@
             "line": 8,
             "name": "I enter location as 'PARIS' and click on Search button",
             "result": {
-              "status": "passed",
-              "duration": 41490000000
-            }
+              "status": "failed",
+              "duration": 14774000000,
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#ChIJD7fiBh9u5kcRYJSMaMOCCwQ`, but never found it.\n    at Object.firstLocation (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:173:19)\n    at HomePage.typeAndSelectLocation (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:193:21)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:35:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:10755:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:10076:35)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
           },
           {
             "arguments": [],
@@ -62,8 +68,7 @@
             "line": 9,
             "name": "I verify the destination field in Home page",
             "result": {
-              "status": "undefined",
-              "duration": 103000000
+              "status": "skipped"
             }
           },
           {
