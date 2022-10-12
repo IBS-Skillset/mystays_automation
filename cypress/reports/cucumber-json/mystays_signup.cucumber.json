@@ -23,7 +23,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 641000000
+              "duration": 47298000000
             }
           },
           {
@@ -33,7 +33,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 192000000
+              "duration": 927000000
             }
           },
           {
@@ -43,7 +43,7 @@
             "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"test@123\" and \"9567911083\"",
             "result": {
               "status": "passed",
-              "duration": 1477000000
+              "duration": 2303000000
             }
           },
           {
@@ -53,7 +53,7 @@
             "name": "I click on Continue button",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 5000000
             }
           },
           {
@@ -63,7 +63,7 @@
             "name": "I verify the account is created with a message \"User successfully created. Enter the password to proceed\"",
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 38000000
             }
           },
           {
@@ -72,9 +72,15 @@
             "line": 10,
             "name": "I am on Sign In page",
             "result": {
-              "status": "passed",
-              "duration": 3000000
-            }
+              "status": "failed",
+              "duration": 4012000000,
+              "error_message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3000/signup' to include 'http://localhost:3000/signin'\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:109:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10893:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10214:35)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
           }
         ]
       },
@@ -93,7 +99,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 176000000
+              "duration": 1508000000
             }
           },
           {
@@ -103,7 +109,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 145000000
+              "duration": 224000000
             }
           },
           {
@@ -113,7 +119,7 @@
             "name": "I enter valid \"test\" and \"Test\" and \"User\" and \"test@123\" and \"9567911083\"",
             "result": {
               "status": "passed",
-              "duration": 1241000000
+              "duration": 1956000000
             }
           },
           {
@@ -123,7 +129,7 @@
             "name": "I click on Continue button and verify \"Invalid email\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 126000000
+              "duration": 227000000
             }
           }
         ]
@@ -143,7 +149,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 160000000
+              "duration": 396000000
             }
           },
           {
@@ -153,7 +159,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 133000000
+              "duration": 203000000
             }
           },
           {
@@ -162,9 +168,14 @@
             "line": 19,
             "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"test@123\" and \"9\"",
             "result": {
-              "status": "passed",
-              "duration": 1309000000
-            }
+              "status": "failed",
+              "error_message": "CypressError: `cy.type()` failed because it targeted a disabled element.\n\nThe element typed into was:\n\n  > <input class=\"inputField\" id=\"password\" type=\"Password\" placeholder=\"Password\" name=\"password\">\n\nEnsure the element does not have an attribute named `disabled` before typing into it.\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:159232:86\nFrom previous event:\n    at onReady (http://localhost:3000/__cypress/runner/cypress_runner.js:159224:14)\n    at runAllChecks (http://localhost:3000/__cypress/runner/cypress_runner.js:154746:14)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:154755:16)\nFrom previous event:\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:173835:65)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:173290:14\nFrom previous event:\n    at $Cy.retry (http://localhost:3000/__cypress/runner/cypress_runner.js:173270:76)\n    at retryActionability (http://localhost:3000/__cypress/runner/cypress_runner.js:154758:19)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:154762:12\nFrom previous event:\n    at Object.verify (http://localhost:3000/__cypress/runner/cypress_runner.js:154667:61)\n    at handleFocused (http://localhost:3000/__cypress/runner/cypress_runner.js:159195:77)\n    at Context.type (http://localhost:3000/__cypress/runner/cypress_runner.js:159255:12)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SignupPage.typePassword (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:393:32)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:98:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10893:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10214:35)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
           },
           {
             "arguments": [],
@@ -172,14 +183,8 @@
             "line": 20,
             "name": "I click on Continue button and verify \"Please enter contact number with country code\" is displayed",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .label > .errorMsg`, but never found it.\n    at SignupPage.clickContinueButtonAndVerifyValMessage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:306:10)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:72:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10772:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10093:35)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "skipped"
+            }
           }
         ]
       },
@@ -198,7 +203,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 221000000
+              "duration": 251000000
             }
           },
           {
@@ -208,7 +213,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 143000000
+              "duration": 200000000
             }
           },
           {
@@ -218,7 +223,7 @@
             "name": "I click on Continue button and verify the message displayed",
             "result": {
               "status": "passed",
-              "duration": 137000000
+              "duration": 114000000
             }
           }
         ]
