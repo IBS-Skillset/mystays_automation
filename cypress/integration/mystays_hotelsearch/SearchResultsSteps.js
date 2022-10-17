@@ -11,5 +11,6 @@ const searchResults=new SearchResultsPage();
 
 Then('I verify the hotel search details displayed',()=>{
     searchResults.verifyLocationField()
-    searchResults.displayFirstHotelDetails()
+    searchResults.displayHotelDetails()
+    searchResults.getNumberOfHotels()
 })

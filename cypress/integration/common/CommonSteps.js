@@ -20,7 +20,7 @@ When('I login into myStays.com application using {string} and {string}',(usernam
     cy.log("Successfully logged into application")
 })
 Then('I am on Home Page',()=>{
-    cy.visit("http://localhost:3000/")
+    cy.visit("http://localhost:3000/") //code to navigate to home page as signin is not yet integrated
     homePage.verifyHomePage()
     common.verifyBrandBanner()
     common.verifyFooterPresent()
@@ -28,6 +28,9 @@ Then('I am on Home Page',()=>{
     cy.log("Successfully logged into application") 
 
 })
+And('I verify the username displayed on top right',()=>{
+    common.getUsername()
+}) 
 Then('I enter location as {string} and click on Search button',(location)=>{
     homePage.typeAndSelectLocation(location)
     cy.wait(5000)

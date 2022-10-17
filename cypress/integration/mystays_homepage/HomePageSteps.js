@@ -21,9 +21,6 @@ And('I verify the validation when clicked on Search button without entering Loca
     const errorMessage="*Location is required"
     homePage.getValidationMessageforNoLocation(errorMessage)
 }) 
-And('I verify the username displayed on top right',()=>{
-    homePage.getUsername()
-}) 
 And('I verify the language selection displayed on top',()=>{
     common.verifyLanguageSelectionField()
 })

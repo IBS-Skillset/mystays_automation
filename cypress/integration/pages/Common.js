@@ -3,6 +3,8 @@ class Common{
 
     elements={
         languageSelectButton:()=>cy.get('.inpt-language'),
+        usernameIcon:()=>cy.get('.text-white'),
+
     }
     //to get the myStays.com banner displayed on page
     getBrandBanner(){
@@ -24,5 +26,15 @@ class Common{
         this.elements.languageSelectButton().should('be.visible').and('be.enabled')
 
     }
+     //to get the username displayed on top right
+     getUsername(){
+        //method to obtain text in username
+        let txt = []
+        cy.get('.text-white').then(function(e){
+        txt.push(e)
+        })
+        cy.log(txt)        
+        }
+    
 }
 export default Common

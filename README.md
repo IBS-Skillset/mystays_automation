@@ -21,6 +21,11 @@
     npx cypress open
     npx cypress run
 
+    # To run tests using Cypress run command: 
+        npm run cypress:run
+    # To run tests using Cypress runner:
+        npm run cypress:open
+
 # To generate HTML reports 
     node cucumberHTMLReport.js
 
