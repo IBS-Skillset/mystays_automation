@@ -11,7 +11,7 @@
       {
         "id": "home-page;verify-the-fields-displayed-in-home-page",
         "keyword": "Scenario",
-        "line": 18,
+        "line": 19,
         "name": "Verify the fields displayed in home page",
         "tags": [
           {
@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 5355000000
+              "duration": 5244000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I login into myStays.com application using \"testuser@gmail.com\" and \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 4581000000
+              "duration": 4629000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 476000000
+              "duration": 1009000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I verify the destination field in Home page",
             "result": {
               "status": "passed",
-              "duration": 427000000
+              "duration": 207000000
             }
           },
           {
@@ -68,7 +68,7 @@
             "name": "I verify the Calendar displayed in Home page",
             "result": {
               "status": "passed",
-              "duration": 106000000
+              "duration": 42000000
             }
           },
           {
@@ -78,27 +78,37 @@
             "name": "I verify the Search button displayed",
             "result": {
               "status": "passed",
-              "duration": 201000000
+              "duration": 160000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I verify the username displayed on top right",
+            "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
               "status": "passed",
-              "duration": 24000000
+              "duration": 429000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 14,
+            "name": "I verify the username displayed on top right",
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
             "name": "I verify the language selection displayed on top",
             "result": {
               "status": "passed",
-              "duration": 95000000
+              "duration": 125000000
             }
           }
         ]

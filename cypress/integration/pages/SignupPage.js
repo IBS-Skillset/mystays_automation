@@ -1,4 +1,5 @@
 class SignupPage{
+//includes the elements and methods in myStays.com Signup Page
 
     elements={
         emailAddress:()=>cy.get('#email'),
@@ -38,6 +39,7 @@ class SignupPage{
     //     this.elements.continueButton().click()  
     }
 
+    //validation when invalid values are entered
     clickContinueButtonAndVerifyMessage(){
         this.elements.continueButton().should('be.visible').and('be.enabled')
         this.elements.continueButton().click()
@@ -60,6 +62,7 @@ class SignupPage{
         //  })
 
     }
+
     clickContinueButtonAndVerifyValMessage(message){
         this.elements.continueButton().should('be.visible').and('be.enabled')
         this.elements.continueButton().click()
