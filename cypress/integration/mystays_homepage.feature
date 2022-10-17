@@ -1,7 +1,7 @@
 Feature: Home Page
     Testing myStays.com home page functionality 
 
-@homepage
+@HomePage
 Scenario Outline: Verify the fields displayed in home page
     Given I can access to myStays.com
     When I login into myStays.com application using "<Username>" and "<Password>" 

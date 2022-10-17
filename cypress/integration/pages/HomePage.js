@@ -2,7 +2,6 @@ class HomePage{
 //includes the elements and methods in myStays.com Home Page
 
     elements={
-        usernameIcon:()=>cy.get('.text-white'),
         languageSelectButton:()=>cy.get('.inpt-language'),
 
         destinationField:()=>cy.get('.flex > .w-full'),
@@ -50,17 +49,6 @@ class HomePage{
         this.elements.searchButton().should('be.visible').and('be.enabled')
 
     }
-
-    //to get the username displayed on top right
-    getUsername(){
-        //method text to obtain text in username
-        let txt = []
-        cy.get('.text-white').then(function(e){
-        txt.push(e)
-        })
-        cy.log(txt)        
-    }
-
     getValidationMessageforNoLocation(errorMessage){
         cy.get('.errorMsg').then(function(e){
             const t = e.text()

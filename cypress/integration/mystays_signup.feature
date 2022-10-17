@@ -1,7 +1,7 @@
 Feature: Signup
     Testing myStays.com Signup functionality 
 
-@signup
+@Signup
 Scenario Outline: As a new user, I can create an account in myStays.com
     Given I can access to myStays.com
     When I click on Create account button in Sign In page
@@ -11,10 +11,10 @@ Scenario Outline: As a new user, I can create an account in myStays.com
     And I am on Sign In page
 
     Examples:
-    |Emailaddress      | Firstname| Lastname |Password | Phonenumber|
-    |Testuser@gmail.com|Test      | User     |test@123 |9567911083  |
+    |Emailaddress      | Firstname| Lastname |Password | Phonenumber   |
+    |Testuser@gmail.com|Test      | User     |test@123 |+919567911083  |
 
-@signup
+@Signup
 Scenario Outline: Verify the validation in Email address and Phone number fields when invalid values are entered
     Given I can access to myStays.com
     When I click on Create account button in Sign In page
@@ -22,11 +22,12 @@ Scenario Outline: Verify the validation in Email address and Phone number fields
     And I click on Continue button and verify "<Message>" is displayed
 
     Examples:
-    |Emailaddress      | Firstname| Lastname |Password | Phonenumber| Message |
-    |test              |Test      | User     |test@123 |9567911083  |Invalid email|
-    |Testuser@gmail.com|Test      | User     |test@123 |9           |Please enter contact number with country code |
+    |Emailaddress      | Firstname| Lastname |Password | Phonenumber   | Message |
+    |test              |Test      | User     |test@123 |+919567911083  |Invalid email|
+    |Testuser@gmail.com|Test      | User     |test@123 |9              |Please enter contact number with country code | 
+    #unable to capture invalid phone number pop up message 
 
-@signup
+@Signup
 Scenario: Verify the field validations when no values are entered in 'Create an account' page
     Given I can access to myStays.com
     When I click on Create account button in Sign In page

@@ -6,26 +6,37 @@ class SearchResultsPage{
         numberOfProperties:()=>cy.get('.text-2xl'),
         locationField:()=>cy.get('.flex > .w-full'),
 
-        hotelOneComplete:()=>cy.get('.my-5 > :nth-child(1)'),
-        hotelOneName:()=>cy.get(':nth-child(1) > .md\:grow > .items-center > :nth-child(1) > #hotel-name'),
-        hotelOneRate:()=>cy.get(':nth-child(1) > .col-span-2 > .text-xl'),
-        hotelOneCity:()=>cy.get(':nth-child(1) > .md\:grow > .items-center > :nth-child(1) > .grid-cols-1 > #hotel-city'),
-        hotelOneAddress:()=>cy.get(':nth-child(1) > .md\:grow > .items-center > :nth-child(1) > .grid-cols-1 > #hotel-address'),
-        hotelOneSeeAvailabilityButton:()=>cy.get(':nth-child(1) > .col-span-2 > .pt-2 > .btn-availability'),
-        hotelOneImage:()=>cy.get(':nth-child(1) > :nth-child(1) > picture > .hotel-image'),
-        hotelOneRating:()=>cy.get(':nth-child(1) > .md\:grow > .items-center > :nth-child(1) > .pl-1'),
-
-        hotelTwoComplete:()=>cy.get('.my-5 > :nth-child(2)'),
-        
+        hotelResultsList:()=>cy.get('.hotel-container grid grid-cols-2 md:flex'),
+        hotelNameList:()=>cy.get('#hotel-name'),
+        hotelCityList:()=>cy.get('#hotel-city'),
+        hotelAddressList:()=>cy.get('#hotel-address'),
+        hotelSeeAvaialabilityButtonList:()=>cy.get('.btn-availability.font-medium'),
+        hotelImageList:()=>cy.get('.hotel-image'),
+        hotelRatingButton:()=>cy.get('.grid pl-1 w-28 grid-cols-5')
     }
     verifyLocationField(){
         this.elements.locationField().should('be.visible').and('be.enabled')
        }
-    displayFirstHotelDetails(){
-        cy.log()
-        
+    displayHotelDetails(){
+        // this.elements.hotelResultsList().should('be.visible')
+        this.elements.hotelNameList().should('be.visible')
+        this.elements.hotelCityList().should('be.visible')
+        this.elements.hotelAddressList().should('be.visible')
+        this.elements.hotelSeeAvaialabilityButtonList().should('be.visible')
+        this.elements.hotelImageList().should('be.visible')
+        // this.elements.hotelRatingButton().should('be.visible')
+        cy.log("Hotel search results are displayed")
+    }
+    getNumberOfHotels(){
+            //method to get number of hotels
+            let txt = []
+            cy.get('.text-2xl').then(function(e){
+            txt.push(e)
+            })
+            cy.log("Total number of Hotels",txt)        
+            }
     }
    
-}
+
 
 export default SearchResultsPage

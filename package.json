@@ -1,12 +1,18 @@
 {
   "name": "mystays.com_automation_cypress9",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated tests for myStays.com application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
-  "author": "SV",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBS-Skillset/mystays_automation"
+  },
+  "author": "myStays.com QA",
   "license": "ISC",
   "dependencies": {
     "cypress": "^9.7.0"

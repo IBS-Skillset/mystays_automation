@@ -15,7 +15,7 @@
         "name": "As User, I can login into myStays.com application using valid credentials",
         "tags": [
           {
-            "name": "@signin",
+            "name": "@SignIn",
             "line": 4
           }
         ],
@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 63871000000
+              "duration": 143941000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username \"testuser@gmail.com\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 722000000
+              "duration": 708000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 126000000
+              "duration": 135000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 149000000
+              "duration": 438000000
             }
           }
         ]
@@ -70,7 +70,7 @@
         "name": "As User, verify myStays.com login using invalid credentials",
         "tags": [
           {
-            "name": "@signin",
+            "name": "@SignIn",
             "line": 15
           }
         ],
@@ -83,7 +83,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 233000000
+              "duration": 241000000
             }
           },
           {
@@ -93,7 +93,7 @@
             "name": "I enter username \"invalidusername\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 736000000
+              "duration": 750000000
             }
           },
           {
@@ -103,7 +103,7 @@
             "name": "I click on Sign In button and verify \"Please include an '@' in the email address. 'invalidusername' is missing an '@'.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 231000000
+              "duration": 247000000
             }
           }
         ]
@@ -115,7 +115,7 @@
         "name": "As User, verify myStays.com login using invalid credentials",
         "tags": [
           {
-            "name": "@signin",
+            "name": "@SignIn",
             "line": 15
           }
         ],
@@ -128,7 +128,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 199000000
+              "duration": 229000000
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "I enter username \"invalidusername@\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 1131000000
+              "duration": 772000000
             }
           },
           {
@@ -148,19 +148,19 @@
             "name": "I click on Sign In button and verify \"Please enter a part following '@'. 'invalidusername@' is incomplete.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 140000000
+              "duration": 138000000
             }
           }
         ]
       },
       {
-        "id": "login;as-user,-verify-mystays.com-login-using-empty-username-and-password",
+        "id": "login;as-user,-verify-mystays.com-login-using-empty-username-and-valid-password",
         "keyword": "Scenario",
         "line": 34,
-        "name": "As User, verify myStays.com login using empty username and password",
+        "name": "As User, verify myStays.com login using empty username and valid password",
         "tags": [
           {
-            "name": "@signin",
+            "name": "@SignIn",
             "line": 26
           }
         ],
@@ -173,44 +173,40 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 250000000
+              "duration": 272000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 29,
-            "name": "I enter username \"\" and password \"\"",
+            "name": "I enter password \"test@123!@#\"",
             "result": {
-              "status": "failed",
-              "error_message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n    at Context.type (http://localhost:3000/__cypress/runner/cypress_runner.js:158854:76)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SignInPage.typeUsername (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:330:37)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:96:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10823:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10144:35)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 332000000
+            }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 30,
-            "name": "I click on Sign In button and verify \"Please fill in this field\" is displayed",
+            "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 121000000
             }
           }
         ]
       },
       {
-        "id": "login;as-user,-verify-mystays.com-login-using-empty-username-and-password",
+        "id": "login;as-user,-verify-mystays.com-login-using-valid-username-and-empty-password",
         "keyword": "Scenario",
-        "line": 35,
-        "name": "As User, verify myStays.com login using empty username and password",
+        "line": 44,
+        "name": "As User, verify myStays.com login using valid username and empty password",
         "tags": [
           {
-            "name": "@signin",
-            "line": 26
+            "name": "@SignIn",
+            "line": 36
           }
         ],
         "type": "scenario",
@@ -218,35 +214,31 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 28,
+            "line": 38,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 807000000
+              "duration": 257000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 29,
-            "name": "I enter username \"invalid@gmail.com\" and password \"\"",
+            "line": 39,
+            "name": "I enter password \"<Password>\"",
             "result": {
-              "status": "failed",
-              "error_message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n    at Context.type (http://localhost:3000/__cypress/runner/cypress_runner.js:158854:76)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SignInPage.typePassword (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:336:37)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:97:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10823:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10144:35)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 569000000
+            }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 30,
-            "name": "I click on Sign In button and verify \"Please fill in this field\" is displayed",
+            "line": 40,
+            "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 147000000
             }
           }
         ]
