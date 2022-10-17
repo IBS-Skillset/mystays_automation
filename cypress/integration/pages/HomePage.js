@@ -31,6 +31,26 @@ class HomePage{
         cy.url().should('include', 'http://localhost:3000/')
 
     }
+    verifyDestinationField(){
+        this.elements.destinationField().should('be.visible').and('be.enabled')
+
+    }
+    verifyCalenderField(){
+        this.elements.calendarIcon().should('be.visible')
+
+    }
+    verifySearchButton(){
+        this.elements.searchButton().should('be.visible').and('be.enabled')
+
+    }
+    getUsername(){
+        //method text to obtain text in username
+        let txt = []
+        cy.get('.text-white').then(function(e){
+        txt.push(e)
+        })
+        cy.log(txt)        
+    }
 }
 
 export default HomePage

@@ -11,95 +11,94 @@
       {
         "id": "home-page;verify-the-fields-displayed-in-home-page",
         "keyword": "Scenario",
-        "line": 17,
+        "line": 18,
         "name": "Verify the fields displayed in home page",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@homepage",
+            "line": 4
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 6,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 6142000000
+              "duration": 5355000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 6,
+            "line": 7,
             "name": "I login into myStays.com application using \"testuser@gmail.com\" and \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 3190000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I am on Home Page",
-            "result": {
-              "status": "passed",
-              "duration": 583000000
+              "duration": 4581000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 8,
-            "name": "I enter location as 'PARIS' and click on Search button",
+            "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 41490000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "I verify the destination field in Home page",
-            "result": {
-              "status": "undefined",
-              "duration": 103000000
+              "duration": 476000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 10,
-            "name": "I verify the Calendar displayed in Home page",
+            "name": "I verify the destination field in Home page",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 427000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "I verify the Search button displayed",
+            "name": "I verify the Calendar displayed in Home page",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 106000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 12,
-            "name": "I verify the username displayed on top right",
+            "name": "I verify the Search button displayed",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 201000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
+            "name": "I verify the username displayed on top right",
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 95000000
             }
           }
         ]

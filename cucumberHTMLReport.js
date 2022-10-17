@@ -11,7 +11,7 @@ report.generate({
         device: "Mac",
         platform: {
             name: "mac",
-            version: "12.2.1",
+            version: "Monterey 12.2.1",
         },
     },
      customData: {
