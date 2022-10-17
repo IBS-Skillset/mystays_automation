@@ -1,4 +1,6 @@
 class SignInPage{
+//includes the elements and methods in myStays.com SignIn Page
+
 
     elements={
         usernameField:()=>cy.get('#username'),
@@ -22,6 +24,8 @@ class SignInPage{
         this.elements.signinButton().click();
         // this.url().should('contains','home')    
     }
+
+    //validation of login using invalid credentials
     clickSigninButtonAndVerifyMessage(message){
         this.elements.signinButton().should('be.visible').and('be.enabled')
         this.elements.signinButton().click();
@@ -31,6 +35,7 @@ class SignInPage{
         })   
     }
 
+    //button to create new user account
     clickCreateOneButton(){
         this.elements.signinButton().should('be.visible').and('be.enabled')
         this.elements.createOneButton().click();

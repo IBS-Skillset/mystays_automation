@@ -22,7 +22,10 @@ When('I login into myStays.com application using {string} and {string}',(usernam
 Then('I am on Home Page',()=>{
     cy.visit("http://localhost:3000/")
     homePage.verifyHomePage()
-    cy.log("Successfully logged into application") //add home page launched validation
+    common.verifyBrandBanner()
+    common.verifyFooterPresent()
+    homePage.verifyHomePage() // home page launched validation
+    cy.log("Successfully logged into application") 
 
 })
 Then('I enter location as {string} and click on Search button',(location)=>{

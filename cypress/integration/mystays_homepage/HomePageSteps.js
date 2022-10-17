@@ -16,6 +16,11 @@ And('I verify the Calendar displayed in Home page',()=>{
 And('I verify the Search button displayed',()=>{
     homePage.verifySearchButton()
 }) 
+And('I verify the validation when clicked on Search button without entering Location',()=>{
+    homePage.clickSearchButton()
+    const errorMessage="*Location is required"
+    homePage.getValidationMessageforNoLocation(errorMessage)
+}) 
 And('I verify the username displayed on top right',()=>{
     homePage.getUsername()
 }) 

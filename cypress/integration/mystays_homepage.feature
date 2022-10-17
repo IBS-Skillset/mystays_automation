@@ -10,6 +10,7 @@ Scenario Outline: Verify the fields displayed in home page
     And I verify the destination field in Home page
     And I verify the Calendar displayed in Home page
     And I verify the Search button displayed
+    And I verify the validation when clicked on Search button without entering Location
     And I verify the username displayed on top right
     And I verify the language selection displayed on top
 

@@ -1,5 +1,7 @@
 
 class SearchResultsPage{
+//includes the elements and methods in myStays.com Search Results Page
+
     elements={
         numberOfProperties:()=>cy.get('.text-2xl'),
         locationField:()=>cy.get('.flex > .w-full'),

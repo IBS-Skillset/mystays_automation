@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 63509000000
+              "duration": 63871000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username \"testuser@gmail.com\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 703000000
+              "duration": 722000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 115000000
+              "duration": 126000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 94000000
+              "duration": 149000000
             }
           }
         ]
@@ -83,7 +83,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 189000000
+              "duration": 233000000
             }
           },
           {
@@ -93,7 +93,7 @@
             "name": "I enter username \"invalidusername\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 692000000
+              "duration": 736000000
             }
           },
           {
@@ -103,7 +103,7 @@
             "name": "I click on Sign In button and verify \"Please include an '@' in the email address. 'invalidusername' is missing an '@'.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 238000000
+              "duration": 231000000
             }
           }
         ]
@@ -128,7 +128,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 775000000
+              "duration": 199000000
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "I enter username \"invalidusername@\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 732000000
+              "duration": 1131000000
             }
           },
           {
@@ -148,7 +148,7 @@
             "name": "I click on Sign In button and verify \"Please enter a part following '@'. 'invalidusername@' is incomplete.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 286000000
+              "duration": 140000000
             }
           }
         ]
@@ -173,7 +173,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 515000000
+              "duration": 250000000
             }
           },
           {
@@ -183,7 +183,7 @@
             "name": "I enter username \"\" and password \"\"",
             "result": {
               "status": "failed",
-              "error_message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n    at Context.type (http://localhost:3000/__cypress/runner/cypress_runner.js:158854:76)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SignInPage.typeUsername (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:307:37)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:92:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10798:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10119:35)"
+              "error_message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n    at Context.type (http://localhost:3000/__cypress/runner/cypress_runner.js:158854:76)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SignInPage.typeUsername (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:330:37)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:96:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10823:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10144:35)"
             },
             "embeddings": [
               {
@@ -222,7 +222,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 262000000
+              "duration": 807000000
             }
           },
           {
@@ -232,7 +232,7 @@
             "name": "I enter username \"invalid@gmail.com\" and password \"\"",
             "result": {
               "status": "failed",
-              "error_message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n    at Context.type (http://localhost:3000/__cypress/runner/cypress_runner.js:158854:76)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SignInPage.typePassword (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:313:37)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:93:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10798:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10119:35)"
+              "error_message": "CypressError: `cy.type()` cannot accept an empty string. You need to actually type something.\n    at Context.type (http://localhost:3000/__cypress/runner/cypress_runner.js:158854:76)\n    at Context.<anonymous> (http://localhost:3000/__cypress/runner/cypress_runner.js:178437:19)\nFrom Your Spec Code:\n    at SignInPage.typePassword (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:336:37)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:97:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10823:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signin.feature:10144:35)"
             },
             "embeddings": [
               {
