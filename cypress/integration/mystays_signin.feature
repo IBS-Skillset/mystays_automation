@@ -1,6 +1,7 @@
 Feature: Login
     Testing myStays.com login functionality 
 
+@signin
 Scenario Outline: As User, I can login into myStays.com application using valid credentials
     Given I can access to myStays.com
     When I enter username "<Username>" and password "<Password>" 
@@ -11,6 +12,7 @@ Scenario Outline: As User, I can login into myStays.com application using valid 
       | Username              | Password   |
       | testuser@gmail.com    | test@123!@#|
 
+@signin
 Scenario Outline: As User, verify myStays.com login using invalid credentials
     Given I can access to myStays.com
     When I enter username "<Username>" and password "<Password>" 
@@ -21,6 +23,7 @@ Scenario Outline: As User, verify myStays.com login using invalid credentials
       | invalidusername   | test@123!@#    | Please include an '@' in the email address. 'invalidusername' is missing an '@'.|
       | invalidusername@  | test@123!@#    | Please enter a part following '@'. 'invalidusername@' is incomplete.|
 
+@signin
 Scenario Outline: As User, verify myStays.com login using empty username and password
     Given I can access to myStays.com
     When I enter username "<Username>" and password "<Password>" 

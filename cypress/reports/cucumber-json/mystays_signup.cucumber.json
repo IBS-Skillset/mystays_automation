@@ -11,70 +11,75 @@
       {
         "id": "signup;as-a-new-user,-i-can-create-an-account-in-mystays.com",
         "keyword": "Scenario",
-        "line": 14,
+        "line": 15,
         "name": "As a new user, I can create an account in myStays.com",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@signup",
+            "line": 4
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 6,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 100166000000
+              "duration": 68773000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 6,
+            "line": 7,
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 1044000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"test@123\" and \"9567911083\"",
-            "result": {
-              "status": "passed",
-              "duration": 2456000000
+              "duration": 940000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "I click on Continue button",
+            "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"test@123\" and \"9567911083\"",
             "result": {
               "status": "passed",
-              "duration": 17000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "I verify the account is created with a message \"User successfully created. Enter the password to proceed\"",
-            "result": {
-              "status": "passed",
-              "duration": 41000000
+              "duration": 2257000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
+            "line": 9,
+            "name": "I click on Continue button",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
             "line": 10,
+            "name": "I verify the account is created with a message \"User successfully created. Enter the password to proceed\"",
+            "result": {
+              "status": "passed",
+              "duration": 27000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
             "name": "I am on Sign In page",
             "result": {
               "status": "failed",
-              "duration": 4035000000,
-              "error_message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3000/signup' to include 'http://localhost:3000/signin'\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:109:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10893:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10214:35)"
+              "duration": 4012000000,
+              "error_message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:3000/signup' to include 'http://localhost:3000/signin'\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:109:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10930:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10251:35)"
             },
             "embeddings": [
               {
@@ -87,49 +92,54 @@
       {
         "id": "signup;verify-the-validation-in-email-address-and-phone-number-fields-when-invalid-values-are-entered",
         "keyword": "Scenario",
-        "line": 24,
+        "line": 26,
         "name": "Verify the validation in Email address and Phone number fields when invalid values are entered",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@signup",
+            "line": 17
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 17,
+            "line": 19,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 503000000
+              "duration": 268000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
+            "line": 20,
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 210000000
+              "duration": 203000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 19,
+            "line": 21,
             "name": "I enter valid \"test\" and \"Test\" and \"User\" and \"test@123\" and \"9567911083\"",
             "result": {
               "status": "passed",
-              "duration": 1870000000
+              "duration": 1847000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 20,
+            "line": 22,
             "name": "I click on Continue button and verify \"Invalid email\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 132000000
+              "duration": 171000000
             }
           }
         ]
@@ -137,49 +147,54 @@
       {
         "id": "signup;verify-the-validation-in-email-address-and-phone-number-fields-when-invalid-values-are-entered",
         "keyword": "Scenario",
-        "line": 25,
+        "line": 27,
         "name": "Verify the validation in Email address and Phone number fields when invalid values are entered",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@signup",
+            "line": 17
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 17,
+            "line": 19,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 206000000
+              "duration": 173000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
+            "line": 20,
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 198000000
+              "duration": 205000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 19,
+            "line": 21,
             "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"test@123\" and \"9\"",
             "result": {
               "status": "passed",
-              "duration": 2051000000
+              "duration": 1915000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 20,
+            "line": 22,
             "name": "I click on Continue button and verify \"Please enter contact number with country code\" is displayed",
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .label > .errorMsg`, but never found it.\n    at SignupPage.clickContinueButtonAndVerifyValMessage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:427:10)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:112:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10893:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10214:35)"
+              "error_message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(2) > .label > .errorMsg`, but never found it.\n    at SignupPage.clickContinueButtonAndVerifyValMessage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:464:10)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:112:14)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10930:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_signup.feature:10251:35)"
             },
             "embeddings": [
               {
@@ -192,39 +207,44 @@
       {
         "id": "signup;verify-the-field-validations-when-no-values-are-entered-in-'create-an-account'-page",
         "keyword": "Scenario",
-        "line": 28,
+        "line": 30,
         "name": "Verify the field validations when no values are entered in 'Create an account' page",
-        "tags": [],
+        "tags": [
+          {
+            "name": "@signup",
+            "line": 29
+          }
+        ],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 29,
+            "line": 31,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 258000000
+              "duration": 317000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 30,
+            "line": 32,
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 200000000
+              "duration": 198000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 31,
+            "line": 33,
             "name": "I click on Continue button and verify the message displayed",
             "result": {
               "status": "passed",
-              "duration": 134000000
+              "duration": 114000000
             }
           }
         ]

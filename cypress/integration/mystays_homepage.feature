@@ -1,11 +1,12 @@
 Feature: Home Page
     Testing myStays.com home page functionality 
 
+@homepage
 Scenario Outline: Verify the fields displayed in home page
     Given I can access to myStays.com
     When I login into myStays.com application using "<Username>" and "<Password>" 
     Then I am on Home Page
-    Then I enter location as 'PARIS' and click on Search button
+    # Then I enter location as 'PARIS' and click on Search button
     And I verify the destination field in Home page
     And I verify the Calendar displayed in Home page
     And I verify the Search button displayed

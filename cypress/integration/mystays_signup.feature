@@ -1,6 +1,7 @@
 Feature: Signup
     Testing myStays.com Signup functionality 
 
+@signup
 Scenario Outline: As a new user, I can create an account in myStays.com
     Given I can access to myStays.com
     When I click on Create account button in Sign In page
@@ -13,6 +14,7 @@ Scenario Outline: As a new user, I can create an account in myStays.com
     |Emailaddress      | Firstname| Lastname |Password | Phonenumber|
     |Testuser@gmail.com|Test      | User     |test@123 |9567911083  |
 
+@signup
 Scenario Outline: Verify the validation in Email address and Phone number fields when invalid values are entered
     Given I can access to myStays.com
     When I click on Create account button in Sign In page
@@ -24,7 +26,7 @@ Scenario Outline: Verify the validation in Email address and Phone number fields
     |test              |Test      | User     |test@123 |9567911083  |Invalid email|
     |Testuser@gmail.com|Test      | User     |test@123 |9           |Please enter contact number with country code |
 
-
+@signup
 Scenario: Verify the field validations when no values are entered in 'Create an account' page
     Given I can access to myStays.com
     When I click on Create account button in Sign In page

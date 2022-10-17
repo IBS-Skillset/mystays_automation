@@ -7,6 +7,22 @@ const signinPage=new SignInPage()
 const common=new Common();
 const homePage=new HomePage();
 
+And('I verify the destination field in Home page',()=>{
+    homePage.verifyDestinationField()
+}) 
+And('I verify the Calendar displayed in Home page',()=>{
+    homePage.verifyCalenderField()
+})
+And('I verify the Search button displayed',()=>{
+    homePage.verifySearchButton()
+}) 
+And('I verify the username displayed on top right',()=>{
+    homePage.getUsername()
+}) 
+And('I verify the language selection displayed on top',()=>{
+    common.verifyLanguageSelectionField()
+})
+
 // Then('I enter location as {string} and click on Search button',(location)=>{
 //     homePage.typeAndSelectLocation(location)
 //     cy.wait(5000)
