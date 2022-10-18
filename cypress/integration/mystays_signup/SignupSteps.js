@@ -9,7 +9,6 @@ const signupPage=new SignupPage()
 
 When ('I click on Create account button in Sign In page',()=>{
     signinPage.clickCreateOneButton()
-
 })
 And ('I enter valid {string} and {string} and {string} and {string} and {string}',(Emailaddress,Firstname,Lastname,Password,Phonenumber)=>{
     signupPage.typeEmailAddress(Emailaddress)
@@ -17,7 +16,6 @@ And ('I enter valid {string} and {string} and {string} and {string} and {string}
     signupPage.typeLastName(Lastname)
     signupPage.typePassword(Password)
     signupPage.typePhoneNumber(Phonenumber)
-
 })
 And ('I click on Continue button',()=>{
     signupPage.clickContinueButton();

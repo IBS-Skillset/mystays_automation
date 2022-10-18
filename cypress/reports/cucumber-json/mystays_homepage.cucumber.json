@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 5522000000
+              "duration": 5432000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I login into myStays.com application using \"testuser@gmail.com\" and \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 4431000000
+              "duration": 4244000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 1187000000
+              "duration": 1409000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I verify the destination field in Home page",
             "result": {
               "status": "passed",
-              "duration": 193000000
+              "duration": 74000000
             }
           },
           {
@@ -68,7 +68,7 @@
             "name": "I verify the Calendar displayed in Home page",
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 70000000
             }
           },
           {
@@ -78,7 +78,7 @@
             "name": "I verify the Search button displayed",
             "result": {
               "status": "passed",
-              "duration": 147000000
+              "duration": 143000000
             }
           },
           {
@@ -88,7 +88,7 @@
             "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
               "status": "passed",
-              "duration": 597000000
+              "duration": 583000000
             }
           },
           {
@@ -98,7 +98,7 @@
             "name": "I verify the username displayed on top right",
             "result": {
               "status": "passed",
-              "duration": 58000000
+              "duration": 46000000
             }
           },
           {
@@ -108,7 +108,7 @@
             "name": "I verify the language selection displayed on top",
             "result": {
               "status": "passed",
-              "duration": 204000000
+              "duration": 159000000
             }
           }
         ]

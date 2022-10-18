@@ -1,7 +1,6 @@
 
 class SearchResultsPage{
-//includes the elements and methods in myStays.com Search Results Page
-
+//includes the elements and methods in myStays.com Search Results Page    
     elements={
         numberOfProperties:()=>cy.get('.text-2xl'),
         locationField:()=>cy.get('.flex > .w-full'),
@@ -17,6 +16,7 @@ class SearchResultsPage{
     verifyLocationField(){
         this.elements.locationField().should('be.visible').and('be.enabled')
        }
+
     displayHotelDetails(){
         // this.elements.hotelResultsList().should('be.visible')
         this.elements.hotelNameList().should('be.visible')
@@ -27,16 +27,18 @@ class SearchResultsPage{
         // this.elements.hotelRatingButton().should('be.visible')
         cy.log("Hotel search results are displayed")
     }
-    getNumberOfHotels(){
-            //method to get number of hotels
-            let txt = []
-            cy.get('.text-2xl').then(function(e){
-            txt.push(e)
-            })
-            cy.log("Total number of Hotels",txt)        
-            }
+
+    getNumberOfHotels(location){
+        //method to get number of hotels ("Paris: 5 properties found")
+        cy.get('div[class="text-2xl md:text-3xl font-medium"]').then(($number)=>{
+        const txt=$number.text()
+        cy.log(txt)   
+        const resultsNumberArray=txt.split(":"); //extracting only value of location from 'Paris: 5 properties found'
+        let locValue=resultsNumberArray[0]
+        cy.log(locValue)
+        //verifying the location in search results is same as that of location in the input data
+        expect(locValue).to.contains(location)
+        })
+        }
     }
-   
-
-
 export default SearchResultsPage

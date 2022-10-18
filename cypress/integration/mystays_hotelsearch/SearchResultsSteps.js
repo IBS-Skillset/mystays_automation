@@ -9,8 +9,9 @@ const common=new Common();
 const homePage=new HomePage();
 const searchResults=new SearchResultsPage();
 
-Then('I verify the hotel search details displayed',()=>{
-    searchResults.verifyLocationField()
+Then('I verify the hotel search results displayed',()=>{
     searchResults.displayHotelDetails()
-    searchResults.getNumberOfHotels()
+})
+Then('I verify the number of hotels displayed in {string}',(location)=>{
+    searchResults.getNumberOfHotels(location)
 })

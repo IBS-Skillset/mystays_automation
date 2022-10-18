@@ -40,7 +40,6 @@ class SignInPage{
         this.elements.signinButton().should('be.visible').and('be.enabled')
         this.elements.createOneButton().click();
         // this.url().should('contains','signup')    
-
     }
 }
 export default SignInPage;
