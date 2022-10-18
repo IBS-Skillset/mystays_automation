@@ -14,6 +14,6 @@ Scenario Outline: Verify the fields displayed in home page
     And I verify the username displayed on top right
     And I verify the language selection displayed on top
 
-        Examples:
+    Examples:
       | Username              | Password   |
       | testuser@gmail.com    | test@123!@#|

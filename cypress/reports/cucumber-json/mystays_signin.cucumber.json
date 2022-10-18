@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 143941000000
+              "duration": 193549000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username \"testuser@gmail.com\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 708000000
+              "duration": 912000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 135000000
+              "duration": 110000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 438000000
+              "duration": 452000000
             }
           }
         ]
@@ -83,7 +83,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 241000000
+              "duration": 293000000
             }
           },
           {
@@ -93,7 +93,7 @@
             "name": "I enter username \"invalidusername\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 750000000
+              "duration": 721000000
             }
           },
           {
@@ -103,7 +103,7 @@
             "name": "I click on Sign In button and verify \"Please include an '@' in the email address. 'invalidusername' is missing an '@'.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 247000000
+              "duration": 227000000
             }
           }
         ]
@@ -128,7 +128,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 229000000
+              "duration": 461000000
             }
           },
           {
@@ -138,7 +138,7 @@
             "name": "I enter username \"invalidusername@\" and password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 772000000
+              "duration": 795000000
             }
           },
           {
@@ -148,7 +148,7 @@
             "name": "I click on Sign In button and verify \"Please enter a part following '@'. 'invalidusername@' is incomplete.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 138000000
+              "duration": 122000000
             }
           }
         ]
@@ -173,7 +173,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 272000000
+              "duration": 316000000
             }
           },
           {
@@ -183,7 +183,7 @@
             "name": "I enter password \"test@123!@#\"",
             "result": {
               "status": "passed",
-              "duration": 332000000
+              "duration": 368000000
             }
           },
           {
@@ -193,7 +193,7 @@
             "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 121000000
+              "duration": 175000000
             }
           }
         ]
@@ -218,7 +218,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 257000000
+              "duration": 350000000
             }
           },
           {
@@ -228,7 +228,7 @@
             "name": "I enter password \"<Password>\"",
             "result": {
               "status": "passed",
-              "duration": 569000000
+              "duration": 409000000
             }
           },
           {
@@ -238,7 +238,7 @@
             "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 147000000
+              "duration": 251000000
             }
           }
         ]

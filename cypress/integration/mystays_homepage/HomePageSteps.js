@@ -24,7 +24,6 @@ And('I verify the validation when clicked on Search button without entering Loca
 And('I verify the language selection displayed on top',()=>{
     common.verifyLanguageSelectionField()
 })
-
 // Then('I enter location as {string} and click on Search button',(location)=>{
 //     homePage.typeAndSelectLocation(location)
 //     cy.wait(5000)

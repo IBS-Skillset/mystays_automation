@@ -34,7 +34,7 @@ class SignupPage{
         this.elements.password().type(Password)    
     }
 
-    clickContinueButton(){
+    clickContinueButton(){ //need to update once auth integration is done
     //     this.elements.continueButton().should('be.visible').and('be.enabled')
     //     this.elements.continueButton().click()  
     }
@@ -62,7 +62,8 @@ class SignupPage{
         //  })
 
     }
-
+    
+    //to get the validation message
     clickContinueButtonAndVerifyValMessage(message){
         this.elements.continueButton().should('be.visible').and('be.enabled')
         this.elements.continueButton().click()

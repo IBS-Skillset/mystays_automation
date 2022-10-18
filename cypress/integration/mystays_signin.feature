@@ -46,7 +46,7 @@ Scenario Outline: As User, verify myStays.com login using valid username and emp
 @SignIn
 Scenario Outline: As User, verify myStays.com login using valid username and empty password
     Given I can access to myStays.com
-        And I click on Sign In button and verify "<Message>" is displayed
+    And I click on Sign In button and verify "<Message>" is displayed
     
     Examples:
      | Please fill in this field.| #empty username and password
