@@ -2,15 +2,11 @@ Feature: Login
     Testing myStays.com login functionality 
 
 @SignIn
-Scenario Outline: As User, I can login into myStays.com application using valid credentials
+Scenario: As User, I can login into myStays.com application using valid credentials
     Given I can access to myStays.com
-    When I enter username "<Username>" and password "<Password>" 
+    When I enter username and password 
     And I click on Sign In button
     Then I am on Home Page
-
-    Examples:
-      | Username              | Password   |
-      | testuser@gmail.com    | test@123!@#|
 
 @SignIn
 Scenario Outline: As User, verify myStays.com login using invalid credentials

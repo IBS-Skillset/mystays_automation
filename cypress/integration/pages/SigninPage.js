@@ -1,6 +1,6 @@
 class SignInPage{
 //includes the elements and methods in myStays.com SignIn Page
-
+    
 
     elements={
         usernameField:()=>cy.get('#username'),
@@ -9,6 +9,7 @@ class SignInPage{
         createOneButton:()=>cy.get('.text-blue-800')
     }
 
+    // commented for fixtures implementation
     typeUsername(username){
         this.elements.usernameField().should('be.visible').and('be.enabled')
         this.elements.usernameField().type(username)
@@ -19,10 +20,26 @@ class SignInPage{
         this.elements.passwordField().type(password)
         }
 
+    typeFixturesUsername(){
+        cy.fixture('testDataFile').then((user) => {
+            this.user = user
+        this.elements.usernameField().should('be.visible').and('be.enabled')
+        this.elements.usernameField().type(user.username)
+        })
+    }
+    
+    typeFixturesPassword(){
+        cy.fixture('testDataFile').then((user) => {
+            this.user = user
+        this.elements.passwordField().should('be.visible').and('be.enabled')
+        this.elements.passwordField().type(user.password)
+        })
+    }
+
     clickSigninButton(){
         this.elements.signinButton().should('be.visible').and('be.enabled')
         this.elements.signinButton().click();
-        // this.url().should('contains','home')    
+        // this.url().should('contains','home')    //need to uncomment later (after auth integration)
     }
 
     //validation of login using invalid credentials

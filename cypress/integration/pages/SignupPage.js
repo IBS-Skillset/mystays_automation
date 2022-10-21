@@ -35,7 +35,6 @@ class SignupPage{
         .click()
         .clear()
         .type(Phonenumber)  
-
     }
 
     typePassword(Password){
@@ -78,7 +77,6 @@ class SignupPage{
         //     const t = e.text()
         //     expect(t).to.contains("*Password is required")
         //  })
-
     }
     
     //to get the validation message

@@ -4,7 +4,6 @@ class Common{
     elements={
         languageSelectButton:()=>cy.get('.inpt-language'),
         usernameIcon:()=>cy.get('.text-white'),
-
     }
     getBrandBanner(){     //to get the myStays.com banner displayed on page
         return cy.get('.brand-banner')
@@ -24,7 +23,6 @@ class Common{
 
     verifyLanguageSelectionField(){    //to get the English/French language button displayed
         this.elements.languageSelectButton().should('be.visible').and('be.enabled')
-
     }
 
      //to get the username displayed on top right
