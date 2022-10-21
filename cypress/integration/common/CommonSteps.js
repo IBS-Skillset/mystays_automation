@@ -14,6 +14,12 @@ Given('I can access to myStays.com',()=>{
     common.verifyBrandBanner()
     common.verifyFooterPresent()
 })
+
+When('I enter username and password',()=>{
+    signinPage.typeFixturesUsername()
+    signinPage.typeFixturesPassword()
+})
+
 When('I login into myStays.com application using {string} and {string}',(username,password)=>{
     signinPage.typeUsername(username)
     signinPage.typePassword(password)
@@ -21,6 +27,11 @@ When('I login into myStays.com application using {string} and {string}',(usernam
     homePage.verifyHomePage()
     cy.log("Successfully logged into application")
 })
+
+And('I click on Sign In button',()=>{
+    signinPage.clickSigninButton()
+})
+
 Then('I am on Home Page',()=>{
     cy.visit("http://localhost:3000/") //code to navigate to home page as signin is not yet integrated
     homePage.verifyHomePage()

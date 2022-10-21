@@ -41,7 +41,7 @@ class HomePage{
         .type('Dec 01, 2022')
         .tab()
         .clear()
-        .type('Dec 02, 2022')
+        .type('Dec 03, 2022')
 
         // this.elements.calendarMonth().select('December')
         // this.elements.calendarYear().select('2022')

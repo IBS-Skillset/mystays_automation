@@ -1,11 +1,10 @@
 {
-          "username": "fixturestestuser@gmail.com",
-          "password": "test@123!@#|",
-      
+  "username":"testuser@gmail.com",
+  "password":"test@123!@#|",
   "bookingDetails":{
-      "destination":"Paris",
-      "startDate":"Dec 01, 2022",
-      "endDate":"Dec 02, 2022",
-      "count":"1"
+     "destination":"Paris",
+     "startDate":"Dec 01, 2022",
+     "endDate":"Dec 02, 2022",
+     "count":"1"
   }
 }
