@@ -40,3 +40,12 @@ And('I enter location as {string} and click on Search button',(location)=>{
     homePage.clickSearchButton()
     cy.wait(25000)
 })
+When('I search a hotel in {string}',(location)=>{
+    searchResults.verifyLocationField()
+    homePage.typeAndSelectLocation(location)
+    cy.wait(5000)
+    homePage.selectFromAndToDate()
+})
+And ('I click on search button',()=>{
+    homePage.clickSearchButton()
+})

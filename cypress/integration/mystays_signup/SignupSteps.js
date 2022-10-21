@@ -10,19 +10,22 @@ const signupPage=new SignupPage()
 When ('I click on Create account button in Sign In page',()=>{
     signinPage.clickCreateOneButton()
 })
-And ('I enter valid {string} and {string} and {string} and {string} and {string}',(Emailaddress,Firstname,Lastname,Password,Phonenumber)=>{
+And ('I enter valid {string} and {string} and {string} and {string} and {string}',(Emailaddress,Firstname,Lastname,Phonenumber,Password)=>{
     signupPage.typeEmailAddress(Emailaddress)
     signupPage.typeFirstName(Firstname)
     signupPage.typeLastName(Lastname)
-    signupPage.typePassword(Password)
     signupPage.typePhoneNumber(Phonenumber)
+
+    signupPage.typePassword(Password)
 })
 And ('I click on Continue button',()=>{
     signupPage.clickContinueButton();
 })
-Then('I verify the account is created with a message "User successfully created. Enter the password to proceed"',()=>{
+Then('I verify the account is created successfully',()=>{
+    const successMessage="User successfully created. Enter the password to proceed"
     common.verifyBrandBanner()
     common.verifyFooterPresent()
+    signupPage.verifySuccessAccountCreation(successMessage)
 })
 And('I am on Sign In page',()=>{
     cy.url().should('include', 'http://localhost:3000/signin')

@@ -31,14 +31,14 @@ Scenario Outline: As User, I can search search hotel with specific name
     When I login into myStays.com application using "<Username>" and "<Password>" 
     Then I am on Home Page
     When I search a hotel in "<Destination>"
-    And I specify "Hilton" hotel name
+    And I specify "<Hotel Name>" hotel name
     And I click on search button
-    Then I verify the hotel search details displayed
-    And First Result is "Hilton" hotel
+    Then I verify the hotel search results displayed
+    And First Result is "<Hotel Name>" hotel
     
     Examples:
-      | Username              | Password   | Destination |
-      | testuser@gmail.com    | test@123!@#| PARIS       |
+      | Username              | Password   | Destination | Hotel Name|
+      | testuser@gmail.com    | test@123!@#| PARIS       | Hilton |
 
 @HotelSearchBookAndCancel 
 Scenario Outline: As User, I can search, book & cancel Hotel with "<USER>"
@@ -47,7 +47,10 @@ Scenario Outline: As User, I can search, book & cancel Hotel with "<USER>"
     Then I am on Home Page
     When I search a hotel in "<Destination>"
     And I click on search button
-    Then I verify the hotel search details displayed
+    Then I verify the hotel search results displayed
+    Then I click on Select and Reserve button
+    And I enter necessary details
+    And I click on Confirm button 
 
     Examples:
       | Username              | Password   | Destination | 
@@ -60,7 +63,7 @@ Scenario Outline: As User, I can see datasource in Hotel Availability
     When I login into myStays.com application using "<Username>" and "<Password>" 
     Then I am on Home Page
     Then I enter location as "<Destination>" and click on Search button
-    Then I verify the hotel search details displayed
+    Then I verify the hotel search results displayed
     And I have results coming from "<DATASOURCE_TYPE>" hotel datasource
 
     Examples:
@@ -74,7 +77,7 @@ Scenario Outline: As a User, i can see the Hotel safe logo for all applicable ho
     When I login into myStays.com application using "<Username>" and "<Password>" 
     Then I am on Home Page
     Then I enter location as "<Destination>" and click on Search button
-    Then I verify the hotel search details displayed
+    Then I verify the hotel search results displayed
     And I see hotel safe logo in results
 
     Examples:

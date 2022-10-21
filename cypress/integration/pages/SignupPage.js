@@ -6,8 +6,10 @@ class SignupPage{
         firstName:()=>cy.get('#fname'),
         lastName:()=>cy.get('#lname'),
         phoneNumber:()=>cy.get('#phoneNumber'),
+        // phoneNumber:()=>cy.get('input[name="phoneNumber"]'),
         password:()=>cy.get('#password'),
         continueButton:()=> cy.get('.btn-continue'),
+        signupSuccessMessage:()=>cy.get('.message')
     }
     typeEmailAddress(Emailaddress){
         this.elements.emailAddress().should('be.visible').and('be.enabled')
@@ -21,12 +23,19 @@ class SignupPage{
 
     typeLastName(Lastname){
         this.elements.lastName().should('be.visible').and('be.enabled')
-        this.elements.lastName().type(Lastname)    
+        this.elements.lastName().type(Lastname) 
     }
 
     typePhoneNumber(Phonenumber){
         this.elements.phoneNumber().should('be.visible').and('be.enabled')
-        this.elements.phoneNumber().type(Phonenumber)    
+        
+        //used removeAttr here to type '+' in PhoneNumber field as .type() was not allowing to type it in number type field
+        this.elements.phoneNumber()
+        .invoke('removeAttr', 'type')
+        .click()
+        .clear()
+        .type(Phonenumber)  
+
     }
 
     typePassword(Password){
@@ -35,8 +44,17 @@ class SignupPage{
     }
 
     clickContinueButton(){ //need to update once auth integration is done
-    //     this.elements.continueButton().should('be.visible').and('be.enabled')
-    //     this.elements.continueButton().click()  
+        this.elements.continueButton().should('be.visible').and('be.enabled')
+        this.elements.continueButton().click() 
+    }
+
+    //verify account creation is success or not
+    verifySuccessAccountCreation(successMessage){
+        this.elements.signupSuccessMessage().should('be.visible')
+        cy.get('.message').then(function(e){
+            const t = e.text()
+            expect(t).to.contains(successMessage)
+         })
     }
 
     //validation when invalid values are entered
