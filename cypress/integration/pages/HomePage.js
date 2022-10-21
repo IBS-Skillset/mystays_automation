@@ -1,3 +1,4 @@
+require('cypress-plugin-tab');
 class HomePage{
 //includes the elements and methods in myStays.com Home Page
 
@@ -11,6 +12,7 @@ class HomePage{
 
         dateInputField:()=>cy.get('.inputBox'),
         calendarIcon:()=>cy.get('.calenderIcon > .svg-image'),
+        earlyDateField:()=>cy.get('.rdrDateDisplayItemActive > input'), //start date field in open calendar
         openCalendar:()=>cy.get('.rdrMonth'),
         calendarPrevButton:()=>cy.get('.rdrPprevButton'),
         calendarNextButton:()=>cy.get('.rdrNextButton'),
@@ -33,10 +35,18 @@ class HomePage{
         // this.elements.calendarIcon().should('be.visible').and('be.enabled')//is not enabled
         this.elements.dateInputField().click()
         this.elements.openCalendar().should('be.visible')
-        this.elements.calendarMonth().select('December')
-        this.elements.calendarYear().select('2022')
-        cy.get('.rdrDayNumber').eq(4).click()
-        cy.get('.rdrDayNumber').eq(5).click();
+
+        cy.get('.rdrDateDisplayItemActive > input')
+        .clear()
+        .type('Dec 01, 2022')
+        .tab()
+        .clear()
+        .type('Dec 02, 2022')
+
+        // this.elements.calendarMonth().select('December')
+        // this.elements.calendarYear().select('2022')
+        // cy.get('.rdrDayNumber').eq(4).click()
+        // cy.get('.rdrDayNumber').eq(5).click();
     }
 
     selectLanguage(language){

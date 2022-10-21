@@ -5,14 +5,14 @@ Feature: Signup
 Scenario Outline: As a new user, I can create an account in myStays.com
     Given I can access to myStays.com
     When I click on Create account button in Sign In page
-    And I enter valid "<Emailaddress>" and "<Firstname>" and "<Lastname>" and "<Password>" and "<Phonenumber>"
+    And I enter valid "<Emailaddress>" and "<Firstname>" and "<Lastname>" and "<Phonenumber>" and "<Password>"
     And I click on Continue button
-    Then I verify the account is created with a message "User successfully created. Enter the password to proceed"
+    Then I verify the account is created successfully
     And I am on Sign In page
 
     Examples:
     |Emailaddress      | Firstname| Lastname |Password | Phonenumber   |
-    |Testuser@gmail.com|Test      | User     |test@123 |+919567911083  |
+    |Testuser@gmail.com|Test      | User     |test@123 | +919567911083  |
 
 @Signup
 Scenario Outline: Verify the validation in Email address and Phone number fields when invalid values are entered

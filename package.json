@@ -20,6 +20,7 @@
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-mochawesome-reporter": "^3.2.2",
+    "cypress-plugin-tab": "^1.0.5",
     "multiple-cucumber-html-reporter": "^2.0.0"
   },
   "cypress-cucumber-preprocessor": {
