@@ -29,3 +29,18 @@ And('I verify the language selection displayed on top',()=>{
 //     cy.wait(5000)
 //     homePage.clickSearchButton()
 // })
+
+And('I select Français language',()=>{
+    common.selectFrenchLanguage()
+})
+
+And('I select English language',()=>{
+    common.selectEnglishLanguage()
+})
+
+Then('I verify the home page is displayed in Français',()=>{
+    common.verifyFrenchHomePage()
+})
+Then('I verify the home page is displayed in English',()=>{
+    common.verifyEnglishHomePage()
+})

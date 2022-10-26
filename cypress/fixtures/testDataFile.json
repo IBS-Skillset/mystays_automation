@@ -4,7 +4,6 @@
   "bookingDetails":{
      "destination":"Paris",
      "startDate":"Dec 01, 2022",
-     "endDate":"Dec 02, 2022",
-     "count":"1"
+     "endDate":"Dec 03, 2022"
   }
 }
