@@ -39,10 +39,11 @@ Scenario Outline: As User, verify myStays.com login using valid username and emp
       | Username           | Message |
       | testuser@gmail.com | Please fill in this field.|
 
-@SignIn
-Scenario Outline: As User, verify myStays.com login using valid username and empty password
-    Given I can access to myStays.com
-    And I click on Sign In button and verify "<Message>" is displayed
+# @SignIn
+# Scenario Outline: As User, verify myStays.com login using empty username and empty password
+#     Given I can access to myStays.com
+#     And I click on Sign In button and verify "<Message>" is displayed
     
-    Examples:
-     | Please fill in this field.| #empty username and password
+#     Examples:
+#      | Message |
+#      | Please fill in this field.|

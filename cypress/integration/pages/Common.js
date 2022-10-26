@@ -4,6 +4,10 @@ class Common{
     elements={
         languageSelectButton:()=>cy.get('.inpt-language'),
         usernameIcon:()=>cy.get('.text-white'),
+
+        staysIcon:()=>cy.get('.pl-2'),
+        locationField:()=>cy.get('input[placeholder*="Cherche"]'),
+        searchButton:()=>cy.get('.search-button'),
     }
     getBrandBanner(){     //to get the myStays.com banner displayed on page
         return cy.get('.brand-banner')
@@ -25,6 +29,46 @@ class Common{
         this.elements.languageSelectButton().should('be.visible').and('be.enabled')
     }
 
+    selectFrenchLanguage(){
+        this.elements.languageSelectButton().select('Français')
+    }
+    selectEnglishLanguage(){
+        this.elements.languageSelectButton().select('English')
+    }
+
+    verifyFrenchHomePage(){
+        this.elements.staysIcon().then(function(e){
+            const t = e.text()
+            expect(t).to.contains("Rester")
+         })
+
+        //  this.elements.locationField().then(function(e){
+        //     const t = e.text()
+        //     expect(t).to.contains("Cherche")
+        //  })
+
+         this.elements.searchButton().then(function(e){
+            const t = e.text()
+            expect(t).to.contains("Cherche")
+         })
+    }
+
+    verifyEnglishHomePage(){
+        this.elements.staysIcon().then(function(e){
+            const t = e.text()
+            expect(t).to.contains("Stays")
+         })
+
+        //  this.elements.locationField().then(function(e){
+        //     const t = e.text()
+        //     expect(t).to.contains("Search")
+        //  })
+
+         this.elements.searchButton().then(function(e){
+            const t = e.text()
+            expect(t).to.contains("Search")
+         })
+    }
      //to get the username displayed on top right
      getUsername(){
         //method to obtain text in username

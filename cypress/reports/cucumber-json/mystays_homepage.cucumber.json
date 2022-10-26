@@ -24,101 +24,206 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
+            "line": 7,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 490000000
+              "duration": 5822000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 7,
+            "line": 8,
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 1579000000
+              "duration": 3957000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 341000000
+              "duration": 408000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 10,
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 583000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "I verify the destination field in Home page",
-            "result": {
-              "status": "passed",
-              "duration": 81000000
+              "duration": 1172000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 12,
-            "name": "I verify the Calendar displayed in Home page",
+            "name": "I verify the destination field in Home page",
             "result": {
               "status": "passed",
-              "duration": 15000000
+              "duration": 206000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I verify the Search button displayed",
+            "name": "I verify the Calendar displayed in Home page",
             "result": {
               "status": "passed",
-              "duration": 61000000
+              "duration": 37000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 14,
-            "name": "I verify the validation when clicked on Search button without entering Location",
+            "name": "I verify the Search button displayed",
             "result": {
               "status": "passed",
-              "duration": 289000000
+              "duration": 191000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 15,
-            "name": "I verify the username displayed on top right",
+            "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
               "status": "passed",
-              "duration": 102000000
+              "duration": 562000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
+            "name": "I verify the username displayed on top right",
+            "result": {
+              "status": "passed",
+              "duration": 117000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
             "name": "I verify the language selection displayed on top",
             "result": {
               "status": "passed",
-              "duration": 54000000
+              "duration": 69000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "home-page;verify-the-option-to-change-language-in-home-page",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Verify the option to change language in Home Page",
+        "tags": [
+          {
+            "name": "@HomePage",
+            "line": 19
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 502000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I enter username and password",
+            "result": {
+              "status": "passed",
+              "duration": 869000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I click on Sign In button",
+            "result": {
+              "status": "passed",
+              "duration": 144000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "I am on Home Page",
+            "result": {
+              "status": "passed",
+              "duration": 186000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I verify the language selection displayed on top",
+            "result": {
+              "status": "passed",
+              "duration": 55000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I select Français language",
+            "result": {
+              "status": "passed",
+              "duration": 204000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I verify the home page is displayed in Français",
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I select English language",
+            "result": {
+              "status": "passed",
+              "duration": 153000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I verify the home page is displayed in English",
+            "result": {
+              "status": "passed",
+              "duration": 31000000
             }
           }
         ]
