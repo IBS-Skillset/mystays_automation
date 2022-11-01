@@ -1,23 +1,22 @@
+class SearchResultsPage {
+    //includes the elements and methods in myStays.com Search Results Page    
+    elements = {
+        numberOfProperties: () => cy.get('.text-2xl'),
+        locationField: () => cy.get('.flex > .w-full'),
 
-class SearchResultsPage{
-//includes the elements and methods in myStays.com Search Results Page    
-    elements={
-        numberOfProperties:()=>cy.get('.text-2xl'),
-        locationField:()=>cy.get('.flex > .w-full'),
-
-        hotelResultsList:()=>cy.get('.hotel-container grid grid-cols-2 md:flex'),
-        hotelNameList:()=>cy.get('#hotel-name'),
-        hotelCityList:()=>cy.get('#hotel-city'),
-        hotelAddressList:()=>cy.get('#hotel-address'),
-        hotelSeeAvaialabilityButtonList:()=>cy.get('.btn-availability.font-medium'),
-        hotelImageList:()=>cy.get('.hotel-image'),
-        hotelRatingButton:()=>cy.get('.grid pl-1 w-28 grid-cols-5')
+        hotelResultsList: () => cy.get('.hotel-container grid grid-cols-2 md:flex'),
+        hotelNameList: () => cy.get('#hotel-name'),
+        hotelCityList: () => cy.get('#hotel-city'),
+        hotelAddressList: () => cy.get('#hotel-address'),
+        hotelSeeAvaialabilityButtonList: () => cy.get('.btn-availability.font-medium'),
+        hotelImageList: () => cy.get('.hotel-image'),
+        hotelRatingButton: () => cy.get('.grid pl-1 w-28 grid-cols-5')
     }
-    verifyLocationField(){
+    verifyLocationField() {
         this.elements.locationField().should('be.visible').and('be.enabled')
-       }
+    }
 
-    displayHotelDetails(){
+    displayHotelDetails() {
         // this.elements.hotelResultsList().should('be.visible')
         this.elements.hotelNameList().should('be.visible')
         this.elements.hotelCityList().should('be.visible')
@@ -28,17 +27,17 @@ class SearchResultsPage{
         cy.log("Hotel search results are displayed")
     }
 
-    getNumberOfHotels(location){
+    getNumberOfHotels(location) {
         //method to get number of hotels ("Paris: 5 properties found")
-        cy.get('div[class="text-2xl md:text-3xl font-medium"]').then(($number)=>{
-        const txt=$number.text()
-        cy.log(txt)   
-        const resultsNumberArray=txt.split(":"); //extracting only value of location from 'Paris: 5 properties found'
-        let locValue=resultsNumberArray[0]
-        cy.log(locValue)
-        //verifying the location in search results is same as that of location in the input data
-        expect(locValue).to.contains(location)
+        cy.get('div[class="text-2xl md:text-3xl font-medium"]').then(($number) => {
+            const txt = $number.text()
+            cy.log(txt)
+            const resultsNumberArray = txt.split(":") //extracting only value of location from 'Paris: 5 properties found'
+            let locValue = resultsNumberArray[0]
+            cy.log(locValue)
+            //verifying the location in search results is same as that of location in the input data
+            expect(locValue).to.contains(location)
         })
-        }
     }
+}
 export default SearchResultsPage

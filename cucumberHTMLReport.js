@@ -6,7 +6,7 @@ report.generate({
     metadata: {
         browser: {
             name: "Chrome",
-            version: "105.0.5195.125",
+            version: "106.0.5249.119",
         },
         device: "Mac",
         platform: {

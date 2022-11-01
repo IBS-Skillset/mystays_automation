@@ -1,6 +1,6 @@
 {
-  "username":"testuser@gmail.com",
-  "password":"test@123!@#|",
+  "username":"test@gmail.com",
+  "password":"test",
   "bookingDetails":{
      "destination":"Paris",
      "startDate":"Dec 01, 2022",
