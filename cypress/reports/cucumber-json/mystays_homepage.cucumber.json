@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 5822000000
+              "duration": 431000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 3957000000
+              "duration": 734000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 408000000
+              "duration": 340000000
             }
           },
           {
@@ -57,9 +57,15 @@
             "line": 10,
             "name": "I am on Home Page",
             "result": {
-              "status": "passed",
-              "duration": 1172000000
-            }
+              "status": "failed",
+              "duration": 30265000000,
+              "error_message": "AssertionError: Timed out retrying after 30000ms: expected 'http://127.0.0.1:3000/signin' to include 'http://localhost:3000/'\n\nThe command was expected to run against origin `http://localhost:3000` but the application is at origin `http://127.0.0.1:3000`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n    at HomePage.verifyHomePage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:392:16)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:42:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:15563:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:14884:35)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
           },
           {
             "arguments": [],
@@ -67,8 +73,7 @@
             "line": 12,
             "name": "I verify the destination field in Home page",
             "result": {
-              "status": "passed",
-              "duration": 206000000
+              "status": "skipped"
             }
           },
           {
@@ -77,8 +82,7 @@
             "line": 13,
             "name": "I verify the Calendar displayed in Home page",
             "result": {
-              "status": "passed",
-              "duration": 37000000
+              "status": "skipped"
             }
           },
           {
@@ -87,8 +91,7 @@
             "line": 14,
             "name": "I verify the Search button displayed",
             "result": {
-              "status": "passed",
-              "duration": 191000000
+              "status": "skipped"
             }
           },
           {
@@ -97,8 +100,7 @@
             "line": 15,
             "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
-              "status": "passed",
-              "duration": 562000000
+              "status": "skipped"
             }
           },
           {
@@ -107,8 +109,7 @@
             "line": 16,
             "name": "I verify the username displayed on top right",
             "result": {
-              "status": "passed",
-              "duration": 117000000
+              "status": "skipped"
             }
           },
           {
@@ -117,8 +118,7 @@
             "line": 17,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "passed",
-              "duration": 69000000
+              "status": "skipped"
             }
           }
         ]
@@ -143,7 +143,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 502000000
+              "duration": 338000000
             }
           },
           {
@@ -153,7 +153,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 869000000
+              "duration": 737000000
             }
           },
           {
@@ -163,7 +163,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 144000000
+              "duration": 360000000
             }
           },
           {
@@ -172,9 +172,14 @@
             "line": 24,
             "name": "I am on Home Page",
             "result": {
-              "status": "passed",
-              "duration": 186000000
-            }
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 30000ms: expected 'http://127.0.0.1:3000/signin' to include 'http://localhost:3000/'\n\nThe command was expected to run against origin `http://localhost:3000` but the application is at origin `http://127.0.0.1:3000`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n    at HomePage.verifyHomePage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:392:16)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:42:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:15563:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:14884:35)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
           },
           {
             "arguments": [],
@@ -182,8 +187,7 @@
             "line": 25,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "passed",
-              "duration": 55000000
+              "status": "skipped"
             }
           },
           {
@@ -192,8 +196,7 @@
             "line": 26,
             "name": "I select Français language",
             "result": {
-              "status": "passed",
-              "duration": 204000000
+              "status": "skipped"
             }
           },
           {
@@ -202,8 +205,7 @@
             "line": 27,
             "name": "I verify the home page is displayed in Français",
             "result": {
-              "status": "passed",
-              "duration": 22000000
+              "status": "skipped"
             }
           },
           {
@@ -212,8 +214,7 @@
             "line": 28,
             "name": "I select English language",
             "result": {
-              "status": "passed",
-              "duration": 153000000
+              "status": "skipped"
             }
           },
           {
@@ -222,8 +223,7 @@
             "line": 29,
             "name": "I verify the home page is displayed in English",
             "result": {
-              "status": "passed",
-              "duration": 31000000
+              "status": "skipped"
             }
           }
         ]
