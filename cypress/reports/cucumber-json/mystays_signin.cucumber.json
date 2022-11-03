@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 6731000000
+              "duration": 7335000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 4977000000
+              "duration": 2820000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 2336000000
+              "duration": 3369000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 502000000
+              "duration": 316000000
             }
           }
         ]

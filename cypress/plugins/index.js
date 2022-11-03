@@ -21,7 +21,17 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
 }
 const cucumber = require('cypress-cucumber-preprocessor').default
+const pg = require("pg");
+const {defineConfig}=require("cypress");
  
 module.exports = (on, config) => {
-  on('file:preprocessor', cucumber())
+  on('file:preprocessor', cucumber());
+
+  on("task", {
+      READFROMDB({dbConfig, sql}) 
+         {
+            const client = new pg.Pool(dbConfig);
+            return client.query(sql);
+        }
+       });
 }

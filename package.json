@@ -15,7 +15,9 @@
   "author": "myStays.com QA",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^9.7.0"
+    "cypress": "^9.7.0",
+    "cypress-postgresql": "^1.0.8",
+    "pg": "^8.8.0"
   },
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^4.3.1",
