@@ -1,8 +1,15 @@
 {
-    "chromeWebSecurity": false,
-    "pageLoadTimeout": 30000,
-    "defaultCommandTimeout": 30000,
+    "chromeWebSecurity":false,
+    "pageLoadTimeout":30000,
+    "defaultCommandTimeout":30000,
     "experimentalSessionAndOrigin":true,
-    "testFiles": "**/*.feature",
-    "baseUrl": "http://localhost:3000/signin"
-}
+    "testFiles":"**/*.feature",
+    "baseUrl":"http://localhost:3000/signin",
+    "db":{
+       "user":"postgres",
+       "password":"Ibs@oct2022",
+       "host":"localhost",
+       "database":"postgres",
+       "port":"5433"
+    }
+ }

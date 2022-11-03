@@ -56,7 +56,16 @@ class SignupPage {
         })
 
         //code to check in DB whether account is created or not
-    
+        cy.task("READFROMDB",
+        {
+            dbConfig: Cypress.config('db'),
+            sql:'SELECT * FROM mystays.users'
+        }).then((result)=>
+        {
+            console.log(result.rows)
+            //add code to verify the entry in db
+        })
+
     }
 
     //validation when invalid values are entered
