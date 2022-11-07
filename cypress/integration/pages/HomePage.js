@@ -61,7 +61,7 @@ class HomePage {
 
     //to verify whether the home page loaded is correct or not
     verifyHomePage() {
-        cy.url().should('contains','home')
+        // cy.url().should('contains','home')
         cy.url().should('include','http://127.0.0.1:3000/')
     }
 

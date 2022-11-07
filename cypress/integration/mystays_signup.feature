@@ -11,8 +11,8 @@ Scenario Outline: As a new user, I can create an account in myStays.com applicat
     And I am on Sign In page
 
     Examples:
-    |Emailaddress      | Firstname| Lastname |Password | Phonenumber   |
-    |testuser@gmail.com|Test      | User     |test@123 | +919567911083  |
+    |Emailaddress   | Firstname         | Lastname         |Password | Phonenumber   |
+    |test@gmail.com |TestFirstName      | TestLastName     |test@123 | +919567911083  |
 
 @Signup
 Scenario Outline: Verify the validation in Email address/ Phone number field when invalid values are entered

@@ -1,6 +1,7 @@
 {
   "username":"test@gmail.com",
   "password":"test",
+  "UserFirstName":"TestFirstName",
   "bookingDetails":{
      "destination":"Paris",
      "startDate":"Dec 01, 2022",

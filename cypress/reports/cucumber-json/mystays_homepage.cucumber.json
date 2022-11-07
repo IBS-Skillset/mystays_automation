@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 431000000
+              "duration": 478000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 734000000
+              "duration": 689000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 340000000
+              "duration": 1066000000
             }
           },
           {
@@ -57,68 +57,68 @@
             "line": 10,
             "name": "I am on Home Page",
             "result": {
-              "status": "failed",
-              "duration": 30265000000,
-              "error_message": "AssertionError: Timed out retrying after 30000ms: expected 'http://127.0.0.1:3000/signin' to include 'http://localhost:3000/'\n\nThe command was expected to run against origin `http://localhost:3000` but the application is at origin `http://127.0.0.1:3000`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n    at HomePage.verifyHomePage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:392:16)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:42:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:15563:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:14884:35)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 1379000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I verify the destination field in Home page",
+            "result": {
+              "status": "passed",
+              "duration": 141000000
+            }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 12,
-            "name": "I verify the destination field in Home page",
+            "name": "I verify the Calendar displayed in Home page",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 47000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I verify the Calendar displayed in Home page",
+            "name": "I verify the Search button displayed",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 144000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 14,
-            "name": "I verify the Search button displayed",
+            "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 191000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 15,
-            "name": "I verify the validation when clicked on Search button without entering Location",
+            "name": "I verify the username displayed on top right",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 26000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
-            "name": "I verify the username displayed on top right",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 46000000
             }
           }
         ]
@@ -126,12 +126,12 @@
       {
         "id": "home-page;verify-the-option-to-change-language-in-home-page",
         "keyword": "Scenario",
-        "line": 20,
+        "line": 19,
         "name": "Verify the option to change language in Home Page",
         "tags": [
           {
             "name": "@HomePage",
-            "line": 19
+            "line": 18
           }
         ],
         "type": "scenario",
@@ -139,91 +139,91 @@
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 21,
+            "line": 20,
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 338000000
+              "duration": 422000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 22,
+            "line": 21,
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 737000000
+              "duration": 731000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 23,
+            "line": 22,
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 360000000
+              "duration": 1034000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 24,
+            "line": 23,
             "name": "I am on Home Page",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 30000ms: expected 'http://127.0.0.1:3000/signin' to include 'http://localhost:3000/'\n\nThe command was expected to run against origin `http://localhost:3000` but the application is at origin `http://127.0.0.1:3000`.\n\nThis commonly happens when you have either not navigated to the expected origin or have navigated away unexpectedly.\n    at HomePage.verifyHomePage (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:392:16)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:42:12)\n    at Context.resolveAndRunStepDefinition (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:15563:29)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/mystays_homepage.feature:14884:35)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 1008000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I verify the language selection displayed on top",
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 25,
-            "name": "I verify the language selection displayed on top",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 26,
             "name": "I select Français language",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 439000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
+            "line": 26,
             "name": "I verify the home page is displayed in Français",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 26000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 28,
+            "line": 27,
             "name": "I select English language",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 161000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 29,
+            "line": 28,
             "name": "I verify the home page is displayed in English",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 50000000
             }
           }
         ]
