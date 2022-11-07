@@ -3,7 +3,7 @@ class Common {
 
     elements = {
         languageSelectButton: () => cy.get('.inpt-language'),
-        usernameIcon: () => cy.get('.text-white'),
+        usernameIcon: () => cy.get('p.text-white'),
 
         staysIcon: () => cy.get('.pl-2'),
         locationField: () => cy.get('input[placeholder*="Cherche"]'),
@@ -18,22 +18,30 @@ class Common {
     }
 
     verifyBrandBanner() {
-        this.getBrandBanner().should('be.visible').and('have.text', 'myStays.com')
+        this.getBrandBanner()
+            .should('be.visible')
+            .and('have.text', 'myStays.com')
     }
 
     verifyFooterPresent() {
-        this.getPageFooter().should('be.visible').and('have.text', 'Copyright © 2022. All rights reserved.myStays.com')
+        this.getPageFooter()
+            .should('be.visible')
+            .and('have.text', 'Copyright © 2022. All rights reserved.myStays.com')
     }
 
     verifyLanguageSelectionField() { //to get the English/French language button displayed
-        this.elements.languageSelectButton().should('be.visible').and('be.enabled')
+        this.elements.languageSelectButton()
+            .should('be.visible')
+            .and('be.enabled')
     }
 
     selectFrenchLanguage() {
-        this.elements.languageSelectButton().select('Français')
+        this.elements.languageSelectButton()
+            .select('Français')
     }
     selectEnglishLanguage() {
-        this.elements.languageSelectButton().select('English')
+        this.elements.languageSelectButton()
+            .select('English')
     }
 
     verifyFrenchHomePage() {
@@ -77,6 +85,17 @@ class Common {
             txt.push(e)
         })
         cy.log(txt)
+    }
+
+    //to verify the first name displayed in Home page
+    verifyUsername(){
+        cy.fixture('testDataFile').then((user) => {
+            this.user = user
+        this.elements.usernameIcon()
+            .should('be.visible')
+            .should('have.text',user.UserFirstName)
+        })
+
     }
 }
 export default Common

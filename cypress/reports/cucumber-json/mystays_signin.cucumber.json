@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 7335000000
+              "duration": 5546000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 2820000000
+              "duration": 4081000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 3369000000
+              "duration": 2433000000
             }
           },
           {
@@ -58,7 +58,222 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 316000000
+              "duration": 2018000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;as-user,-verify-mystays.com-login-using-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "As User, verify myStays.com login using invalid credentials",
+        "tags": [
+          {
+            "name": "@SignIn",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 1356000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I enter username \"invalidusername\" and password \"test@123!@#\"",
+            "result": {
+              "status": "passed",
+              "duration": 1219000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click on Sign In button and verify \"Please include an '@' in the email address. 'invalidusername' is missing an '@'.\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 433000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;as-user,-verify-mystays.com-login-using-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "As User, verify myStays.com login using invalid credentials",
+        "tags": [
+          {
+            "name": "@SignIn",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 1124000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I enter username \"invalidusername@\" and password \"test@123!@#\"",
+            "result": {
+              "status": "passed",
+              "duration": 975000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click on Sign In button and verify \"Please enter a part following '@'. 'invalidusername@' is incomplete.\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 265000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;as-user,-verify-mystays.com-login-using-empty-username-and-valid-password",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "As User, verify myStays.com login using empty username and valid password",
+        "tags": [
+          {
+            "name": "@SignIn",
+            "line": 22
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 435000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I enter password \"test@123!@#\"",
+            "result": {
+              "status": "passed",
+              "duration": 605000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 302000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;as-user,-verify-mystays.com-login-using-valid-username-and-empty-password",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "As User, verify myStays.com login using valid username and empty password",
+        "tags": [
+          {
+            "name": "@SignIn",
+            "line": 32
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 345000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I enter password \"<Password>\"",
+            "result": {
+              "status": "passed",
+              "duration": 618000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 157000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;as-user,-verify-mystays.com-login-using-empty-username-and-empty-password",
+        "keyword": "Scenario",
+        "line": 49,
+        "name": "As User, verify myStays.com login using empty username and empty password",
+        "tags": [
+          {
+            "name": "@SignIn",
+            "line": 42
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 44,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 391000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
+            "result": {
+              "status": "passed",
+              "duration": 372000000
             }
           }
         ]

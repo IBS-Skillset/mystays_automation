@@ -45,7 +45,7 @@ class SignInPage {
     clickSigninButtonAndVerifyMessage(message) {
         this.elements.signinButton().should('be.visible').and('be.enabled')
         this.elements.signinButton().click();
-        cy.get('input:invalid').should('have.length', 1)
+        // cy.get('input:invalid').should('have.length', 1)
         cy.get('#username').then(($input) => {
             expect($input[0].validationMessage).to.eq(message)
         })

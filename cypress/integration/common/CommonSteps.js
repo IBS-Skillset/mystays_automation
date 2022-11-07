@@ -36,6 +36,7 @@ Then('I am on Home Page', () => {
     homePage.verifyHomePage() // home page launched validation
     common.verifyBrandBanner()
     common.verifyFooterPresent()
+    common.verifyUsername()
     cy.log("Successfully logged into application")
 })
 And('I verify the username displayed on top right', () => {

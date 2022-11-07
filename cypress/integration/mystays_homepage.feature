@@ -8,7 +8,6 @@ Scenario: Verify the fields displayed in home page
     When I enter username and password 
     And I click on Sign In button
     Then I am on Home Page
-    # Then I enter location as 'PARIS' and click on Search button
     And I verify the destination field in Home page
     And I verify the Calendar displayed in Home page
     And I verify the Search button displayed
