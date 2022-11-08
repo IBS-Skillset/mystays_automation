@@ -11,7 +11,7 @@ Scenario Outline: As User, I can search Hotel in specified location
     Then I verify the hotel search results displayed
 
     Examples:
-      | Destination |
+      | Destination  |
       | London       |
 
 @HotelSearch
@@ -66,6 +66,21 @@ Scenario Outline: As User, I can search Hotel with less than 10 results
     Examples:
       | Destination |
       | Kochi       |
+      
+@HotelSearch
+Scenario Outline: As User, I can search Hotel for 3 nights
+    Given I can access to myStays.com
+    When I enter username and password 
+    And I click on Sign In button
+    Then I am on Home Page
+    And I enter location as "<Destination>"
+    And I search for 3 nights
+    And I click on search button
+    Then I see the text 3 night on search results page
+
+    Examples:
+      | Destination |
+      | Kochi, Kerala|
 
 # @HotelSearch
 # Scenario Outline: As User, I can search search hotel with specific name

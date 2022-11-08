@@ -29,3 +29,9 @@ Then('I verify less than 10 hotel results are displayed',()=>{
 Then('I click on See Avaialbility button',()=>{
     searchResults.clickOnSeeAvaialabilityButton()
 })
+And('I search for 3 nights', () => {
+    homePage.selectDate()
+})
+Then('I see the text 3 night on search results page',()=>{
+    searchResults.displayNoOfNights()
+})

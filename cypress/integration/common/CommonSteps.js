@@ -58,3 +58,7 @@ When('I search a hotel in {string}', (location) => {
 And('I click on search button', () => {
     homePage.clickSearchButton()
 })
+And('I enter location as {string}', (location) => {
+    searchResults.verifyLocationField()
+    homePage.typeAndSelectLocation(location)
+})

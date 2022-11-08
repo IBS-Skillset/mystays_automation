@@ -1,3 +1,4 @@
+
 require('cypress-plugin-tab');
 class HomePage {
     //includes the elements and methods in myStays.com Home Page
@@ -58,6 +59,38 @@ class HomePage {
         cy.get('.rdrDayNumber').eq(4).click()
         cy.get('.rdrDayNumber').eq(5).click()
     }
+
+    selectDate(){
+        this.elements.dateInputField()
+        .should('be.visible')
+        .and('be.enabled') 
+        this.elements.dateInputField()
+            .click()
+        this.elements.openCalendar()
+            .should('be.visible')
+            cy.get('.rdrNextButton > i').click().click()
+            cy.get('.rdrDayStartOfMonth > .rdrDayNumber').click()
+            cy.get(':nth-child(2) > input').click()
+            cy.wait(1000)
+            cy.get('.rdrDayNumber').eq(3).click()
+
+        //cy.get('.rdrDayToday > .rdrDayNumber > span').click()
+
+        
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
 
     selectLanguage(language) {
         this.elements.languageSelectButton()
