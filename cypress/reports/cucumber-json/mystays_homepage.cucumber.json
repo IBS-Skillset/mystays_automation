@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 478000000
+              "duration": 5138000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 689000000
+              "duration": 5318000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 1066000000
+              "duration": 2479000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 1379000000
+              "duration": 2448000000
             }
           },
           {
@@ -68,7 +68,7 @@
             "name": "I verify the destination field in Home page",
             "result": {
               "status": "passed",
-              "duration": 141000000
+              "duration": 100000000
             }
           },
           {
@@ -78,7 +78,7 @@
             "name": "I verify the Calendar displayed in Home page",
             "result": {
               "status": "passed",
-              "duration": 47000000
+              "duration": 129000000
             }
           },
           {
@@ -88,7 +88,7 @@
             "name": "I verify the Search button displayed",
             "result": {
               "status": "passed",
-              "duration": 144000000
+              "duration": 161000000
             }
           },
           {
@@ -98,7 +98,7 @@
             "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
               "status": "passed",
-              "duration": 191000000
+              "duration": 494000000
             }
           },
           {
@@ -108,7 +108,7 @@
             "name": "I verify the username displayed on top right",
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 82000000
             }
           },
           {
@@ -118,7 +118,7 @@
             "name": "I verify the language selection displayed on top",
             "result": {
               "status": "passed",
-              "duration": 46000000
+              "duration": 128000000
             }
           }
         ]
@@ -143,7 +143,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 422000000
+              "duration": 883000000
             }
           },
           {
@@ -153,7 +153,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 731000000
+              "duration": 831000000
             }
           },
           {
@@ -163,7 +163,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 1034000000
+              "duration": 1181000000
             }
           },
           {
@@ -173,7 +173,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 1008000000
+              "duration": 1034000000
             }
           },
           {
@@ -183,7 +183,7 @@
             "name": "I verify the language selection displayed on top",
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 29000000
             }
           },
           {
@@ -193,7 +193,7 @@
             "name": "I select Français language",
             "result": {
               "status": "passed",
-              "duration": 439000000
+              "duration": 184000000
             }
           },
           {
@@ -203,7 +203,7 @@
             "name": "I verify the home page is displayed in Français",
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 30000000
             }
           },
           {
@@ -213,7 +213,7 @@
             "name": "I select English language",
             "result": {
               "status": "passed",
-              "duration": 161000000
+              "duration": 257000000
             }
           },
           {
@@ -223,7 +223,7 @@
             "name": "I verify the home page is displayed in English",
             "result": {
               "status": "passed",
-              "duration": 50000000
+              "duration": 29000000
             }
           }
         ]

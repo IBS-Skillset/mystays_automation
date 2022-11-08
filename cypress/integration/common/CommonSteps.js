@@ -1,4 +1,4 @@
-import { Given,When, Them, And, Then } from "cypress-cucumber-preprocessor/steps"
+import { Given, When, Them, And, Then, Before, beforeEach, After} from "cypress-cucumber-preprocessor/steps"
 import Common from "../pages/Common.js";
 import SignInPage from "../pages/SigninPage.js";
 import HomePage from "../pages/HomePage.js";
@@ -9,10 +9,13 @@ const common = new Common();
 const homePage = new HomePage();
 const searchResults = new SearchResultsPage();
 
-Given('I can access to myStays.com', () => {
-    cy.visit("/")
+After(()=>{ // runs once all tests are done
     common.verifyBrandBanner()
     common.verifyFooterPresent()
+})
+
+Given('I can access to myStays.com', () => {
+    cy.visit("/")
 })
 
 When('I enter username and password', () => {
@@ -34,8 +37,6 @@ And('I click on Sign In button', () => {
 
 Then('I am on Home Page', () => {
     homePage.verifyHomePage() // home page launched validation
-    common.verifyBrandBanner()
-    common.verifyFooterPresent()
     common.verifyUsername()
     cy.log("Successfully logged into application")
 })
@@ -45,10 +46,8 @@ And('I verify the username displayed on top right', () => {
 And('I enter location as {string} and click on Search button', (location) => {
     searchResults.verifyLocationField()
     homePage.typeAndSelectLocation(location)
-    cy.wait(5000)
     homePage.selectFromAndToDate()
     homePage.clickSearchButton()
-    cy.wait(25000)
 })
 When('I search a hotel in {string}', (location) => {
     searchResults.verifyLocationField()

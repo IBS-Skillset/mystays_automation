@@ -55,17 +55,26 @@ class SignupPage {
             expect(t).to.contains(successMessage)
         })
 
-        //code to check in DB whether account is created or not
+        //code to check in DB after account creation
         cy.task("READFROMDB",
         {
             dbConfig: Cypress.config('db'),
-            sql:'SELECT * FROM mystays.users'
+            sql:"SELECT * FROM mystays.users where email IN ('test@gmail.com')"
         }).then((result)=>
         {
-            console.log(result.rows)
-            //add code to verify the entry in db
+            console.log(result)
+            cy.log(result)
+            // expect(result.rows[0].email).to.have.string("test@gmail.com");            
         })
 
+        // cy.task('READFROMDB',
+        // {
+        //     dbConfig: Cypress.config('db'),
+        //     sql:'SELECT COUNT(*) as "rowCount" FROM mystays.users WHERE email like 'test@gmail.com''
+        // }).then((result)=>
+        // {
+        //     console.log(result)
+        // })
     }
 
     //validation when invalid values are entered
