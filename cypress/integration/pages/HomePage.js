@@ -24,18 +24,27 @@ class HomePage {
 
     //type and search for a particular location in Home page
     typeAndSelectLocation(location) {
-        this.elements.destinationField().should('be.visible').and('be.enabled')
-        this.elements.destinationField().type(location)
+        this.elements.destinationField()
+            .should('be.visible')
+            .and('be.enabled')
+        this.elements.destinationField()
+            .type(location)
         cy.wait(10000)
-        this.elements.firstLocation().click()
+        this.elements.firstLocation()
+            .click()
+        cy.wait(5000)
     }
 
     //select date from react date picker
     selectFromAndToDate() {
-        this.elements.dateInputField().should('be.visible').and('be.enabled')
+        this.elements.dateInputField()
+            .should('be.visible')
+            .and('be.enabled')
         // this.elements.calendarIcon().should('be.visible').and('be.enabled')//is not enabled
-        this.elements.dateInputField().click()
-        this.elements.openCalendar().should('be.visible')
+        this.elements.dateInputField()
+            .click()
+        this.elements.openCalendar()
+            .should('be.visible')
 
         // cy.get('.rdrDateDisplayItemActive > input')
         // .clear()
@@ -51,12 +60,17 @@ class HomePage {
     }
 
     selectLanguage(language) {
-        this.elements.languageSelectButton().should('be.visible').and('be.enabled')
+        this.elements.languageSelectButton()
+            .should('be.visible')
+            .and('be.enabled')
     }
 
     clickSearchButton() {
-        this.elements.searchButton().should('be.visible').and('be.enabled')
-        this.elements.searchButton().click()
+        this.elements.searchButton()
+            .should('be.visible')
+            .and('be.enabled')
+            .click()
+        cy.wait(25000)
     }
 
     //to verify whether the home page loaded is correct or not
@@ -67,14 +81,19 @@ class HomePage {
 
     //verifying the elements displayed in Home Page
     verifyDestinationField() {
-        this.elements.destinationField().should('be.visible').and('be.enabled')
+        this.elements.destinationField()
+            .should('be.visible')
+            .and('be.enabled')
     }
     verifyCalenderField() {
-        this.elements.calendarIcon().should('be.visible')
+        this.elements.calendarIcon()
+            .should('be.visible')
 
     }
     verifySearchButton() {
-        this.elements.searchButton().should('be.visible').and('be.enabled')
+        this.elements.searchButton()
+            .should('be.visible')
+            .and('be.enabled')
 
     }
     getValidationMessageforNoLocation(errorMessageForNoLocation) {

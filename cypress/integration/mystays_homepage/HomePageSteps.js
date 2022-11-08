@@ -1,4 +1,4 @@
-import { Given,When, Them, And, Then } from "cypress-cucumber-preprocessor/steps"
+import { Given, When, Them, And, Then, Before, After} from "cypress-cucumber-preprocessor/steps"
 import Common from "../pages/Common.js";
 import SignInPage from "../pages/SigninPage.js";
 import HomePage from "../pages/HomePage.js";
@@ -6,6 +6,11 @@ import HomePage from "../pages/HomePage.js";
 const signinPage = new SignInPage()
 const common = new Common();
 const homePage = new HomePage();
+
+After(()=>{ // runs once all tests are done
+    common.verifyBrandBanner()
+    common.verifyFooterPresent()
+})
 
 And('I verify the destination field in Home page', () => {
     homePage.verifyDestinationField()

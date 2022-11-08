@@ -23,28 +23,40 @@ class SignInPage {
     typeFixturesUsername() {
         cy.fixture('testDataFile').then((user) => {
             this.user = user
-            this.elements.usernameField().should('be.visible').and('be.enabled')
-            this.elements.usernameField().type(user.username)
+            this.elements.usernameField()
+                .should('be.visible')
+                .and('be.enabled')
+            this.elements.usernameField()
+                .type(user.username)
         })
     }
 
     typeFixturesPassword() {
         cy.fixture('testDataFile').then((user) => {
             this.user = user
-            this.elements.passwordField().should('be.visible').and('be.enabled')
-            this.elements.passwordField().type(user.password)
+            this.elements.passwordField()
+                .should('be.visible')
+                .and('be.enabled')
+            this.elements.passwordField()
+                .type(user.password)
         })
     }
 
     clickSigninButton() {
-        this.elements.signinButton().should('be.visible').and('be.enabled')
-        this.elements.signinButton().click();
+        this.elements.signinButton()
+            .should('be.visible')
+            .and('be.enabled')
+        this.elements.signinButton()
+            .click();
     }
 
     //validation of login using invalid credentials
     clickSigninButtonAndVerifyMessage(message) {
-        this.elements.signinButton().should('be.visible').and('be.enabled')
-        this.elements.signinButton().click();
+        this.elements.signinButton()
+            .should('be.visible')
+            .and('be.enabled')
+        this.elements.signinButton()
+            .click();
         // cy.get('input:invalid').should('have.length', 1)
         cy.get('#username').then(($input) => {
             expect($input[0].validationMessage).to.eq(message)
