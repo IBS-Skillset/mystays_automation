@@ -74,5 +74,12 @@ class SearchResultsPage {
             .and('be.enabled')
             .click()
     }
+
+    displayNoOfNights(){
+        //cy.get(':nth-child(1) > .col-span-2 > .text-sm')
+        cy.get(':nth-child(1) > .col-span-2 > .text-sm').should('have.text', '3 night')
+        
+    }
+
 }
 export default SearchResultsPage
