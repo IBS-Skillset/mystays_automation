@@ -1,6 +1,6 @@
 {
-  "username":"test@gmail.com",
-  "password":"test",
+  "username":"qauser@gmail.com",
+  "password":"TEST",
   "UserFirstName":"TestFirstName",
   "bookingDetails":{
      "destination":"Paris",

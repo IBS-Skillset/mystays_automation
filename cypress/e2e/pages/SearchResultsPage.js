@@ -66,6 +66,7 @@ class SearchResultsPage {
     clickOnSeeAvaialabilityButton(){
         this.elements.seeAvaialabilityButtonOne()
             .click()
+        cy.wait(5000)
     }
 
     clickOnShowMoreButton(){
