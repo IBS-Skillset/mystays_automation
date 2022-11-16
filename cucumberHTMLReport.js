@@ -19,6 +19,7 @@ report.generate({
         data: [
             {label: 'Project', value: 'myStays.com Application'},
             {label: 'Release Version', value: 'test'},
+            {label: 'Cypress Version', value: '11.0.1'},
             {label: 'Execution  Time', value: Date()},
         ]
     }

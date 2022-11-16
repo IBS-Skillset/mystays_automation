@@ -25,7 +25,7 @@ Scenario Outline: As User, I can search Hotel  and verify the number of hotels d
 
     Examples:
       | Destination |
-      | Paris       |
+      | Paris, France       |
 
 @HotelSearch
 Scenario Outline: As User, I can search Hotel and verify the see availability option
@@ -39,7 +39,7 @@ Scenario Outline: As User, I can search Hotel and verify the see availability op
 
     Examples:
       | Destination |
-      | Paris       |
+      | Paris, France       |
 
 @HotelSearch
 Scenario Outline: As User, I can search Hotel with more than 10 results
@@ -52,7 +52,7 @@ Scenario Outline: As User, I can search Hotel with more than 10 results
 
     Examples:
       | Destination |
-      | Paris       |
+      | Paris, France       |
 
 @HotelSearch
 Scenario Outline: As User, I can search Hotel with less than 10 results
@@ -64,8 +64,8 @@ Scenario Outline: As User, I can search Hotel with less than 10 results
     Then I verify less than 10 hotel results are displayed
 
     Examples:
-      | Destination |
-      | Kochi       |
+      | Destination    |
+      | Kochi, Kerala  |
       
 @HotelSearch
 Scenario Outline: As User, I can search Hotel for 3 nights
@@ -79,8 +79,8 @@ Scenario Outline: As User, I can search Hotel for 3 nights
     Then I see the text 3 night on search results page
 
     Examples:
-      | Destination |
-      | Kochi, Kerala|
+      | Destination   |
+      | Kochi, Kerala | 
 
 # @HotelSearch
 # Scenario Outline: As User, I can search search hotel with specific name
