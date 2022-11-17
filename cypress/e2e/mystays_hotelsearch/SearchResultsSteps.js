@@ -3,11 +3,13 @@ import Common from "../pages/Common.js";
 import SignInPage from "../pages/SigninPage.js";
 import HomePage from "../pages/HomePage.js";
 import SearchResultsPage from "../pages/SearchResultsPage.js";
+import RoomDetailsPage from "../pages/RoomDetailsPage.js";
 
 const signinPage = new SignInPage()
 const common = new Common();
 const homePage = new HomePage();
 const searchResults = new SearchResultsPage();
+const rommDetails = new RoomDetailsPage();
 
 After(()=>{ // runs once all tests are done
     common.verifyBrandBanner()
@@ -28,6 +30,9 @@ Then('I verify less than 10 hotel results are displayed',()=>{
 })
 Then('I click on See Avaialbility button',()=>{
     searchResults.clickOnSeeAvaialabilityButton()
+})
+And('I verify the room details displayed',()=>{
+    rommDetails.verifyRoomType()
 })
 And('I search for 3 nights', () => {
     homePage.selectDate()

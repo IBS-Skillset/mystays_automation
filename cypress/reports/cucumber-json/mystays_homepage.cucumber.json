@@ -27,8 +27,7 @@
             "line": 7,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 168000000
+              "status": "skipped"
             }
           },
           {
@@ -37,8 +36,7 @@
             "line": 8,
             "name": "I enter username and password",
             "result": {
-              "status": "passed",
-              "duration": 635000000
+              "status": "skipped"
             }
           },
           {
@@ -47,8 +45,7 @@
             "line": 9,
             "name": "I click on Sign In button",
             "result": {
-              "status": "passed",
-              "duration": 366000000
+              "status": "skipped"
             }
           },
           {
@@ -57,8 +54,7 @@
             "line": 10,
             "name": "I am on Home Page",
             "result": {
-              "status": "passed",
-              "duration": 282000000
+              "status": "skipped"
             }
           },
           {
@@ -67,8 +63,7 @@
             "line": 11,
             "name": "I verify the destination field in Home page",
             "result": {
-              "status": "passed",
-              "duration": 7000000
+              "status": "skipped"
             }
           },
           {
@@ -77,8 +72,7 @@
             "line": 12,
             "name": "I verify the Calendar displayed in Home page",
             "result": {
-              "status": "passed",
-              "duration": 4000000
+              "status": "skipped"
             }
           },
           {
@@ -87,8 +81,7 @@
             "line": 13,
             "name": "I verify the Search button displayed",
             "result": {
-              "status": "passed",
-              "duration": 8000000
+              "status": "skipped"
             }
           },
           {
@@ -97,8 +90,7 @@
             "line": 14,
             "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
-              "status": "passed",
-              "duration": 25134000000
+              "status": "skipped"
             }
           },
           {
@@ -107,8 +99,7 @@
             "line": 15,
             "name": "I verify the username displayed on top right",
             "result": {
-              "status": "passed",
-              "duration": 11000000
+              "status": "skipped"
             }
           },
           {
@@ -117,8 +108,7 @@
             "line": 16,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "passed",
-              "duration": 12000000
+              "status": "skipped"
             }
           }
         ]
@@ -142,8 +132,7 @@
             "line": 20,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 250000000
+              "status": "skipped"
             }
           },
           {
@@ -152,8 +141,7 @@
             "line": 21,
             "name": "I enter username and password",
             "result": {
-              "status": "passed",
-              "duration": 640000000
+              "status": "skipped"
             }
           },
           {
@@ -162,8 +150,7 @@
             "line": 22,
             "name": "I click on Sign In button",
             "result": {
-              "status": "passed",
-              "duration": 326000000
+              "status": "skipped"
             }
           },
           {
@@ -172,8 +159,7 @@
             "line": 23,
             "name": "I am on Home Page",
             "result": {
-              "status": "passed",
-              "duration": 278000000
+              "status": "skipped"
             }
           },
           {
@@ -182,8 +168,7 @@
             "line": 24,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "passed",
-              "duration": 6000000
+              "status": "skipped"
             }
           },
           {
@@ -192,8 +177,7 @@
             "line": 25,
             "name": "I select Français language",
             "result": {
-              "status": "passed",
-              "duration": 151000000
+              "status": "skipped"
             }
           },
           {
@@ -202,8 +186,7 @@
             "line": 26,
             "name": "I verify the home page is displayed in Français",
             "result": {
-              "status": "passed",
-              "duration": 11000000
+              "status": "skipped"
             }
           },
           {
@@ -212,8 +195,7 @@
             "line": 27,
             "name": "I select English language",
             "result": {
-              "status": "passed",
-              "duration": 153000000
+              "status": "skipped"
             }
           },
           {
@@ -222,8 +204,7 @@
             "line": 28,
             "name": "I verify the home page is displayed in English",
             "result": {
-              "status": "passed",
-              "duration": 14000000
+              "status": "skipped"
             }
           }
         ]
