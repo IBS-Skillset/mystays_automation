@@ -4,11 +4,11 @@ class HomePage {
     //includes the elements and methods in myStays.com Home Page
 
     elements = {
-        languageSelectButton: () => cy.get('.inpt-language'),
+        languageSelectButton: () => cy.get('.input-language'),
 
-        destinationField: () => cy.get('.flex > .w-full'),
+        destinationField: () => cy.get('.input').eq(0),
         // firstLocation:()=>cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ'), //select only Paris
-        firstLocation: () => cy.get('div[class="location-items"]').eq(0), //any location
+        firstLocation: () => cy.get('.absolute').eq(0), //any location
         searchButton: () => cy.get('.search-button'),
         errorMessageForNoLocation: () => cy.get('.errorMsg'),
 

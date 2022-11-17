@@ -5,8 +5,8 @@ class SignInPage {
     elements = {
         usernameField: () => cy.get('#username'),
         passwordField: () => cy.get(':nth-child(2) > .input-box'),
-        signinButton: () => cy.get('.btn-submit'),
-        createOneButton: () => cy.get('.text-blue-800')
+        signinButton: () => cy.get('.btn-continue'),
+        createOneButton: () => cy.get('.p-4 > .text-white')
     }
 
     // commented for fixtures implementation
