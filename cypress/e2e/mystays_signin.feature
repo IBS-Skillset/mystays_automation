@@ -8,7 +8,7 @@ Scenario: As User, I can login into myStays.com application using valid credenti
     And I click on Sign In button
     Then I am on Home Page
 
-@SignIn
+@SignIn 
 Scenario Outline: As User, verify myStays.com login using invalid credentials
     Given I can access to myStays.com
     When I enter username "<Username>" and password "<Password>" 

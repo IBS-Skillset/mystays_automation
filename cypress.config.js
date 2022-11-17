@@ -17,6 +17,7 @@ module.exports = defineConfig({
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
       return require('./cypress/plugins/index.js')(on, config);
+      return require('@cypress/grep/src/plugin')(config);
     },
     "experimentalSessionAndOrigin": true,
     "specPattern": "cypress/e2e/**/*.feature",

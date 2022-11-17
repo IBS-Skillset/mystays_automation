@@ -27,8 +27,7 @@
             "line": 6,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 628000000
+              "status": "skipped"
             }
           },
           {
@@ -37,8 +36,7 @@
             "line": 7,
             "name": "I enter username and password",
             "result": {
-              "status": "passed",
-              "duration": 675000000
+              "status": "skipped"
             }
           },
           {
@@ -47,8 +45,7 @@
             "line": 8,
             "name": "I click on Sign In button",
             "result": {
-              "status": "passed",
-              "duration": 637000000
+              "status": "skipped"
             }
           },
           {
@@ -57,8 +54,7 @@
             "line": 9,
             "name": "I am on Home Page",
             "result": {
-              "status": "passed",
-              "duration": 318000000
+              "status": "skipped"
             }
           }
         ]
@@ -82,8 +78,7 @@
             "line": 13,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 138000000
+              "status": "skipped"
             }
           },
           {
@@ -92,8 +87,7 @@
             "line": 14,
             "name": "I enter username \"invalidusername\" and password \"test@123!@#\"",
             "result": {
-              "status": "passed",
-              "duration": 724000000
+              "status": "skipped"
             }
           },
           {
@@ -102,8 +96,7 @@
             "line": 15,
             "name": "I click on Sign In button and verify \"Please include an '@' in the email address. 'invalidusername' is missing an '@'.\" is displayed",
             "result": {
-              "status": "passed",
-              "duration": 104000000
+              "status": "skipped"
             }
           }
         ]
@@ -127,8 +120,7 @@
             "line": 13,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 117000000
+              "status": "skipped"
             }
           },
           {
@@ -137,8 +129,7 @@
             "line": 14,
             "name": "I enter username \"invalidusername@\" and password \"test@123!@#\"",
             "result": {
-              "status": "passed",
-              "duration": 736000000
+              "status": "skipped"
             }
           },
           {
@@ -147,8 +138,7 @@
             "line": 15,
             "name": "I click on Sign In button and verify \"Please enter a part following '@'. 'invalidusername@' is incomplete.\" is displayed",
             "result": {
-              "status": "passed",
-              "duration": 96000000
+              "status": "skipped"
             }
           }
         ]
@@ -172,8 +162,7 @@
             "line": 24,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 120000000
+              "status": "skipped"
             }
           },
           {
@@ -182,8 +171,7 @@
             "line": 25,
             "name": "I enter password \"test@123!@#\"",
             "result": {
-              "status": "passed",
-              "duration": 335000000
+              "status": "skipped"
             }
           },
           {
@@ -192,8 +180,7 @@
             "line": 26,
             "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
             "result": {
-              "status": "passed",
-              "duration": 95000000
+              "status": "skipped"
             }
           }
         ]
@@ -217,8 +204,7 @@
             "line": 34,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 118000000
+              "status": "skipped"
             }
           },
           {
@@ -227,8 +213,7 @@
             "line": 35,
             "name": "I enter password \"<Password>\"",
             "result": {
-              "status": "passed",
-              "duration": 320000000
+              "status": "skipped"
             }
           },
           {
@@ -237,8 +222,7 @@
             "line": 36,
             "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
             "result": {
-              "status": "passed",
-              "duration": 94000000
+              "status": "skipped"
             }
           }
         ]
@@ -262,8 +246,7 @@
             "line": 44,
             "name": "I can access to myStays.com",
             "result": {
-              "status": "passed",
-              "duration": 123000000
+              "status": "skipped"
             }
           },
           {
@@ -272,8 +255,7 @@
             "line": 45,
             "name": "I click on Sign In button and verify \"Please fill in this field.\" is displayed",
             "result": {
-              "status": "passed",
-              "duration": 120000000
+              "status": "skipped"
             }
           }
         ]

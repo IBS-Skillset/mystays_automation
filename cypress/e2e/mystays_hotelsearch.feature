@@ -15,7 +15,7 @@ Scenario Outline: As User, I can search Hotel in specified location
       | London       |
 
 @HotelSearch
-Scenario Outline: As User, I can search Hotel  and verify the number of hotels displayed
+Scenario Outline: As User, I can search Hotel and verify the number of hotels displayed
     Given I can access to myStays.com
     When I enter username and password 
     And I click on Sign In button
@@ -25,9 +25,9 @@ Scenario Outline: As User, I can search Hotel  and verify the number of hotels d
 
     Examples:
       | Destination |
-      | Paris, France       |
+      | London      |
 
-@HotelSearch
+@HotelSearch @RoomDetails
 Scenario Outline: As User, I can search Hotel and verify the see availability option
     Given I can access to myStays.com
     When I enter username and password 
@@ -36,10 +36,11 @@ Scenario Outline: As User, I can search Hotel and verify the see availability op
     And I enter location as "<Destination>" and click on Search button
     Then I verify the hotel search results displayed
     Then I click on See Avaialbility button
+    And I verify the room details displayed
 
     Examples:
-      | Destination |
-      | Paris, France       |
+      | Destination     |
+      | Paris, France   |
 
 @HotelSearch
 Scenario Outline: As User, I can search Hotel with more than 10 results
@@ -68,7 +69,7 @@ Scenario Outline: As User, I can search Hotel with less than 10 results
       | Kochi, Kerala  |
       
 @HotelSearch
-Scenario Outline: As User, I can search Hotel for 3 nights
+Scenario Outline: As User, I can search Hotel for multiple nights
     Given I can access to myStays.com
     When I enter username and password 
     And I click on Sign In button

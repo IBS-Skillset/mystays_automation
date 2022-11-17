@@ -50,6 +50,7 @@ class SearchResultsPage {
     }
 
     getNumberOfHotels(location) {
+        //add step to fetch no.of hotels from DB
         //method to get number of hotels ("Paris: 5 properties found")
         cy.get('div[class="text-2xl md:text-3xl font-medium"]').then(($number) => {
             const txt = $number.text()
