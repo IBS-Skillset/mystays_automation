@@ -71,14 +71,11 @@ class SignInPage {
     }
 
     //verify mail id populated in username field
-    checkEmailIdInUsernameField() {
-        cy.fixture('testDataFile').then((user) => {
-            this.user = user
+    checkEmailIdInUsernameField(Emailaddress) {
             this.elements.usernameField()
                 .should('be.visible')
                 .and('be.enabled')
-                .should('have.value',user.username)
-        })
+                .should('have.value',Emailaddress)
     }
 
     verifySignPage(){

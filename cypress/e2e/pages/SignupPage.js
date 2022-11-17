@@ -6,7 +6,6 @@ class SignupPage {
         firstName: () => cy.get('#fname'),
         lastName: () => cy.get('#lname'),
         phoneNumber: () => cy.get('#phoneNumber'),
-        // phoneNumber:()=>cy.get('input[name="phoneNumber"]'),
         password: () => cy.get('#password'),
         continueButton: () => cy.get('.btn-continue'),
         signupSuccessMessage: () => cy.get('.message')
@@ -102,12 +101,17 @@ class SignupPage {
 
     //to get the validation message
     clickContinueButtonAndVerifyValMessage(message) {
-        this.elements.continueButton().should('be.visible').and('be.enabled')
-        this.elements.continueButton().click()
-        cy.get(':nth-child(2) > .label > .errorMsg').then(function(e) {
-            const t = e.text()
-            expect(t).to.contains(message)
-        })
+        this.elements.continueButton()
+            .should('be.visible')
+            .and('be.enabled')
+        this.elements.continueButton()
+            .click()
+            
+    //Implementation of Alert text verification
+        cy.on('window:alert',(t)=>{
+                //assertions
+                expect(t).to.contains(message);
+        })   
     }
 }
 export default SignupPage;

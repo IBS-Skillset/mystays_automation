@@ -31,9 +31,9 @@ Then('I verify the account is created successfully', () => {
     // common.verifyFooterPresent()
     signupPage.verifySuccessAccountCreation(successMessage)
 })
-And('I am on Sign In page', () => {
+And('I am on Sign In page with {string} in username field', (Emailaddress) => {
     signinPage.verifySignPage()
-    signinPage.checkEmailIdInUsernameField()
+    signinPage.checkEmailIdInUsernameField(Emailaddress)
 })
 And('I click on Continue button and verify {string} is displayed', (message) => {
     signupPage.clickContinueButtonAndVerifyValMessage(message)
