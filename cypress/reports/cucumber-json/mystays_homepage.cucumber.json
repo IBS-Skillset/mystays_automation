@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 180000000
+              "duration": 415000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 626000000
+              "duration": 609000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 349000000
+              "duration": 548000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 342000000
+              "duration": 552000000
             }
           },
           {
@@ -67,15 +67,9 @@
             "line": 11,
             "name": "I verify the destination field in Home page",
             "result": {
-              "status": "failed",
-              "duration": 30000000000,
-              "error_message": "AssertionError: Timed out retrying after 30000ms: expected '<div.input-field>' to be 'enabled'\n    at HomePage.verifyDestinationField (cypress/e2e/pages/HomePage.js:119:13)\n    at Context.eval (cypress/e2e/mystays_homepage/HomePageSteps.js:16:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 12000000
+            }
           },
           {
             "arguments": [],
@@ -83,7 +77,8 @@
             "line": 12,
             "name": "I verify the Calendar displayed in Home page",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 2000000
             }
           },
           {
@@ -92,7 +87,8 @@
             "line": 13,
             "name": "I verify the Search button displayed",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 8000000
             }
           },
           {
@@ -101,8 +97,15 @@
             "line": 14,
             "name": "I verify the validation when clicked on Search button without entering Location",
             "result": {
-              "status": "skipped"
-            }
+              "status": "failed",
+              "duration": 55159000000,
+              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.errorMsg`, but never found it.\n    at HomePage.getValidationMessageforNoLocation (cypress/e2e/pages/HomePage.js:110:11)\n    at Context.eval (cypress/e2e/mystays_homepage/HomePageSteps.js:27:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
           },
           {
             "arguments": [],
@@ -144,7 +147,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 257000000
+              "duration": 578000000
             }
           },
           {
@@ -154,7 +157,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 664000000
+              "duration": 635000000
             }
           },
           {
@@ -164,7 +167,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 331000000
+              "duration": 552000000
             }
           },
           {
@@ -174,7 +177,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 288000000
+              "duration": 579000000
             }
           },
           {
@@ -183,14 +186,9 @@
             "line": 24,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.inpt-language`, but never found it.\n    at Common.verifyLanguageSelectionField (cypress/e2e/pages/Common.js:34:13)\n    at Context.eval (cypress/e2e/mystays_homepage/HomePageSteps.js:30:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 9000000
+            }
           },
           {
             "arguments": [],
@@ -198,7 +196,8 @@
             "line": 25,
             "name": "I select Français language",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 153000000
             }
           },
           {
@@ -207,8 +206,14 @@
             "line": 26,
             "name": "I verify the home page is displayed in Français",
             "result": {
-              "status": "skipped"
-            }
+              "status": "failed",
+              "error_message": "AssertionError: expected 'Search' to include 'Cherche'\n    at Context.eval (cypress/e2e/pages/Common.js:60:25)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
           },
           {
             "arguments": [],

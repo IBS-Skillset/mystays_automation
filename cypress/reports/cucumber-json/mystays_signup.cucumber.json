@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 146000000
+              "duration": 475000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 201000000
+              "duration": 210000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I enter valid \"test@gmail.com\" and \"TestFirstName\" and \"TestLastName\" and \"+919567911083\" and \"test@123\"",
             "result": {
               "status": "passed",
-              "duration": 2279000000
+              "duration": 2300000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I click on Continue button",
             "result": {
               "status": "passed",
-              "duration": 170000000
+              "duration": 166000000
             }
           },
           {
@@ -68,17 +68,17 @@
             "name": "I verify the account is created successfully",
             "result": {
               "status": "passed",
-              "duration": 443000000
+              "duration": 62000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "I am on Sign In page",
+            "name": "I am on Sign In page with \"test@gmail.com\" in username field",
             "result": {
               "status": "passed",
-              "duration": 10146000000
+              "duration": 14000000
             }
           }
         ]
@@ -103,7 +103,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 186000000
+              "duration": 383000000
             }
           },
           {
@@ -113,7 +113,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 198000000
+              "duration": 209000000
             }
           },
           {
@@ -123,7 +123,7 @@
             "name": "I enter valid \"test\" and \"Test\" and \"User\" and \"+919567911083\" and \"test@123\"",
             "result": {
               "status": "passed",
-              "duration": 1894000000
+              "duration": 1940000000
             }
           },
           {
@@ -133,7 +133,7 @@
             "name": "I click on Continue button and verify \"Invalid email\" is displayed",
             "result": {
               "status": "passed",
-              "duration": 171000000
+              "duration": 175000000
             }
           }
         ]
@@ -158,7 +158,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 167000000
+              "duration": 409000000
             }
           },
           {
@@ -168,7 +168,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 204000000
+              "duration": 199000000
             }
           },
           {
@@ -178,7 +178,7 @@
             "name": "I enter valid \"Testuser@gmail.com\" and \"Test\" and \"User\" and \"9567\" and \"test@123\"",
             "result": {
               "status": "passed",
-              "duration": 2000000000
+              "duration": 1992000000
             }
           },
           {
@@ -187,14 +187,9 @@
             "line": 22,
             "name": "I click on Continue button and verify \"Please enter contact number with country code\" is displayed",
             "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `:nth-child(2) > .label > .errorMsg`, but never found it.\n    at SignupPage.clickContinueButtonAndVerifyValMessage (cypress/e2e/pages/SignupPage.js:107:11)\n    at Context.eval (cypress/e2e/mystays_signup/SignupSteps.js:39:15)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
+              "status": "passed",
+              "duration": 166000000
+            }
           }
         ]
       },
@@ -218,7 +213,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 279000000
+              "duration": 388000000
             }
           },
           {
@@ -228,7 +223,7 @@
             "name": "I click on Create account button in Sign In page",
             "result": {
               "status": "passed",
-              "duration": 201000000
+              "duration": 205000000
             }
           },
           {
@@ -238,7 +233,7 @@
             "name": "I click on Continue button and verify the message displayed",
             "result": {
               "status": "passed",
-              "duration": 100000000
+              "duration": 104000000
             }
           }
         ]

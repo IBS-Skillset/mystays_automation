@@ -8,7 +8,7 @@ Scenario Outline: As a new user, I can create an account in myStays.com applicat
     And I enter valid "<Emailaddress>" and "<Firstname>" and "<Lastname>" and "<Phonenumber>" and "<Password>"
     And I click on Continue button
     Then I verify the account is created successfully
-    And I am on Sign In page
+    And I am on Sign In page with "<Emailaddress>" in username field
 
     Examples:
     |Emailaddress   | Firstname         | Lastname         |Password | Phonenumber   |
