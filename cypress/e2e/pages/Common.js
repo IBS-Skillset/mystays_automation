@@ -2,12 +2,12 @@ class Common {
     //includes the common elements and common methods in myStays.com application
 
     elements = {
-        languageSelectButton: () => cy.get('.inpt-language'),
+        languageSelectButton: () => cy.get('.input-language') ,
         usernameIcon: () => cy.get('p.text-white'),
 
         staysIcon: () => cy.get('.pl-2'),
         locationField: () => cy.get('input[placeholder*="Cherche"]'),
-        searchButton: () => cy.get('.search-button'),
+        searchButton: () => cy.get('.btn-search'),
     }
     getBrandBanner() { //to get the myStays.com banner displayed on page
         return cy.get('.brand-banner')

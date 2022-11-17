@@ -2,7 +2,7 @@ class SearchResultsPage {
     //includes the elements and methods in myStays.com Search Results Page    
     elements = {
         numberOfProperties: () => cy.get('.text-2xl'),
-        locationField: () => cy.get('.flex > .w-full'),
+        locationField: () => cy.get('.input').eq(0),
 
         hotelResultsList: () => cy.get('.hotel-container grid grid-cols-2 md:flex'),
         hotelNameList: () => cy.get('#hotel-name'),
