@@ -1,3 +1,4 @@
+
 class SearchResultsPage {
     //includes the elements and methods in myStays.com Search Results Page    
     elements = {
@@ -5,14 +6,13 @@ class SearchResultsPage {
         locationField: () => cy.get('.input').eq(0),
 
         hotelResultsList: () => cy.get('.hotel-container grid grid-cols-2 md:flex'),
-        hotelNameList: () => cy.get('#hotel-name'),
+        hotelNameList: () => cy.get('.hotel-name'),
         hotelCityList: () => cy.get('#hotel-city'),
         hotelAddressList: () => cy.get('#hotel-address'),
-        hotelSeeAvaialabilityButtonList: () => cy.get('.btn-availability.font-medium'),
+        seeAvaialabilityButtonOne:()=>cy.contains('See availability').eq(0),
         hotelImageList: () => cy.get('.hotel-image'),
         hotelRatingButton: () => cy.get('.grid pl-1 w-28 grid-cols-5'),
 
-        seeAvaialabilityButtonOne:()=>cy.contains('See availability'),
 
         showMoreButton: () => cy.get('.btn-loadmore')
     }
@@ -24,10 +24,10 @@ class SearchResultsPage {
         // this.elements.hotelResultsList().should('be.visible')
         this.elements.hotelNameList()
             .should('be.visible')
-        this.elements.hotelCityList()
-            .should('be.visible')
-        this.elements.hotelAddressList()
-            .should('be.visible')
+        // this.elements.hotelCityList()
+        //     .should('be.visible')
+        // this.elements.hotelAddressList()
+        //     .should('be.visible')
         this.elements.seeAvaialabilityButtonOne()
             .should('be.visible')
         this.elements.hotelImageList()
@@ -56,20 +56,62 @@ class SearchResultsPage {
             const txt = $number.text()
             cy.log(txt)
             const resultsNumberArray = txt.split(":") //extracting only value of location from 'Paris: 5 properties found'
-            // let locValue = resultsNumberArray[0]
-            // cy.log(locValue)
 
             //verifying the location in search results is same as that of location in the input data
             expect(resultsNumberArray[0]).to.contains(location)
-        })
+        })      
     }
 
     clickOnSeeAvaialabilityButton(){
-        this.elements.seeAvaialabilityButtonOne()
-            .click()
-        cy.wait(5000)
-    }
+        //get hotelCode
+        cy.get('a:contains("See availability")').then(($link) => {
+            const href = $link.attr('href');
+            cy.log(href);
+            const hrefArray = href.split("/")
+            const hotelCode=hrefArray[2]
+            cy.log(hotelCode)
 
+        //to get redux state
+        cy.window()
+          .its('store')
+          .invoke('getState')
+          .then((state) => {
+            var hotelDescription=state.hotel.descriptionResponse.hotelDescriptionResponsesPerCode[hotelCode]
+            var hotelAvailability=state.hotel.availabilityRequest.hotelAvailabilityRequest
+            var nightCount=state.hotel.nightCount.days
+            cy.log(hotelDescription,hotelAvailability,nightCount)
+            
+        //click See Availability button
+        cy.get('a:contains("See availability")')
+            .eq(0)
+            .invoke('removeAttr', 'target')
+            .invoke('removeAttr','rel')
+            .click()
+        
+        //to dispatch hotel description, hotel availability, night count
+        cy.window()
+          .its('store')
+          .invoke('dispatch', {
+            type: 'ADD_HOTEL_DESCRIPTION_RESPONSE',
+            hotelCode: hotelCode,
+            payload: hotelDescription,   
+           })
+        cy.window()
+          .its('store')
+          .invoke('dispatch', {
+            type: 'HOTEL_AVAILABILITY_REQUEST',
+            payload: hotelAvailability,   
+           }) 
+        cy.window()
+          .its('store')
+          .invoke('dispatch', {
+            type: 'DAYS',
+            payload: nightCount,   
+           })     
+          })
+        })
+    }
+    
     clickOnShowMoreButton(){
         this.elements.showMoreButton()
             .should('be.visible')

@@ -8,8 +8,8 @@ class HomePage {
 
         destinationField: () => cy.get('.input').eq(0),
         // firstLocation:()=>cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ'), //select only Paris
-        firstLocation: () => cy.get('.absolute').eq(0), //any location
-        searchButton: () => cy.get('.search-button'),
+        firstLocation: () => cy.get('.absolute'), //any location
+        searchButton: () => cy.get('.btn-search'),
         errorMessageForNoLocation: () => cy.get('.errorMsg'),
 
         dateInputField: () => cy.get('.inputBox'),
@@ -33,7 +33,6 @@ class HomePage {
         cy.wait(10000)
         this.elements.firstLocation()
             .click()
-        cy.wait(5000)
     }
 
     //select date from react date picker
@@ -58,6 +57,18 @@ class HomePage {
         this.elements.calendarYear().select('2022')
         cy.get('.rdrDayNumber').eq(4).click()
         cy.get('.rdrDayNumber').eq(5).click()
+    }
+    selectDateDummy(){
+        cy.get('.input-wrap > .input-field > .label').click()
+        cy.get('.react-datepicker__day--025').click()
+        cy.get('.input-wrap1 > .input-field > .label').click()
+        cy.get('.react-datepicker__day--029').click()
+        // cy.get('.input').eq(1).type('18/11/2022')
+        
+        // cy.get('.input').eq(2).type('28/11/2022')
+        
+        cy.get('.input').eq(3).type('2')
+
     }
 
     selectDate(){
@@ -100,8 +111,8 @@ class HomePage {
 
     clickSearchButton() {
         this.elements.searchButton()
-            .should('be.visible')
-            .and('be.enabled')
+            // .should('be.visible')
+            // .and('be.enabled')
             .click()
         cy.wait(25000)
     }

@@ -15,7 +15,7 @@ After(()=>{ // runs once all tests are done
 })
 
 Given('I can access to myStays.com', () => {
-    cy.visit("/")
+    cy.visit("http://127.0.0.1:3000/signin")
 })
 
 When('I enter username and password', () => {
@@ -33,6 +33,7 @@ When('I login into myStays.com application using {string} and {string}', (userna
 
 And('I click on Sign In button', () => {
     signinPage.clickSigninButton()
+    
 })
 
 Then('I am on Home Page', () => {
@@ -46,7 +47,8 @@ And('I verify the username displayed on top right', () => {
 And('I enter location as {string} and click on Search button', (location) => {
     searchResults.verifyLocationField()
     homePage.typeAndSelectLocation(location)
-    homePage.selectFromAndToDate()
+    // homePage.selectFromAndToDate()
+    homePage.selectDateDummy()
     homePage.clickSearchButton()
 })
 When('I search a hotel in {string}', (location) => {
