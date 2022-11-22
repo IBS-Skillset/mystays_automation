@@ -8,12 +8,11 @@ class HomePage {
 
         destinationField: () => cy.get('.input').eq(0),
         // firstLocation:()=>cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ'), //select only Paris
-        firstLocation: () => cy.get('.absolute'), //any location
         searchButton: () => cy.get('.btn-search'),
         errorMessageForNoLocation: () => cy.get('.errorMsg'),
 
         dateInputField: () => cy.get('.inputBox'),
-        calendarIcon: () => cy.get('.calenderIcon > .svg-image'),
+        calendarField: () => cy.get('.input-wrap > .input-field > .label > .input > .react-datepicker-wrapper > .react-datepicker__input-container > .picker'),
         earlyDateField: () => cy.get('.rdrDateDisplayItemActive > input'), //start date field in open calendar
         openCalendar: () => cy.get('.rdrMonth'),
         calendarPrevButton: () => cy.get('.rdrPprevButton'),
@@ -130,7 +129,7 @@ class HomePage {
             .and('be.enabled')
     }
     verifyCalenderField() {
-        this.elements.calendarIcon()
+        this.elements.calendarField()
             .should('be.visible')
 
     }
