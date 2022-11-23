@@ -18,14 +18,14 @@ Scenario: Verify the fields displayed in home page
     And I verify the username displayed on top right
     And I verify the language selection displayed on top
 
-@HomePage
-Scenario: Verify the option to change language in Home Page
-    Given I can access to myStays.com
-    When I enter username and password 
-    And I click on Sign In button
-    Then I am on Home Page
-    And I verify the language selection displayed on top
-    And I select Français language
-    Then I verify the home page is displayed in Français
-    And I select English language
-    Then I verify the home page is displayed in English
+# @HomePage
+# Scenario: Verify the option to change language in Home Page
+#     Given I can access to myStays.com
+#     When I enter username and password 
+#     And I click on Sign In button
+#     Then I am on Home Page
+#     And I verify the language selection displayed on top
+#     And I select Français language
+#     Then I verify the home page is displayed in Français
+#     And I select English language
+#     Then I verify the home page is displayed in English
