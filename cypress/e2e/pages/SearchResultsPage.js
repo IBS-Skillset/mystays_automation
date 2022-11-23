@@ -149,7 +149,7 @@ class SearchResultsPage {
 
     displayNoOfNights(){
         //cy.get(':nth-child(1) > .col-span-2 > .text-sm')
-        cy.get(':nth-child(1) > .col-span-2 > .text-sm').should('have.text', '3 night')
+        cy.get(':nth-child(1) > :nth-child(3) > .text-sm').should('have.text', '3 night')
         
     }
 
