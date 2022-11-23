@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 415000000
+              "duration": 186000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 609000000
+              "duration": 542000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 548000000
+              "duration": 252000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 552000000
+              "duration": 231000000
             }
           },
           {
@@ -68,7 +68,7 @@
             "name": "I verify the destination field in Home page",
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 10000000
             }
           },
           {
@@ -78,7 +78,7 @@
             "name": "I verify the Calendar displayed in Home page",
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 8000000
             }
           },
           {
@@ -94,26 +94,11 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 14,
-            "name": "I verify the validation when clicked on Search button without entering Location",
-            "result": {
-              "status": "failed",
-              "duration": 55159000000,
-              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.errorMsg`, but never found it.\n    at HomePage.getValidationMessageforNoLocation (cypress/e2e/pages/HomePage.js:110:11)\n    at Context.eval (cypress/e2e/mystays_homepage/HomePageSteps.js:27:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
             "line": 15,
             "name": "I verify the username displayed on top right",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 5000000
             }
           },
           {
@@ -122,7 +107,8 @@
             "line": 16,
             "name": "I verify the language selection displayed on top",
             "result": {
-              "status": "skipped"
+              "status": "passed",
+              "duration": 7000000
             }
           }
         ]
@@ -147,7 +133,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 578000000
+              "duration": 138000000
             }
           },
           {
@@ -157,7 +143,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 635000000
+              "duration": 538000000
             }
           },
           {
@@ -167,7 +153,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 552000000
+              "duration": 279000000
             }
           },
           {
@@ -177,7 +163,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 579000000
+              "duration": 253000000
             }
           },
           {
@@ -187,7 +173,7 @@
             "name": "I verify the language selection displayed on top",
             "result": {
               "status": "passed",
-              "duration": 9000000
+              "duration": 6000000
             }
           },
           {
@@ -197,7 +183,7 @@
             "name": "I select Français language",
             "result": {
               "status": "passed",
-              "duration": 153000000
+              "duration": 136000000
             }
           },
           {
@@ -207,7 +193,7 @@
             "name": "I verify the home page is displayed in Français",
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: expected 'Search' to include 'Cherche'\n    at Context.eval (cypress/e2e/pages/Common.js:60:25)"
+              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `input[placeholder*=\"Cherche\"]`, but never found it.\n    at Object.locationField (cypress/e2e/pages/Common.js:10:32)\n    at Common.verifyFrenchHomePage (cypress/e2e/pages/Common.js:51:23)\n    at Context.eval (cypress/e2e/mystays_homepage/HomePageSteps.js:47:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
             },
             "embeddings": [
               {

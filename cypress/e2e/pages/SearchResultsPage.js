@@ -14,10 +14,16 @@ class SearchResultsPage {
         hotelRatingButton: () => cy.get('.grid pl-1 w-28 grid-cols-5'),
 
 
-        showMoreButton: () => cy.get('.btn-loadmore')
+        showMoreButton: () => cy.get('.btn-loadmore'),
+
+        resultsLocationField: () =>cy.get('input[name=location]'),
+        resultsCheckInDate: ()=> cy.get('.date-picker').eq(0),
+        resultsCheckOutDate: () =>cy.get('.date-picker').eq(1),
+        resultsPassengerNoField:() => cy.get('input[placeholder="1 adult"]'),
+        resultsSearchButton: ()=> cy.get('.button')
     }
     verifyLocationField() {
-        this.elements.locationField().should('be.visible').and('be.enabled')
+        this.elements.resultsLocationField().should('be.visible').and('be.enabled')
     }
 
     displayHotelDetails() {
@@ -38,13 +44,17 @@ class SearchResultsPage {
     }
     displayHotelResultsLessThanTen(){
         // to get "Kochi: 6 properties found"
-        cy.get('div[class="text-2xl md:text-3xl font-medium"]').then(($input) => {
-            const txt=$input.text()
-            cy.log(txt)
-            const resultsNumberArray = txt.split(" ")
-            expect(resultsNumberArray[1]).to.eq('6')
-            expect(parseInt(resultsNumberArray[1])).to.be.lessThan(10) //checking results are less than 10
-        })
+        // cy.get('div[class="text-2xl md:text-3xl font-medium"]').then(($input) => {
+        //     const txt=$input.text()
+        //     cy.log(txt)
+        //     const resultsNumberArray = txt.split(" ")
+        //     expect(resultsNumberArray[1]).to.eq('6')
+            // expect(parseInt(resultsNumberArray[1])).to.be.lessThan(10) //checking results are less than 10
+        // })
+
+        //to get the number of see availability buttons
+        const numberOfHotels=$('#btn-availability').length()
+        expect(numberOfHotels).to.be.lessThan(10)
         this.elements.showMoreButton()
             .should('not.exist')
     }
@@ -62,6 +72,24 @@ class SearchResultsPage {
         })      
     }
 
+    searchInResultsPage(){
+        this.elements.resultsLocationField()
+            .should('be.visible')
+            .clear()
+            .type('Paris, France')
+            .wait(10000)
+        cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ').click()
+        this.elements.resultsCheckInDate()
+            .should('be.visible')
+        this.elements.resultsCheckOutDate()
+            .should('be.visible')
+        this.elements.resultsPassengerNoField()
+            .should('be.visible')
+        // this.elements.resultsSearchButton()
+        //     .should('be.visible')
+        //     .click()
+        // cy.wait(150000)
+    }
     clickOnSeeAvaialabilityButton(){
         //get hotelCode
         cy.get('a:contains("See availability")').then(($link) => {

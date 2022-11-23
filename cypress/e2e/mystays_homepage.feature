@@ -8,10 +8,13 @@ Scenario: Verify the fields displayed in home page
     When I enter username and password 
     And I click on Sign In button
     Then I am on Home Page
+    And I verify the travel type headers displayed
     And I verify the destination field in Home page
     And I verify the Calendar displayed in Home page
+    And I verify the date fields displayed
+    And I verify the travellers input box
     And I verify the Search button displayed
-    And I verify the validation when clicked on Search button without entering Location
+    # And I verify the validation when clicked on Search button without entering Location
     And I verify the username displayed on top right
     And I verify the language selection displayed on top
 

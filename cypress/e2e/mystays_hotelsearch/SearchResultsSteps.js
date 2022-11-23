@@ -22,6 +22,10 @@ Then('I verify the hotel search results displayed', () => {
 Then('I verify the number of hotels displayed in {string}', (location) => {
     searchResults.getNumberOfHotels(location)
 })
+Then('I verify the hotel search option in search results page',()=>{
+    searchResults.searchInResultsPage()
+    // searchResults.displayHotelDetails()
+})
 Then('I verify more than 10 hotel results are displayed',()=>{
     searchResults.clickOnShowMoreButton()
 })

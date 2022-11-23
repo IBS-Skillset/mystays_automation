@@ -7,28 +7,60 @@ class HomePage {
         languageSelectButton: () => cy.get('.input-language'),
 
         destinationField: () => cy.get('.input').eq(0),
-        // firstLocation:()=>cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ'), //select only Paris
         firstLocation: () => cy.get('.absolute'), //any location
         searchButton: () => cy.get('.btn-search'),
         errorMessageForNoLocation: () => cy.get('.errorMsg'),
 
         dateInputField: () => cy.get('.inputBox'),
-        calendarIcon: () => cy.get('.calenderIcon > .svg-image'),
+        calendarIcon: () => cy.get('.svg-image'),
         earlyDateField: () => cy.get('.rdrDateDisplayItemActive > input'), //start date field in open calendar
         openCalendar: () => cy.get('.rdrMonth'),
         calendarPrevButton: () => cy.get('.rdrPprevButton'),
         calendarNextButton: () => cy.get('.rdrNextButton'),
         calendarYear: () => cy.get('.rdrYearPicker > select'),
         calendarMonth: () => cy.get('.rdrMonthPicker > select'),
-        calendarDay: () => cy.get('.rdrDayNumber')
+        calendarDay: () => cy.get('.rdrDayNumber'),
+
+        hotelOnlyTab:()=>cy.contains('HOTEL ONLY'),
+        hotelFlightTab:()=>cy.contains('HOTEL + FLIGHT'),
+        hotelFlightCarTab:()=>cy.contains('HOTEL + FLIGHT + CAR'),
+        hotelCarTab:()=>cy.contains('HOTEL + CAR'),
+
+        homeLocationField: () =>cy.get('input[name=location]'),
+        homeCheckInDate: ()=> cy.get('.input-wrap > .input-field > .label'),
+        homeCheckOutDate: () =>cy.get('.input-wrap1 > .input-field > .label'),
+        homeTravellerNoField:() => cy.get('input[placeholder="1 adult"]'),
+        homesSearchButton: ()=> cy.get('.button')
     }
 
-    //type and search for a particular location in Home page
-    typeAndSelectLocation(location) {
-        this.elements.destinationField()
+    verifyTravelTypeHeaders(){
+        this.elements.hotelOnlyTab()
+            .should('be.visible')
+        this.elements.hotelFlightTab()
+            .should('be.visible')
+        this.elements.hotelFlightCarTab()
+            .should('be.visible')
+        this.elements.hotelCarTab()
+            .should('be.visible')
+    }
+
+    verifyDateFields(){
+        this.elements.homeCheckInDate()
+            .should('be.visible')
+        this.elements.homeCheckOutDate()
+            .should('be.visible')
+    }
+
+    verifyTravellerNumberBox(){
+        this.elements.homeTravellerNoField()
             .should('be.visible')
             .and('be.enabled')
-        this.elements.destinationField()
+    }
+    //type and search for a particular location in Home page
+    typeAndSelectLocation(location) {
+        this.elements.homeLocationField()
+            .should('be.visible')
+            .and('be.enabled')
             .type(location)
         cy.wait(10000)
         this.elements.firstLocation()
@@ -59,10 +91,18 @@ class HomePage {
         cy.get('.rdrDayNumber').eq(5).click()
     }
     selectDateDummy(){
-        cy.get('.input-wrap > .input-field > .label').click()
-        cy.get('.react-datepicker__day--025').click()
-        cy.get('.input-wrap1 > .input-field > .label').click()
-        cy.get('.react-datepicker__day--029').click()
+        this.elements. homeCheckInDate()
+            .click()
+        cy.get('.react-datepicker__navigation--next')
+            .click()
+            .click()
+            .click()
+        cy.get(':nth-child(1) > .react-datepicker__day--001').click()
+        this.elements. homeCheckOutDate()
+            .click()
+            cy.get('.react-datepicker__navigation--next').click().click().click()
+
+        cy.get('.react-datepicker__day--007').click()
         // cy.get('.input').eq(1).type('18/11/2022')
         
         // cy.get('.input').eq(2).type('28/11/2022')
@@ -86,10 +126,6 @@ class HomePage {
             cy.get('.rdrDayNumber').eq(3).click()
 
         //cy.get('.rdrDayToday > .rdrDayNumber > span').click()
-
-        
-
-
 
     }
 

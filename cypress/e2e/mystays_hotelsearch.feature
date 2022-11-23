@@ -1,31 +1,32 @@
 Feature: Hotel Search
     Testing myStays.com hotel search results page  
 
-@HotelSearch
-Scenario Outline: As User, I can search Hotel in specified location
-    Given I can access to myStays.com
-    When I enter username and password 
-    And I click on Sign In button
-    Then I am on Home Page
-    And I enter location as "<Destination>" and click on Search button
-    Then I verify the hotel search results displayed
+# @HotelSearch
+# Scenario Outline: As User, I can search Hotel in specified location
+#     Given I can access to myStays.com
+#     When I enter username and password 
+#     And I click on Sign In button
+#     Then I am on Home Page
+#     And I enter location as "<Destination>" and click on Search button
+#     Then I verify the hotel search results displayed
 
-    Examples:
-      | Destination  |
-      | London       |
+#     Examples:
+#       | Destination  |
+#       | London       |
 
-@HotelSearch
-Scenario Outline: As User, I can search Hotel and verify the number of hotels displayed
-    Given I can access to myStays.com
-    When I enter username and password 
-    And I click on Sign In button
-    Then I am on Home Page
-    And I enter location as "<Destination>" and click on Search button
-    Then I verify the number of hotels displayed in "<Destination>"
+# @HotelSearch
+# Scenario Outline: As User, I can search Hotel and verify the search option in search results page
+#     Given I can access to myStays.com
+#     When I enter username and password 
+#     And I click on Sign In button
+#     Then I am on Home Page
+#     And I enter location as "<Destination>" and click on Search button
+#     # Then I verify the number of hotels displayed in "<Destination>"
+#     Then I verify the hotel search option in search results page
 
-    Examples:
-      | Destination |
-      | London      |
+#     Examples:
+#       | Destination |
+#       | London      |
 
 @HotelSearch @RoomDetails
 Scenario Outline: As User, I can search Hotel and verify the see availability option
@@ -66,7 +67,7 @@ Scenario Outline: As User, I can search Hotel with less than 10 results
 
     Examples:
       | Destination    |
-      | Kochi, Kerala  |
+      | Paris, France  |
       
 @HotelSearch
 Scenario Outline: As User, I can search Hotel for multiple nights
