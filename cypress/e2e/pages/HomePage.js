@@ -17,7 +17,7 @@ class HomePage {
         calendarField: () => cy.get('.input-wrap > .input-field > .label > .input > .react-datepicker-wrapper > .react-datepicker__input-container > .picker'),
 
         earlyDateField: () => cy.get('.rdrDateDisplayItemActive > input'), //start date field in open calendar
-        openCalendar: () => cy.get('.rdrMonth'),
+        //openCalendar: () => cy.get('.rdrMonth'),
         calendarPrevButton: () => cy.get('.rdrPprevButton'),
         calendarNextButton: () => cy.get('.rdrNextButton'),
         calendarYear: () => cy.get('.rdrYearPicker > select'),
@@ -115,20 +115,14 @@ class HomePage {
     }
 
     selectDate(){
-        this.elements.dateInputField()
-        .should('be.visible')
-        .and('be.enabled') 
-        this.elements.dateInputField()
-            .click()
-        this.elements.openCalendar()
-            .should('be.visible')
-            cy.get('.rdrNextButton > i').click().click()
-            cy.get('.rdrDayStartOfMonth > .rdrDayNumber').click()
-            cy.get(':nth-child(2) > input').click()
-            cy.wait(1000)
-            cy.get('.rdrDayNumber').eq(3).click()
 
-        //cy.get('.rdrDayToday > .rdrDayNumber > span').click()
+        this.elements. homeCheckInDate()
+            .click()
+            cy.get('.react-datepicker__navigation--next').click().click()
+            cy.get(':nth-child(1) > .react-datepicker__day--001').click()
+            this.elements. homeCheckOutDate().click()
+            cy.get('.react-datepicker__navigation--next').click().click()
+            cy.get(':nth-child(1) > .react-datepicker__day--004').click()
 
     }
 
