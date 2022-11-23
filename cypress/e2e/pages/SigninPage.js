@@ -9,7 +9,6 @@ class SignInPage {
         createOneButton: () => cy.get('.p-4 > .text-white')
     }
 
-    // commented for fixtures implementation
     typeUsername(username) {
         this.elements.usernameField().should('be.visible').and('be.enabled')
         this.elements.usernameField().type(username)
@@ -20,6 +19,7 @@ class SignInPage {
         this.elements.passwordField().type(password)
     }
 
+    //fixtures implementation
     typeFixturesUsername() {
         cy.fixture('testDataFile').then((user) => {
             this.user = user
@@ -67,7 +67,7 @@ class SignInPage {
     clickCreateOneButton() {
         this.elements.signinButton().should('be.visible').and('be.enabled')
         this.elements.createOneButton().click();
-        // this.url().should('contains','signup')    
+        cy.url().should('contains','signup')    
     }
 
     //verify mail id populated in username field
