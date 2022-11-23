@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 186000000
+              "duration": 445000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 542000000
+              "duration": 551000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 252000000
+              "duration": 605000000
             }
           },
           {
@@ -58,14 +58,34 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 231000000
+              "duration": 643000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
+            "name": "I verify the travel type headers displayed",
+            "result": {
+              "status": "passed",
+              "duration": 51000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
             "name": "I verify the destination field in Home page",
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I verify the Calendar displayed in Home page",
             "result": {
               "status": "passed",
               "duration": 10000000
@@ -74,149 +94,51 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 12,
-            "name": "I verify the Calendar displayed in Home page",
+            "line": 14,
+            "name": "I verify the date fields displayed",
             "result": {
               "status": "passed",
-              "duration": 8000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "I verify the Search button displayed",
-            "result": {
-              "status": "passed",
-              "duration": 8000000
+              "duration": 17000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 15,
-            "name": "I verify the username displayed on top right",
+            "name": "I verify the travellers input box",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 13000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 16,
+            "name": "I verify the Search button displayed",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I verify the username displayed on top right",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
             "name": "I verify the language selection displayed on top",
             "result": {
               "status": "passed",
-              "duration": 7000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "home-page;verify-the-option-to-change-language-in-home-page",
-        "keyword": "Scenario",
-        "line": 19,
-        "name": "Verify the option to change language in Home Page",
-        "tags": [
-          {
-            "name": "@HomePage",
-            "line": 18
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 20,
-            "name": "I can access to myStays.com",
-            "result": {
-              "status": "passed",
-              "duration": 138000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 21,
-            "name": "I enter username and password",
-            "result": {
-              "status": "passed",
-              "duration": 538000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 22,
-            "name": "I click on Sign In button",
-            "result": {
-              "status": "passed",
-              "duration": 279000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 23,
-            "name": "I am on Home Page",
-            "result": {
-              "status": "passed",
-              "duration": 253000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 24,
-            "name": "I verify the language selection displayed on top",
-            "result": {
-              "status": "passed",
-              "duration": 6000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 25,
-            "name": "I select Français language",
-            "result": {
-              "status": "passed",
-              "duration": 136000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 26,
-            "name": "I verify the home page is displayed in Français",
-            "result": {
-              "status": "failed",
-              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `input[placeholder*=\"Cherche\"]`, but never found it.\n    at Object.locationField (cypress/e2e/pages/Common.js:10:32)\n    at Common.verifyFrenchHomePage (cypress/e2e/pages/Common.js:51:23)\n    at Context.eval (cypress/e2e/mystays_homepage/HomePageSteps.js:47:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
-            },
-            "embeddings": [
-              {
-                "mime_type": "image/png"
-              }
-            ]
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 27,
-            "name": "I select English language",
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 28,
-            "name": "I verify the home page is displayed in English",
-            "result": {
-              "status": "skipped"
+              "duration": 12000000
             }
           }
         ]

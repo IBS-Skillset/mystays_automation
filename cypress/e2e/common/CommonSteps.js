@@ -47,8 +47,7 @@ And('I verify the username displayed on top right', () => {
 And('I enter location as {string} and click on Search button', (location) => {
     searchResults.verifyLocationField()
     homePage.typeAndSelectLocation(location)
-    // homePage.selectFromAndToDate()
-    homePage.selectDateDummy()
+    homePage.selectFromAndToDate()
     homePage.clickSearchButton()
 })
 When('I search a hotel in {string}', (location) => {

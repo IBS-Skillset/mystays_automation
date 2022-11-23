@@ -5,14 +5,11 @@ class SearchResultsPage {
         numberOfProperties: () => cy.get('.text-2xl'),
         locationField: () => cy.get('.input').eq(0),
 
-        hotelResultsList: () => cy.get('.hotel-container grid grid-cols-2 md:flex'),
         hotelNameList: () => cy.get('.hotel-name'),
-        hotelCityList: () => cy.get('#hotel-city'),
-        hotelAddressList: () => cy.get('#hotel-address'),
+        hotelAddressList: () => cy.get('.address'),
         seeAvaialabilityButtonOne:()=>cy.contains('See availability').eq(0),
         hotelImageList: () => cy.get('.hotel-image'),
         hotelRatingButton: () => cy.get('.grid pl-1 w-28 grid-cols-5'),
-
 
         showMoreButton: () => cy.get('.btn-loadmore'),
 
@@ -20,20 +17,29 @@ class SearchResultsPage {
         resultsCheckInDate: ()=> cy.get('.date-picker').eq(0),
         resultsCheckOutDate: () =>cy.get('.date-picker').eq(1),
         resultsPassengerNoField:() => cy.get('input[placeholder="1 adult"]'),
-        resultsSearchButton: ()=> cy.get('.button')
+        resultsSearchButton: ()=> cy.get('.button'),
+
+        firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)')
     }
     verifyLocationField() {
         this.elements.resultsLocationField().should('be.visible').and('be.enabled')
     }
 
     displayHotelDetails() {
-        // this.elements.hotelResultsList().should('be.visible')
+        this.elements.resultsLocationField()
+            .should('be.visible')
+        this.elements.resultsCheckInDate()
+            .should('be.visible')
+        this.elements.resultsCheckOutDate()
+            .should('be.visible')
+        this.elements.resultsPassengerNoField()
+            .should('be.visible')
+        this.elements.firstHotel()
+            .should('be.visible')
         this.elements.hotelNameList()
             .should('be.visible')
-        // this.elements.hotelCityList()
-        //     .should('be.visible')
-        // this.elements.hotelAddressList()
-        //     .should('be.visible')
+        this.elements.hotelAddressList()
+            .should('be.visible')
         this.elements.seeAvaialabilityButtonOne()
             .should('be.visible')
         this.elements.hotelImageList()
@@ -52,10 +58,8 @@ class SearchResultsPage {
             // expect(parseInt(resultsNumberArray[1])).to.be.lessThan(10) //checking results are less than 10
         // })
 
-        //to get the number of see availability buttons
-        const numberOfHotels=$('#btn-availability').length()
-        expect(numberOfHotels).to.be.lessThan(10)
-        this.elements.showMoreButton()
+        cy.get('.btn-availability').its('length').should('be.lt', 10) //assert expected 3 (see availability buttons) to be below 10
+        this.elements.showMoreButton()//assert expected .btn-loadmore not to exist in the DOM
             .should('not.exist')
     }
 
@@ -65,7 +69,7 @@ class SearchResultsPage {
         cy.get('div[class="text-2xl md:text-3xl font-medium"]').then(($number) => {
             const txt = $number.text()
             cy.log(txt)
-            const resultsNumberArray = txt.split(":") //extracting only value of location from 'Paris: 5 properties found'
+            const resultsNumberArray = txt.split(":") //extracting only 'Paris'' from 'Paris: 5 properties found'
 
             //verifying the location in search results is same as that of location in the input data
             expect(resultsNumberArray[0]).to.contains(location)

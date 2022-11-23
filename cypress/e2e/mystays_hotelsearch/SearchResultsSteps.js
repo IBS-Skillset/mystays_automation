@@ -39,7 +39,7 @@ And('I verify the room details displayed',()=>{
     rommDetails.verifyRoomType()
 })
 And('I search for 3 nights', () => {
-    homePage.selectDate()
+    homePage.searchforThreeNights()
 })
 Then('I see the text 3 night on search results page',()=>{
     searchResults.displayNoOfNights()

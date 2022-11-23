@@ -46,7 +46,6 @@ class Common {
         this.elements.languageSelectButton()
             .select('English')
     }
-
     verifyFrenchHomePage() {
          this.elements.locationField().then(function(e){
             const t = e.text()
@@ -58,7 +57,6 @@ class Common {
             expect(t).to.contains("Cherche")
         })
     }
-
     verifyEnglishHomePage() {
          this.elements.locationField().then(function(e){
             const t = e.text()
