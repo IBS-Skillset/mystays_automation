@@ -12,11 +12,20 @@ After(()=>{ // runs once all tests are done
     common.verifyFooterPresent()
 })
 
+And('I verify the travel type headers displayed',()=>{
+    homePage.verifyTravelTypeHeaders()
+})
 And('I verify the destination field in Home page', () => {
     homePage.verifyDestinationField()
 })
 And('I verify the Calendar displayed in Home page', () => {
     homePage.verifyCalenderField()
+})
+And('I verify the date fields displayed',()=>{
+    homePage.verifyDateFields()
+})
+And('I verify the travellers input box',()=>{
+    homePage.verifyTravellerNumberBox()
 })
 And('I verify the Search button displayed', () => {
     homePage.verifySearchButton()
