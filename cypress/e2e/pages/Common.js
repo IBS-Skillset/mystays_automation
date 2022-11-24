@@ -23,7 +23,7 @@ class Common {
     verifyBrandBanner() {
         this.getBrandBanner()
             .should('be.visible')
-            .and('have.text', 'myStays.com')
+            .and('have.text', 'HappyStays')
     }
 
     verifyFooterPresent() {
@@ -88,6 +88,11 @@ class Common {
             .should('have.text',user.UserFirstName)
         })
 
+    }
+
+    clickUsername(){
+        this.elements.usernameIcon()
+            .click()
     }
 }
 export default Common

@@ -36,8 +36,7 @@ Scenario: Verify the options displayed in the username drop down
     When I enter username and password 
     And I click on Sign In button
     Then I am on Home Page
-    And I click on the username drop down 
-    And I verify the options displayed in the drop down
+    And I click on the username drop down and verify the options displayed in the drop down
     
 
 @HomePage

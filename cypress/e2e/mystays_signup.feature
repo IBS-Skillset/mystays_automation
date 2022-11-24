@@ -25,7 +25,6 @@ Scenario Outline: Verify the validation in Email address/ Phone number field whe
     |Emailaddress      | Firstname| Lastname |Phonenumber | Password   | Message |
     |test              |Test      | User     |+919567911083 |test@123  |Invalid email|
     |Testuser@gmail.com|Test      | User     |9567  |test@123  |Please enter contact number with country code | 
-    #unable to capture invalid phone number pop up message 
 
 @Signup
 Scenario: Verify the field validations when no values are entered in 'Create an account' page and clicked on Continue button

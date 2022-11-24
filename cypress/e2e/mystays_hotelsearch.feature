@@ -23,7 +23,7 @@ Scenario Outline: As User, I can search Hotel and verify the search option in se
     And I enter location as "<Destination>" and click on Search button
     # Then I verify the number of hotels displayed in "<Destination>"
     Then I verify the hotel search option in search results page
-    And I verify the option to see the maximum of 6 hotel images
+    # And I verify the option to see the maximum of 6 hotel images
 
     Examples:
       | Destination |
@@ -38,6 +38,7 @@ Scenario Outline: As User, I can search Hotel and verify the see availability op
     And I enter location as "<Destination>" and click on Search button
     Then I verify the hotel search results displayed
     Then I click on See Avaialbility button
+    And I verify the room details displayed
 
     Examples:
       | Destination     |
