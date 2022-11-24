@@ -29,3 +29,22 @@ Scenario: Verify the fields displayed in home page
 #     Then I verify the home page is displayed in Français
 #     And I select English language
 #     Then I verify the home page is displayed in English
+
+@HomePage
+Scenario: Verify the options displayed in the username drop down
+    Given I can access to myStays.com
+    When I enter username and password 
+    And I click on Sign In button
+    Then I am on Home Page
+    And I click on the username drop down 
+    And I verify the options displayed in the drop down
+    
+
+@HomePage
+Scenario: Verify the user Logout in myStays.com
+    Given I can access to myStays.com
+    When I enter username and password 
+    And I click on Sign In button
+    Then I am on Home Page
+    And I click on the username drop down 
+    And I select Logout from the menu
