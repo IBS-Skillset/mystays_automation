@@ -19,8 +19,12 @@ class SearchResultsPage {
         resultsPassengerNoField:() => cy.get('input[placeholder="1 adult"]'),
         resultsSearchButton: ()=> cy.get('.button'),
 
-        firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)')
+        firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)'),
+
+        firstHotelImageSwiper: ()=>cy.get(':nth-child(1)>.swiper-container>.next').eq(0),
+        firstHotelImage: () =>cy.get(':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img')
     }
+
     verifyLocationField() {
         this.elements.resultsLocationField().should('be.visible').and('be.enabled')
     }
@@ -155,6 +159,15 @@ class SearchResultsPage {
         //cy.get(':nth-child(1) > .col-span-2 > .text-sm')
         cy.get(':nth-child(1) > :nth-child(3) > .text-sm').should('have.text', '3 night')
         
+    }
+
+    navigateFirstHotelImages(){
+        this.elements.hotelImageList()
+        .should('be.visible')
+        cy.wait(10000)
+        this.elements.firstHotelImageSwiper().click().click().click().click().click()
+        this.elements.hotelImageList().should('be.visible')
+
     }
 
 }
