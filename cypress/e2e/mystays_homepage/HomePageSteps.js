@@ -58,3 +58,12 @@ Then('I verify the home page is displayed in Français', () => {
 Then('I verify the home page is displayed in English', () => {
     common.verifyEnglishHomePage()
 })
+And('I click on the username drop down and verify the options displayed in the drop down',()=>{
+    homePage.clickuserNameDropdown()
+})
+And('I click on the username drop down',()=>{
+    common.clickUsername()
+})
+And('I select Logout from the menu',()=>{
+    homePage.clickLogoutButton()
+})

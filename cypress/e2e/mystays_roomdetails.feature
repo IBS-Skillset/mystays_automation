@@ -49,7 +49,7 @@ Scenario Outline: As User, I can search Hotel and verify the Facilities displaye
       | Paris, France   |
 
 @HotelDescription @RoomDetails
-Scenario Outline: As User, I can search Hotel and verify the Facilities displayed
+Scenario Outline: As User, I can search Hotel and verify the Reserve
     Given I can access to myStays.com
     When I enter username and password 
     And I click on Sign In button
