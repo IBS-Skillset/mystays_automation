@@ -1,4 +1,8 @@
-class RoomDetailsPage {
+import HomePage from "./HomePage"
+const homePage=new HomePage();
+
+class RoomDetailsPage{
+
     //includes the elements and methods in myStays.com Room Details pop up    
     elements = {
         roomTypeHeader: () =>cy.get('.w-40'),
@@ -8,7 +12,8 @@ class RoomDetailsPage {
         roomPrice: () =>cy.get('tbody > :nth-child(1) > .font-semibold > .flex'),
         breakfastIncludedFlag: () =>cy.get('.text-green-600'),
         breakfastExcludedFlag: () =>cy.get('.text-red-500'),
-        refundableFlag: () =>cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(2) > span > .listdisc')
+        refundableFlag: () =>cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(2) > span > .listdisc'),
+
     }
     verifyRoomType() {
         // this.elements.roomTypeHeader()
@@ -26,10 +31,9 @@ class RoomDetailsPage {
         // this.elements.breakfastIncludedFlag()
         //     .should('be.visible')
         cy.wait(5000)
-        cy.get('.input-value-dest').eq(0).type('Paris')
+        homePage.elements.destinationField().type('Paris')
         cy.get('.active-tab').click()
         cy.wait(3000)
     }
-
 }
 export default RoomDetailsPage

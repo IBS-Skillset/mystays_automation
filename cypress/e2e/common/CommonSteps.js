@@ -14,6 +14,7 @@ After(()=>{ // runs once all tests are done
     common.verifyFooterPresent()
 })
 
+
 Given('I can access to myStays.com', () => {
     cy.visit("http://127.0.0.1:3000/signin")
 })

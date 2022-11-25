@@ -7,53 +7,59 @@ class SignupPage {
         lastName: () => cy.get('#lname'),
         phoneNumber: () => cy.get('#phoneNumber'),
         password: () => cy.get('#password'),
+
         continueButton: () => cy.get('.btn-continue'),
         signupSuccessMessage: () => cy.get('.message')
     }
+
     typeEmailAddress(Emailaddress) {
-        this.elements.emailAddress().should('be.visible').and('be.enabled')
-        this.elements.emailAddress().type(Emailaddress)
+        this.elements.emailAddress()
+            .should('be.visible')
+            .and('be.enabled')
+            .type(Emailaddress)
     }
-
     typeFirstName(Firstname) {
-        this.elements.firstName().should('be.visible').and('be.enabled')
-        this.elements.firstName().type(Firstname)
+        this.elements.firstName()
+            .should('be.visible')
+            .and('be.enabled')
+            .type(Firstname)
     }
-
     typeLastName(Lastname) {
-        this.elements.lastName().should('be.visible').and('be.enabled')
-        this.elements.lastName().type(Lastname)
+        this.elements.lastName()
+            .should('be.visible')
+            .and('be.enabled')
+            .type(Lastname)
     }
-
     typePhoneNumber(Phonenumber) {
-        this.elements.phoneNumber().should('be.visible').and('be.enabled')
-
-        //used removeAttr here to type '+' in PhoneNumber field as .type() was not allowing to type it in number type field
         this.elements.phoneNumber()
+            .should('be.visible')
+            .and('be.enabled')
+        //used removeAttr here to type '+' in PhoneNumber field as .type() was not allowing to type it in number type field
             .invoke('removeAttr', 'type')
             .click()
             .clear()
             .type(Phonenumber)
     }
-
     typePassword(Password) {
-        this.elements.password().should('be.visible').and('be.enabled')
-        this.elements.password().type(Password)
+        this.elements.password()
+            .should('be.visible')
+            .and('be.enabled')
+            .type(Password)
     }
-
-    clickContinueButton() { //need to update once auth integration is done
-        this.elements.continueButton().should('be.visible').and('be.enabled')
-        this.elements.continueButton().click()
+    clickContinueButton() { 
+        this.elements.continueButton()
+            .should('be.visible')
+            .and('be.enabled')
+            .click()
     }
-
     //verify account creation is success or not
     verifySuccessAccountCreation(successMessage) {
-        this.elements.signupSuccessMessage().should('be.visible')
+        this.elements.signupSuccessMessage()
+            .should('be.visible')
         cy.get('.message').then(function(e) {
             const t = e.text()
             expect(t).to.contains(successMessage)
         })
-
         //code to check in DB after account creation
         cy.task("READFROMDB",
         {
@@ -75,11 +81,12 @@ class SignupPage {
         //     console.log(result)
         // })
     }
-
     //validation when invalid values are entered
     clickContinueButtonAndVerifyMessage() {
-        this.elements.continueButton().should('be.visible').and('be.enabled')
-        this.elements.continueButton().click()
+        this.elements.continueButton()
+            .should('be.visible')
+            .and('be.enabled')
+            .click()
         cy.get(':nth-child(2) > .label > .errorMsg').then(function(e) {
             //method text to obtain text content
             const t = e.text()
@@ -104,9 +111,7 @@ class SignupPage {
         this.elements.continueButton()
             .should('be.visible')
             .and('be.enabled')
-        this.elements.continueButton()
             .click()
-            
     //Implementation of Alert text verification
         cy.on('window:alert',(t)=>{
                 //assertions
@@ -114,4 +119,4 @@ class SignupPage {
         })   
     }
 }
-export default SignupPage;
+export default SignupPage
