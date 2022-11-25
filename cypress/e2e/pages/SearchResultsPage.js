@@ -18,7 +18,12 @@ class SearchResultsPage{
 
         showMoreButton: () => cy.get('.btn-loadmore'),
         resultsSearchButton: ()=> cy.get('.button'),
+
+        firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)'),
+        firstHotelImageSwiper: ()=>cy.get(':nth-child(1)>.swiper-container>.next').eq(0),
+        firstHotelImage: () =>cy.get(':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img')
     }
+
     verifyLocationField() {
         homePage.elements.destinationField()
                 .should('be.visible')
@@ -148,6 +153,14 @@ class SearchResultsPage{
     }
     displayNoOfNights(){
         cy.get(':nth-child(1) > :nth-child(3) > .text-sm').should('have.text', '3 night')
+    }
+    navigateFirstHotelImages(){
+        this.elements.hotelImageList()
+        .should('be.visible')
+        cy.wait(10000)
+        this.elements.firstHotelImageSwiper().click().click().click().click().click()
+        this.elements.hotelImageList().should('be.visible')
+
     }
 }
 export default SearchResultsPage

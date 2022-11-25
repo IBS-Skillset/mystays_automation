@@ -44,3 +44,6 @@ And('I search for 3 nights', () => {
 Then('I see the text 3 night on search results page',()=>{
     searchResults.displayNoOfNights()
 })
+And('I verify the option to see the maximum of 6 hotel images',()=>{
+    searchResults.navigateFirstHotelImages()
+})
