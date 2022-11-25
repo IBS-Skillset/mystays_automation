@@ -3,11 +3,13 @@ import Common from "../pages/Common.js";
 import SignInPage from "../pages/SigninPage.js";
 import HomePage from "../pages/HomePage.js";
 import SearchResultsPage from "../pages/SearchResultsPage.js";
+import RoomDetailsPage from "../pages/RoomDetailsPage.js";
 
 const signinPage = new SignInPage()
 const common = new Common();
 const homePage = new HomePage();
 const searchResults = new SearchResultsPage();
+const roomDetails = new RoomDetailsPage();
 
 After(()=>{ // runs once all tests are done
     common.verifyBrandBanner()
@@ -62,4 +64,16 @@ And('I click on search button', () => {
 And('I enter location as {string}', (location) => {
     searchResults.verifyLocationField()
     homePage.typeAndSelectLocation(location)
+})
+Then('I verify the hotel search results displayed', () => {
+    searchResults.displayHotelDetails()
+})
+Then('I click on See Avaialbility button',()=>{
+    searchResults.clickOnSeeAvaialabilityButton()
+})
+Then('I verify Overview tab is active by default',()=>{
+    searchResults.verifyOverviewTab()
+})
+And('I verify the room details displayed',()=>{
+    roomDetails.verifyRoomType()
 })
