@@ -16,9 +16,7 @@ After(()=>{ // runs once all tests are done
     common.verifyFooterPresent()
 })
 
-Then('I verify the hotel search results displayed', () => {
-    searchResults.displayHotelDetails()
-})
+
 Then('I verify the number of hotels displayed in {string}', (location) => {
     searchResults.getNumberOfHotels(location)
 })
@@ -32,12 +30,8 @@ Then('I verify more than 10 hotel results are displayed',()=>{
 Then('I verify less than 10 hotel results are displayed',()=>{
     searchResults.displayHotelResultsLessThanTen()
 })
-Then('I click on See Avaialbility button',()=>{
-    searchResults.clickOnSeeAvaialabilityButton()
-})
-And('I verify the room details displayed',()=>{
-    rommDetails.verifyRoomType()
-})
+
+
 And('I search for 3 nights', () => {
     homePage.searchforThreeNights()
 })
