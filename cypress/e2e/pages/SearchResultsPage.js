@@ -162,5 +162,9 @@ class SearchResultsPage{
         this.elements.hotelImageList().should('be.visible')
 
     }
+
+    verifyOverviewTab(){
+        cy.get('.active-tab').should('be.enabled')
+    }
 }
 export default SearchResultsPage
