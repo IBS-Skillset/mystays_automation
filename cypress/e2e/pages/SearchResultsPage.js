@@ -1,43 +1,43 @@
 
-class SearchResultsPage {
+import HomePage from "./HomePage"
+const homePage=new HomePage();
+
+class SearchResultsPage{
+
     //includes the elements and methods in myStays.com Search Results Page    
     elements = {
-        numberOfProperties: () => cy.get('.text-2xl'),
-        locationField: () => cy.get('.input').eq(0),
+        // numberOfProperties: () => cy.get('.text-2xl'),
 
         hotelNameList: () => cy.get('.hotel-name'),
         hotelAddressList: () => cy.get('.address'),
-        seeAvaialabilityButtonOne:()=>cy.contains('See availability').eq(0),
         hotelImageList: () => cy.get('.hotel-image'),
         hotelRatingButton: () => cy.get('.grid pl-1 w-28 grid-cols-5'),
+        firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)'),
+
+        seeAvaialabilityButtonOne:()=>cy.contains('See availability').eq(0),
 
         showMoreButton: () => cy.get('.btn-loadmore'),
-
-        resultsLocationField: () =>cy.get('input[name=location]'),
-        resultsCheckInDate: ()=> cy.get('.date-picker').eq(0),
-        resultsCheckOutDate: () =>cy.get('.date-picker').eq(1),
-        resultsPassengerNoField:() => cy.get('input[placeholder="1 adult"]'),
         resultsSearchButton: ()=> cy.get('.button'),
 
         firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)'),
-
         firstHotelImageSwiper: ()=>cy.get(':nth-child(1)>.swiper-container>.next').eq(0),
         firstHotelImage: () =>cy.get(':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img')
     }
 
     verifyLocationField() {
-        this.elements.resultsLocationField().should('be.visible').and('be.enabled')
+        homePage.elements.destinationField()
+                .should('be.visible')
+                .and('be.enabled')
     }
-
     displayHotelDetails() {
-        this.elements.resultsLocationField()
-            .should('be.visible')
-        this.elements.resultsCheckInDate()
-            .should('be.visible')
-        this.elements.resultsCheckOutDate()
-            .should('be.visible')
-        this.elements.resultsPassengerNoField()
-            .should('be.visible')
+        homePage.elements.destinationField()
+                .should('be.visible')
+        homePage.elements.checkInDateField()
+                .should('be.visible')
+        homePage.elements.checkOutDateField()
+                .should('be.visible')
+        homePage.elements.TravellerNumberField()
+                .should('be.visible')
         this.elements.firstHotel()
             .should('be.visible')
         this.elements.hotelNameList()
@@ -66,7 +66,6 @@ class SearchResultsPage {
         this.elements.showMoreButton()//assert expected .btn-loadmore not to exist in the DOM
             .should('not.exist')
     }
-
     getNumberOfHotels(location) {
         //add step to fetch no.of hotels from DB
         //method to get number of hotels ("Paris: 5 properties found")
@@ -79,22 +78,21 @@ class SearchResultsPage {
             expect(resultsNumberArray[0]).to.contains(location)
         })      
     }
-
     searchInResultsPage(){
-        this.elements.resultsLocationField()
+        homePage.elements.destinationField()
             .should('be.visible')
             .clear()
             .type('Paris, France')
             .wait(10000)
         cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ').click()
-        this.elements.resultsCheckInDate()
+        homePage.elements.checkInDateField()
             .should('be.visible')
-        this.elements.resultsCheckOutDate()
+        homePage.elements.checkOutDateField()
             .should('be.visible')
-        this.elements.resultsPassengerNoField()
+        homePage.elements.TravellerNumberField()
             .should('be.visible')
-        // this.elements.resultsSearchButton()
-        //     .should('be.visible')
+        this.elements.resultsSearchButton()
+            .should('be.visible')
         //     .click()
         // cy.wait(150000)
     }
@@ -147,20 +145,15 @@ class SearchResultsPage {
           })
         })
     }
-    
     clickOnShowMoreButton(){
         this.elements.showMoreButton()
             .should('be.visible')
             .and('be.enabled')
             .click()
     }
-
     displayNoOfNights(){
-        //cy.get(':nth-child(1) > .col-span-2 > .text-sm')
         cy.get(':nth-child(1) > :nth-child(3) > .text-sm').should('have.text', '3 night')
-        
     }
-
     navigateFirstHotelImages(){
         this.elements.hotelImageList()
         .should('be.visible')
@@ -169,9 +162,9 @@ class SearchResultsPage {
         this.elements.hotelImageList().should('be.visible')
 
     }
+
     verifyOverviewTab(){
         cy.get('.active-tab').should('be.enabled')
     }
-
 }
 export default SearchResultsPage
