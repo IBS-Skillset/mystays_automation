@@ -72,9 +72,6 @@ Then('I verify the hotel search results displayed', () => {
 Then('I click on See Avaialbility button',()=>{
     searchResults.clickOnSeeAvaialabilityButton()
 })
-Then('I verify Overview tab is active by default',()=>{
-    searchResults.verifyOverviewTab()
-})
 And('I verify the room details displayed',()=>{
     roomDetails.verifyRoomType()
 })

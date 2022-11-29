@@ -1,6 +1,8 @@
 
 import HomePage from "./HomePage"
+import RoomDetailsPage from "./RoomDetailsPage";
 const homePage=new HomePage();
+const roomDetails=new RoomDetailsPage();
 
 class SearchResultsPage{
 
@@ -21,7 +23,8 @@ class SearchResultsPage{
 
         firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)'),
         firstHotelImageSwiper: ()=>cy.get(':nth-child(1)>.swiper-container>.next').eq(0),
-        firstHotelImage: () =>cy.get(':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img')
+        firstHotelImage: () =>cy.get(':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img'),
+        nightCount:()=>cy.get(':nth-child(1) > :nth-child(3) > .text-sm')
     }
 
     verifyLocationField() {
@@ -152,7 +155,8 @@ class SearchResultsPage{
             .click()
     }
     displayNoOfNights(){
-        cy.get(':nth-child(1) > :nth-child(3) > .text-sm').should('have.text', '3 night')
+        this.elements.nightCount()
+            .should('have.text', '3 night')
     }
     navigateFirstHotelImages(){
         this.elements.hotelImageList()
@@ -162,9 +166,10 @@ class SearchResultsPage{
         this.elements.hotelImageList().should('be.visible')
 
     }
-
-    verifyOverviewTab(){
-        cy.get('.active-tab').should('be.enabled')
+    overviewTabDefaultActive(){
+        roomDetails.elements.overViewTab()
+            .should('be.visible')
+            .should('be.enabled')
     }
 }
 export default SearchResultsPage
