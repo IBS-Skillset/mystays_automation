@@ -5,17 +5,22 @@ class RoomDetailsPage{
 
     //includes the elements and methods in myStays.com Room Details pop up    
     elements = {
-        roomTypeHeader: () =>cy.get('.w-40'),
-        todaysPriceHeader: () =>cy.get('.w-28'),
-        yourChoiceHeader: () =>cy.get('.w-32'),
+        overViewTab:()=>cy.contains('Overview'),
+        roomsTab:()=>cy.contains('Rooms'),
+        roomTypeHeader: () =>cy.contains('Room Type'),
+        todaysPriceHeader: () =>cy.contains('Todays Price'),
+        yourChoiceHeader: () =>cy.contains('Your choice'),
         roomDetails: () =>cy.get(':nth-child(1) > .roomtype'),
         roomPrice: () =>cy.get('tbody > :nth-child(1) > .font-semibold > .flex'),
-        breakfastIncludedFlag: () =>cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(1) > h1.text-green-600'),
+        breakfastIncludedFlag: () =>cy.get('.text-green-600 ml-2'),
         breakfastExcludedFlag: () =>cy.get('.text-red-500'),
-        refundableFlag: () =>cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(2) > span > .listdisc'),
+        refundableFlag: () =>cy.get('.refund ml-2 mt-2'),
 
     }
     verifyRoomType() {
+        this.elements.roomsTab()
+            .should('be.visible')
+            .click()
          this.elements.roomTypeHeader()
              .should('be.visible')
          this.elements.todaysPriceHeader()
@@ -28,13 +33,10 @@ class RoomDetailsPage{
              .should('be.visible')
         // this.elements.refundableFlag()
         //     .should('be.visible')
-         this.elements.breakfastIncludedFlag()
-             .should('be.visible')
+        //  this.elements.breakfastIncludedFlag()
+        //      .should('be.visible')
         cy.wait(5000)
         homePage.elements.destinationField().type('Paris')
-        //cy.get('.input-value-dest').eq(0).type('Paris')
-        cy.get('.active-tab').click()
-        cy.wait(3000)
     }
 }
 export default RoomDetailsPage
