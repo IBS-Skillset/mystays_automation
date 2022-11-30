@@ -21,23 +21,17 @@ class SignInPage {
             .type(password)
     }
     //fixtures implementation
-    typeFixturesUsername() {
-        cy.fixture('testDataFile').then((user) => {
-            this.user = user
+    typeFixturesUsername(username) {
             this.elements.usernameField()
                 .should('be.visible')
                 .and('be.enabled')
-                .type(user.username)
-        })
+                .type(username)
     }
-    typeFixturesPassword() {
-        cy.fixture('testDataFile').then((user) => {
-            this.user = user
+    typeFixturesPassword(password) {
             this.elements.passwordField()
                 .should('be.visible')
                 .and('be.enabled')
-                .type(user.password)
-        })
+                .type(password)
     }
     clickSigninButton() {
         this.elements.signinButton()

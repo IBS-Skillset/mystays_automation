@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  projectId: 'eu71sz',
   "chromeWebSecurity": false,
   "pageLoadTimeout": 30000,
   "defaultCommandTimeout": 30000,
@@ -9,9 +10,8 @@ module.exports = defineConfig({
     "password": "Ibs@oct2022",
     "host": "localhost",
     "database": "postgres",
-    "port": "5433"
+    "port": "5433",
   },
-  "projectId": "eu71sz",
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.

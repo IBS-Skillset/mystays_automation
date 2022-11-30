@@ -21,9 +21,9 @@ Given('I can access to myStays.com', () => {
     cy.visit("http://127.0.0.1:3000/signin")
 })
 
-When('I enter username and password', () => {
-    signinPage.typeFixturesUsername()
-    signinPage.typeFixturesPassword()
+When('I enter username and password', function(){
+    signinPage.typeFixturesUsername(this.data.username)
+    signinPage.typeFixturesPassword(this.data.password)
 })
 
 When('I login into myStays.com application using {string} and {string}', (username, password) => {
@@ -39,9 +39,9 @@ And('I click on Sign In button', () => {
     
 })
 
-Then('I am on Home Page', () => {
+Then('I am on Home Page', function(){
     homePage.verifyHomePage() // home page launched validation
-    common.verifyUsername()
+    common.verifyUsername(this.data.UserFirstName)
     cy.log("Successfully logged into application")
 })
 And('I verify the username displayed on top right', () => {
