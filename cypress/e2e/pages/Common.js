@@ -75,13 +75,10 @@ class Common{
         cy.log(txt)
     }
     //to verify the first name displayed in Home page
-    verifyUsername(){
-        cy.fixture('testDataFile').then((user) => {
-            this.user = user
+    verifyUsername(UserFirstName){
         this.elements.usernameIcon()
             .should('be.visible')
-            .should('have.text',user.UserFirstName)
-        })
+            .should('have.text',UserFirstName)
     }
     clickuserNameDropdown(){
         this.elements.usernameIcon()

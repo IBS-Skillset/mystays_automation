@@ -1,4 +1,4 @@
-Feature: Hotel Search
+Feature: Room Details
     Testing myStays.com hotel description page  
     
 @HotelDescription @RoomDetails
