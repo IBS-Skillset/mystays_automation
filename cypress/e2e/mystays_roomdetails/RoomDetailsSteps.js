@@ -14,3 +14,9 @@ const roomDetails = new RoomDetailsPage();
 Then('I verify Overview tab is active by default',()=>{
     searchResults.overviewTabDefaultActive()
 })
+Then('I verify the address displayed in Overview section',()=>{
+    searchResults.addressDisplay()
+})
+Then('I verify maximum 12 facilities displayed in description page',()=>{
+    searchResults.displayFacilities()
+})
