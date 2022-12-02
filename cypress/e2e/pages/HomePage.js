@@ -55,9 +55,7 @@ class HomePage {
         this.elements.checkOutDateField()
             .click()
         this.elements.calendarNextButton()
-            .click()
-            .click()
-            .click()
+    
         cy.get(':nth-child(1) > .react-datepicker__day--003')
             .click()
         this.elements.TravellerNumberField()
@@ -74,8 +72,7 @@ class HomePage {
         this.elements.checkOutDateField()
             .click()
         this.elements.calendarNextButton()
-            .click()
-            .click()
+            
         cy.get(':nth-child(1) > .react-datepicker__day--004')
             .click()
     }

@@ -24,7 +24,8 @@ class SearchResultsPage{
         firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)'),
         firstHotelImageSwiper: ()=>cy.get(':nth-child(1)>.swiper-container>.next').eq(0),
         firstHotelImage: () =>cy.get(':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img'),
-        nightCount:()=>cy.get(':nth-child(1) > :nth-child(3) > .text-sm')
+        nightCount:()=>cy.get(':nth-child(1) > :nth-child(3) > .text-sm'),
+        hotelAddress:()=>cy.get('.address-field')
     }
 
     verifyLocationField() {
@@ -170,6 +171,11 @@ class SearchResultsPage{
         roomDetails.elements.overViewTab()
             .should('be.visible')
             .should('be.enabled')
+    }
+
+    addressDisplay(){
+        this.elements.hotelAddress()
+        .should('be.visible')
     }
 }
 export default SearchResultsPage
