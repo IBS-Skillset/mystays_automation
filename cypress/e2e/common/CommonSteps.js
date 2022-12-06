@@ -16,16 +16,13 @@ After(()=>{ // runs once all tests are done
     common.verifyFooterPresent()
 })
 
-
 Given('I can access to myStays.com', () => {
     cy.visit("http://127.0.0.1:3000/signin")
 })
-
 When('I enter username and password', function(){
     signinPage.typeFixturesUsername(this.data.username)
     signinPage.typeFixturesPassword(this.data.password)
 })
-
 When('I login into myStays.com application using {string} and {string}', (username, password) => {
     signinPage.typeUsername(username)
     signinPage.typePassword(password)
@@ -33,12 +30,9 @@ When('I login into myStays.com application using {string} and {string}', (userna
     homePage.verifyHomePage()
     cy.log("Successfully logged into application")
 })
-
 And('I click on Sign In button', () => {
     signinPage.clickSigninButton()
-    
 })
-
 Then('I am on Home Page', function(){
     homePage.verifyHomePage() // home page launched validation
     common.verifyUsername(this.data.UserFirstName)
@@ -74,4 +68,7 @@ Then('I click on See Avaialbility button',()=>{
 })
 And('I verify the room details displayed',()=>{
     roomDetails.verifyRoomType()
+})
+And('I verify the option to see hotel images',()=>{
+    roomDetails.verifySeeMoreImages()
 })

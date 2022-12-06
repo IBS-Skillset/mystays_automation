@@ -9,11 +9,9 @@ When('I enter username {string} and password {string}', (username, password) => 
     signinPage.typeUsername(username)
     signinPage.typePassword(password)
 })
-
 When('I enter password {string}', (password) => {
     signinPage.typePassword(password)
 })
-
 And('I click on Sign In button and verify {string} is displayed', (message) => {
     signinPage.clickSigninButtonAndVerifyMessage(message)
 })

@@ -14,7 +14,6 @@ class SearchResultsPage{
         hotelAddressList: () => cy.get('.address'),
         hotelImageList: () => cy.get('.hotel-image'),
         hotelRatingButton: () => cy.get('.grid pl-1 w-28 grid-cols-5'),
-        firstHotel:()=>cy.get('.search-result > :nth-child(1) > :nth-child(1)'),
 
         seeAvaialabilityButtonOne:()=>cy.contains('See availability').eq(0),
 
@@ -25,8 +24,7 @@ class SearchResultsPage{
         firstHotelImageSwiper: ()=>cy.get(':nth-child(1)>.swiper-container>.next').eq(0),
         firstHotelImage: () =>cy.get(':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img'),
         nightCount:()=>cy.get(':nth-child(1) > :nth-child(3) > .text-sm'),
-        hotelAddress:()=>cy.get('.address-field'),
-        facilities:()=>cy.get('.facilities')
+        hotelAddress:()=>cy.get('.address-field')
     }
 
     verifyLocationField() {
@@ -173,18 +171,11 @@ class SearchResultsPage{
             .should('be.visible')
             .should('be.enabled')
     }
-
     addressDisplay(){
         this.elements.hotelAddress()
         .should('be.visible')
     }
 
-    displayFacilities(){
-      
-        this.elements.facilities().
-        should('be.visible')
-        cy.get('.room-type').should('have.length.lessThan',13)
-        
-    }
+
 }
 export default SearchResultsPage

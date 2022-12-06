@@ -16,6 +16,11 @@ class RoomDetailsPage{
         breakfastExcludedFlag: () =>cy.get('.text-red-500'),
         refundableFlag: () =>cy.get('.refund ml-2 mt-2'),
 
+        facilities:()=>cy.get('.facilities'),
+        facilitiesClass:()=>cy.get('.room-type'),
+
+        seeMoreButton:()=>cy.get('.more-photos'),
+        imagePopUpCloseButton:()=>cy.get('.close-button')
     }
     verifyRoomType() {
         this.elements.roomsTab()
@@ -37,6 +42,24 @@ class RoomDetailsPage{
         //      .should('be.visible')
         cy.wait(5000)
         homePage.elements.destinationField().type('Paris')
+    }
+    displayFacilities(){
+      
+        this.elements.facilities()
+            .should('be.visible')
+        this.elements.facilitiesClass()
+            .should('have.length.lessThan',13)
+        
+    }
+    verifySeeMoreImages(){
+        this.elements.seeMoreButton()
+            .should('be.visible')
+            .click()
+        cy.wait(2000)
+        cy.scrollTo('bottom')
+        this.elements.imagePopUpCloseButton()
+            .should('be.visible')
+            .click()
     }
 }
 export default RoomDetailsPage
