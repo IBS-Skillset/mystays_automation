@@ -16,7 +16,6 @@ After(()=>{ // runs once all tests are done
     common.verifyFooterPresent()
 })
 
-
 Then('I verify the number of hotels displayed in {string}', (location) => {
     searchResults.getNumberOfHotels(location)
 })
@@ -30,8 +29,6 @@ Then('I verify more than 10 hotel results are displayed',()=>{
 Then('I verify less than 10 hotel results are displayed',()=>{
     searchResults.displayHotelResultsLessThanTen()
 })
-
-
 And('I search for 3 nights', () => {
     homePage.searchforThreeNights()
 })

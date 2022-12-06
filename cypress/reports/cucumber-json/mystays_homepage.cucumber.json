@@ -28,7 +28,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 131000000
+              "duration": 119000000
             }
           },
           {
@@ -38,7 +38,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 545000000
+              "duration": 533000000
             }
           },
           {
@@ -48,7 +48,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 279000000
+              "duration": 251000000
             }
           },
           {
@@ -58,7 +58,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 217000000
+              "duration": 182000000
             }
           },
           {
@@ -68,7 +68,7 @@
             "name": "I verify the travel type headers displayed",
             "result": {
               "status": "passed",
-              "duration": 60000000
+              "duration": 46000000
             }
           },
           {
@@ -88,7 +88,7 @@
             "name": "I verify the Calendar displayed in Home page",
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 11000000
             }
           },
           {
@@ -118,7 +118,7 @@
             "name": "I verify the Search button displayed",
             "result": {
               "status": "passed",
-              "duration": 9000000
+              "duration": 8000000
             }
           },
           {
@@ -163,7 +163,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 167000000
+              "duration": 145000000
             }
           },
           {
@@ -173,7 +173,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 541000000
+              "duration": 539000000
             }
           },
           {
@@ -183,7 +183,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 281000000
+              "duration": 260000000
             }
           },
           {
@@ -193,7 +193,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 211000000
+              "duration": 151000000
             }
           },
           {
@@ -203,7 +203,7 @@
             "name": "I click on the username drop down and verify the options displayed in the drop down",
             "result": {
               "status": "passed",
-              "duration": 103000000
+              "duration": 100000000
             }
           }
         ]
@@ -228,7 +228,7 @@
             "name": "I can access to myStays.com",
             "result": {
               "status": "passed",
-              "duration": 168000000
+              "duration": 145000000
             }
           },
           {
@@ -238,7 +238,7 @@
             "name": "I enter username and password",
             "result": {
               "status": "passed",
-              "duration": 542000000
+              "duration": 535000000
             }
           },
           {
@@ -248,7 +248,7 @@
             "name": "I click on Sign In button",
             "result": {
               "status": "passed",
-              "duration": 289000000
+              "duration": 249000000
             }
           },
           {
@@ -258,7 +258,7 @@
             "name": "I am on Home Page",
             "result": {
               "status": "passed",
-              "duration": 222000000
+              "duration": 152000000
             }
           },
           {
@@ -268,7 +268,7 @@
             "name": "I click on the username drop down",
             "result": {
               "status": "passed",
-              "duration": 86000000
+              "duration": 84000000
             }
           },
           {
@@ -278,7 +278,7 @@
             "name": "I select Logout from the menu",
             "result": {
               "status": "passed",
-              "duration": 321000000
+              "duration": 306000000
             }
           }
         ]

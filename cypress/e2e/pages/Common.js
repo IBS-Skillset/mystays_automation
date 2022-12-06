@@ -10,6 +10,7 @@ class Common{
         dropdownList:()=>cy.get('.dropdown-link'),
         logoutButton:()=>cy.get('.dropdown-logout'),
     }
+    
     getBrandBanner() { 
         return cy.get('.brand-banner')
     }

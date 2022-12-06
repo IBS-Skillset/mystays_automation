@@ -105,7 +105,6 @@ class SignupPage {
         //     expect(t).to.contains("*Password is required")
         //  })
     }
-
     //to get the validation message
     clickContinueButtonAndVerifyValMessage(message) {
         this.elements.continueButton()

@@ -45,7 +45,8 @@ class SignInPage {
             .should('be.visible')
             .and('be.enabled')
             .click();
-        cy.get('#username').then(($input) => {
+        this.elements.usernameField()
+            .then(($input) => {
             expect($input[0].validationMessage).to.eq(message)
         })
     }

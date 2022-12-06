@@ -18,5 +18,5 @@ Then('I verify the address displayed in Overview section',()=>{
     searchResults.addressDisplay()
 })
 Then('I verify maximum 12 facilities displayed in description page',()=>{
-    searchResults.displayFacilities()
+    roomDetails.displayFacilities()
 })
