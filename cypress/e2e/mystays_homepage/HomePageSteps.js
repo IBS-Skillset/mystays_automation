@@ -1,42 +1,54 @@
-import { Given, When, Them, And, Then, Before, After} from "cypress-cucumber-preprocessor/steps"
-import Common from "../pages/Common.js";
-import SignInPage from "../pages/SigninPage.js";
-import HomePage from "../pages/HomePage.js";
+import {
+  Given,
+  When,
+  Them,
+  And,
+  Then,
+  Before,
+  After,
+} from 'cypress-cucumber-preprocessor/steps'
+import Common from '../pages/Common.js'
+import SignInPage from '../pages/SigninPage.js'
+import HomePage from '../pages/HomePage.js'
 
 const signinPage = new SignInPage()
-const common = new Common();
-const homePage = new HomePage();
+const common = new Common()
+const homePage = new HomePage()
 
-After(()=>{ // runs once all tests are done
-    common.verifyBrandBanner()
-    common.verifyFooterPresent()
+After(() => {
+  // runs once all tests are done
+  common.verifyBrandBanner()
+  common.verifyFooterPresent()
 })
 
-And('I verify the travel type headers displayed',()=>{
-    homePage.verifyTravelTypeHeaders()
+And('I verify the travel type headers displayed', () => {
+  homePage.verifyTravelTypeHeaders()
 })
 And('I verify the destination field in Home page', () => {
-    homePage.verifyDestinationField()
+  homePage.verifyDestinationField()
 })
 And('I verify the Calendar displayed in Home page', () => {
-    homePage.verifyCalenderField()
+  homePage.verifyCalenderField()
 })
-And('I verify the date fields displayed',()=>{
-    homePage.verifyDateFields()
+And('I verify the date fields displayed', () => {
+  homePage.verifyDateFields()
 })
-And('I verify the travellers input box',()=>{
-    homePage.verifyTravellerNumberBox()
+And('I verify the travellers input box', () => {
+  homePage.verifyTravellerNumberBox()
 })
 And('I verify the Search button displayed', () => {
-    homePage.verifySearchButton()
+  homePage.verifySearchButton()
 })
-And('I verify the validation when clicked on Search button without entering Location', () => {
+And(
+  'I verify the validation when clicked on Search button without entering Location',
+  () => {
     homePage.clickSearchButton()
-    const errorMessage = "*Location is required"
+    const errorMessage = '*Location is required'
     homePage.getValidationMessageforNoLocation(errorMessage)
-})
+  },
+)
 And('I verify the language selection displayed on top', () => {
-    common.verifyLanguageSelectionField()
+  common.verifyLanguageSelectionField()
 })
 // Then('I enter location as {string} and click on Search button',(location)=>{
 //     homePage.typeAndSelectLocation(location)
@@ -45,25 +57,28 @@ And('I verify the language selection displayed on top', () => {
 // })
 
 And('I select Français language', () => {
-    common.selectFrenchLanguage()
+  common.selectFrenchLanguage()
 })
 
 And('I select English language', () => {
-    common.selectEnglishLanguage()
+  common.selectEnglishLanguage()
 })
 
 Then('I verify the home page is displayed in Français', () => {
-    common.verifyFrenchHomePage()
+  common.verifyFrenchHomePage()
 })
 Then('I verify the home page is displayed in English', () => {
-    common.verifyEnglishHomePage()
+  common.verifyEnglishHomePage()
 })
-And('I click on the username drop down and verify the options displayed in the drop down',()=>{
+And(
+  'I click on the username drop down and verify the options displayed in the drop down',
+  () => {
     common.clickuserNameDropdown()
+  },
+)
+And('I click on the username drop down', () => {
+  common.clickUsername()
 })
-And('I click on the username drop down',()=>{
-    common.clickUsername()
-})
-And('I select Logout from the menu',()=>{
-    common.clickLogoutButton()
+And('I select Logout from the menu', () => {
+  common.clickLogoutButton()
 })

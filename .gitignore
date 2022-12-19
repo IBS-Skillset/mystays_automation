@@ -5,3 +5,11 @@
 # /cypress/screenshots
 /cypress/reports/cucumber-json
 cypress/reports/features/
+
+# IntelliJ files
+.idea/
+*.iml
+
+#vs-code
+.vscode/
+.vscode/launch.json
