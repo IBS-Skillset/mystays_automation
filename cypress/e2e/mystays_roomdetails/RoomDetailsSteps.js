@@ -29,3 +29,13 @@ Then('I verify the address displayed in Overview section', () => {
 Then('I verify maximum 12 facilities displayed in description page', () => {
   roomDetails.displayFacilities()
 })
+And('I verify the option to see hotel images', () => {
+  roomDetails.verifySeeMoreImages()
+})
+Then('I select room and verify selected room is highlighted',()=>{
+  roomDetails.selectRoomAndHighlight()
+})
+And('I verify Reserve button is displayed',()=>{
+  roomDetails.verifyReserveButton()
+})
+

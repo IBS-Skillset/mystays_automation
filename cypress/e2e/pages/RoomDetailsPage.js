@@ -21,6 +21,10 @@ class RoomDetailsPage {
 
     seeMoreButton: () => cy.get('.more-photos'),
     imagePopUpCloseButton: () => cy.get('.close-button'),
+
+    roomTypeSection: ()=>cy.get('.roomtype'),
+    selectedRoomRow:()=>cy.get('.border-b-2 border-gray-100 cursor-pointer selected'),
+    reserveButton: ()=>cy.get('.reserve-button')
   }
   verifyRoomType() {
     this.elements.roomsTab().should('be.visible').click()
@@ -45,6 +49,17 @@ class RoomDetailsPage {
     cy.wait(2000)
     cy.scrollTo('bottom')
     this.elements.imagePopUpCloseButton().should('be.visible').click()
+  }
+  verifyReserveButton(){
+    this.elements.reserveButton().click()
+  }
+  selectRoomAndHighlight(){
+    this.elements.roomTypeSection().click()
+    cy.get('.modal-table.bg-white')
+      .find('tbody')
+      .find('tr')
+      // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
+      .and('have.attr','style')
   }
 }
 export default RoomDetailsPage
