@@ -1,10 +1,10 @@
 {
-  "username":"qauser@gmail.com",
-  "password":"TEST",
-  "UserFirstName":"TestFirstName",
-  "bookingDetails":{
-     "destination":"Paris",
-     "startDate":"Dec 01, 2022",
-     "endDate":"Dec 03, 2022"
+  "username": "qauser@gmail.com",
+  "password": "TEST",
+  "UserFirstName": "TestFirstName",
+  "bookingDetails": {
+    "destination": "Paris",
+    "startDate": "Dec 01, 2022",
+    "endDate": "Dec 03, 2022"
   }
 }
