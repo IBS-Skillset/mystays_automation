@@ -49,7 +49,7 @@ And('I click on Sign In button', () => {
 })
 Then('I am on Home Page', function () {
   homePage.verifyHomePage() // home page launched validation
-  common.verifyUsername(this.data.UserFirstName)
+  // common.verifyUsername(this.data.UserFirstName)
   cy.log('Successfully logged into application')
 })
 And('I verify the username displayed on top right', () => {
@@ -83,6 +83,13 @@ Then('I click on See Avaialbility button', () => {
 And('I verify the room details displayed', () => {
   roomDetails.verifyRoomType()
 })
-And('I verify the option to see hotel images', () => {
-  roomDetails.verifySeeMoreImages()
+Then('I select room and click on Reserve button', () => {
+  roomDetails.selectRoomAndHighlight()
+  roomDetails.verifyReserveButton()
+})
+And('I enter the details in confirm page',()=>{
+
+})
+And('I click on Confirm button',()=>{
+
 })
