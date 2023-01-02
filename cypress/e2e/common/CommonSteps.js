@@ -87,3 +87,9 @@ Then('I select room and click on Reserve button', () => {
   roomDetails.selectRoomAndHighlight()
   roomDetails.verifyReserveButton()
 })
+And('I enter the details in confirm page',()=>{
+
+})
+And('I click on Confirm button',()=>{
+
+})

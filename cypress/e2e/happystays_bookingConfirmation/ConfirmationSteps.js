@@ -25,3 +25,19 @@ import {
   And('I verify the details in confirm page',()=>{
     confirmPage.verifyDetails()
   })
+
+  And('I verify the hotel details displayed in confirm page',()=>{
+
+  })
+  And('I enter the user details in confirm page',()=>{
+
+  })
+  And('I verify the payment options in confirm page',()=>{
+
+  })
+  And('I verify the hotel booking is successful',()=>{
+
+  })
+  And('I verify the booked hotel is displayed in My Trips',()=>{
+
+  })
