@@ -91,7 +91,7 @@ class SearchResultsPage {
   }
   clickOnSeeAvaialabilityButton() {
     //get hotelCode
-    cy.get('a:contains("See availability")').then(($link) => {
+    cy.get('a:contains("See availability")').eq(2).then(($link) => {
       const href = $link.attr('href')
       cy.log(href)
       const hrefArray = href.split('/')
@@ -111,10 +111,11 @@ class SearchResultsPage {
             state.hotel.availabilityRequest.hotelAvailabilityRequest
           var nightCount = state.hotel.nightCount.days
           cy.log(hotelDescription, hotelAvailability, nightCount)
+          var userDetails=state.userDetails.userDetails
 
           //click See Availability button
           cy.get('a:contains("See availability")')
-            .eq(0)
+            .eq(2)//Bonne Nouvelle hotel
             .invoke('removeAttr', 'target')
             .invoke('removeAttr', 'rel')
             .click()
@@ -132,6 +133,10 @@ class SearchResultsPage {
           cy.window().its('store').invoke('dispatch', {
             type: 'DAYS',
             payload: nightCount,
+          })
+          cy.window().its('store').invoke('dispatch', {
+            type: 'USER_DETAILS',
+            payload: userDetails,
           })
         })
     })

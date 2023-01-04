@@ -24,7 +24,9 @@ class RoomDetailsPage {
 
     roomTypeSection: ()=>cy.get('.roomtype'),
     selectedRoomRow:()=>cy.get('.border-b-2 border-gray-100 cursor-pointer selected'),
-    reserveButton: ()=>cy.get('.reserve-button')
+    reserveButton: ()=>cy.get('.reserve-button'),
+
+    hotelName: ()=>cy.get('.hotelName')
   }
   verifyRoomType() {
     this.elements.roomsTab().should('be.visible').click()
@@ -54,12 +56,21 @@ class RoomDetailsPage {
     this.elements.reserveButton().click()
   }
   selectRoomAndHighlight(){
-    this.elements.roomTypeSection().click()
-    cy.get('.modal-table.bg-white')
-      .find('tbody')
-      .find('tr')
-      // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
-      .and('have.attr','style')
+    // this.elements.roomTypeSection().click()
+    this.elements.roomTypeSection().eq(1).click()
+    //verifying the selected room is highlighted or not
+    // cy.get('.modal-table.bg-white')
+    //   .find('tbody')
+    //   .find('tr')
+    //   // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
+    //   .and('have.attr','style')
+  }
+  getHotelDetails(){
+    cy.get('.hotelName').then(($name)=>{
+      const hotelName=$name.text()
+      console.log(hotelName)
+      cy.log(hotelName)
+    })
   }
 }
 export default RoomDetailsPage

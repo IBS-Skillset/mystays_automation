@@ -48,13 +48,13 @@ class HomePage {
   //select date from react date picker
   selectFromAndToDate() {
     this.elements.checkInDateField().click()
-    this.elements.calendarNextButton().click().click().click()
-    cy.get(':nth-child(1) > .react-datepicker__day--001').click()
+    this.elements.calendarNextButton().click().click().click().click().click()
+    cy.get('.react-datepicker__day--004').click()
     this.elements.checkOutDateField().click()
     this.elements.calendarNextButton()
 
-    cy.get(':nth-child(1) > .react-datepicker__day--003').click()
-    this.elements.TravellerNumberField().type('2') //select 2 travellers
+    // cy.get(':nth-child(2) > .react-datepicker__day--002').click()
+    // this.elements.TravellerNumberField().type('2') //select 2 travellers//this field is disabled now
   }
   searchforThreeNights() {
     this.elements.checkInDateField().click()
