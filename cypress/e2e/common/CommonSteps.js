@@ -14,12 +14,16 @@ import SignInPage from '../pages/SigninPage.js'
 import HomePage from '../pages/HomePage.js'
 import SearchResultsPage from '../pages/SearchResultsPage.js'
 import RoomDetailsPage from '../pages/RoomDetailsPage.js'
+import ConfirmationPage from '../pages/ConfirmationPage.js'
 
 const signinPage = new SignInPage()
 const common = new Common()
 const homePage = new HomePage()
 const searchResults = new SearchResultsPage()
 const roomDetails = new RoomDetailsPage()
+const confirmPage=new ConfirmationPage()
+
+
 
 After(() => {
   // runs once all tests are done
@@ -84,12 +88,13 @@ And('I verify the room details displayed', () => {
   roomDetails.verifyRoomType()
 })
 Then('I select room and click on Reserve button', () => {
+  roomDetails.getHotelDetails()
   roomDetails.selectRoomAndHighlight()
   roomDetails.verifyReserveButton()
 })
 And('I enter the details in confirm page',()=>{
-
+  confirmPage.fillPaymentInfo()
 })
 And('I click on Confirm button',()=>{
-
+  confirmPage.clickBookNowButton()
 })

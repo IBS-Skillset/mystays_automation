@@ -22,12 +22,8 @@ import {
   const roomDetails = new RoomDetailsPage()
   const confirmPage=new ConfirmationPage()
   
-  And('I verify the details in confirm page',()=>{
-    confirmPage.verifyDetails()
-  })
-
   And('I verify the hotel details displayed in confirm page',()=>{
-
+    confirmPage.verifyDetails()
   })
   And('I enter the user details in confirm page',()=>{
 
@@ -36,8 +32,8 @@ import {
 
   })
   And('I verify the hotel booking is successful',()=>{
-
+    confirmPage.verifyBookingMessage()
   })
   And('I verify the booked hotel is displayed in My Trips',()=>{
-
+    confirmPage.verifyMyTrips()
   })
