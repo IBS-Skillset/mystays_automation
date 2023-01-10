@@ -19,6 +19,7 @@ class ConfirmationPage {
     cancelRate:() =>cy.get('.rate-cancel'),
 
     userDetails:() =>cy.get('.user-details'),
+    userDetailsFields:() =>cy.get('.values.headings'),
 
     paymentDetails:() =>cy.get('.payment-details'),
     cardHolderNameField: () => cy.get('#cardHolderName'),
@@ -30,7 +31,6 @@ class ConfirmationPage {
   }
   verifyDetails(){
     this.elements.bookingDetails().should('be.visible')
-
     this.elements.hotelImage().should('be.visible')
     this.elements.hotelDetailsBook().should('be.visible')
     this.elements.hotelName().should('be.visible')
@@ -39,6 +39,30 @@ class ConfirmationPage {
     //   cy.log(confirmHotelName)
     // })
     this.elements.hotelAddress().should('be.visible')
+    cy.wait(5000)
+  }
+
+  verifyUserDetails(userFirstName, userLastName, emailAddress, mobilePhone) {
+    cy.wait(5000)
+    this.elements
+    .userDetailsFields().eq(0)
+    .should('be.visible')
+    .should('have.text', userFirstName)
+
+    this.elements
+    .userDetailsFields().eq(1)
+    .should('be.visible')
+    .should('have.text', userLastName)
+
+    this.elements
+    .userDetailsFields().eq(2)
+    .should('be.visible')
+    .should('have.text', emailAddress)
+
+    this.elements
+    .userDetailsFields().eq(3)
+    .should('be.visible')
+    .should('have.text', mobilePhone)
   }
   
   fillPaymentInfo(){
@@ -54,7 +78,9 @@ class ConfirmationPage {
     cy.wait(3000)
   }
   verifyBookingMessage(){
-    cy.get('.final-booking-info-content').should('have.text','Your trip has been successfully booked . Thank you for your reservation.')
+    // cy.get('.final-booking-info-content').should('have.text','Your trip has been successfully booked . Thank you for your reservation.')
+    cy.get('.final-booking-info-content').should('have.text','Thank you for your reservation.','Your trip has been successfully booked . Thank you for your\n            reservation.')
+
     cy.wait(3000)
   }
   verifyMyTrips(){

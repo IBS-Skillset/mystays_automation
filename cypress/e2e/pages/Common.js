@@ -9,6 +9,8 @@ class Common {
     userImage: () => cy.get('.pr-1'),
     dropdownList: () => cy.get('.dropdown-link'),
     logoutButton: () => cy.get('.dropdown-logout'),
+
+    userDetailsFields:() =>cy.get('.values.headings'),
   }
 
   getBrandBanner() {
@@ -69,11 +71,11 @@ class Common {
     cy.log(txt)
   }
   //to verify the first name displayed in Home page
-  verifyUsername(UserFirstName) {
+  verifyUsername(UserFullName) {
     this.elements
       .usernameIcon()
       .should('be.visible')
-      .should('have.text', UserFirstName)
+      .should('have.text', UserFullName)
   }
   clickuserNameDropdown() {
     this.elements.usernameIcon().click()
