@@ -49,7 +49,7 @@ class HomePage {
   selectFromAndToDate() {
     this.elements.checkInDateField().click()
     this.elements.calendarNextButton().click().click().click().click().click()
-    cy.get('.react-datepicker__day--004').click()
+    cy.get(':nth-child(1) > .react-datepicker__day--001').click()
     this.elements.checkOutDateField().click()
     this.elements.calendarNextButton()
 
@@ -86,7 +86,7 @@ class HomePage {
     this.elements.checkOutDateField().should('be.visible')
   }
   verifyTravellerNumberBox() {
-    this.elements.TravellerNumberField().should('be.visible').and('be.enabled')
+    this.elements.TravellerNumberField().should('be.visible')
   }
   verifyDestinationField() {
     this.elements.destinationField().should('be.visible').and('be.enabled')

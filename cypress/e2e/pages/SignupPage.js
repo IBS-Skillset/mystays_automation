@@ -98,11 +98,11 @@ class SignupPage {
     })
     cy.get(':nth-child(3) > .label > .errorMsg').then(function (e) {
       const t = e.text()
-      expect(t).to.contains('Please enter valid name')
+      expect(t).to.contains('Please enter first name')
     })
     cy.get(':nth-child(4) > .label > .errorMsg').then(function (e) {
       const t = e.text()
-      expect(t).to.contains('Please enter valid name')
+      expect(t).to.contains('Please enter last name')
     })
     //  cy.get(':nth-child(6) > .label > .errorMsg').then(function(e){
     //     const t = e.text()

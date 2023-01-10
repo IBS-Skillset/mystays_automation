@@ -1,10 +1,13 @@
 {
-  "username": "sovarghese@gmail.com",
-  "password": "Soniy@123",
-  "UserFirstName": "TestFirstName",
-  "bookingDetails": {
-    "destination": "Paris",
-    "startDate": "Dec 01, 2022",
-    "endDate": "Dec 03, 2022"
+  "username":"sovarghese@gmail.com",
+  "password":"Soniy@123",
+  "UserFullName":"Soniya Varghese",
+  "userFirstName":"Soniya",
+  "userLastName":"Varghese",
+  "MobilePhone":"919567911083",
+  "bookingDetails":{
+     "destination":"Paris",
+     "startDate":"Dec 01, 2022",
+     "endDate":"Dec 03, 2022"
   }
 }

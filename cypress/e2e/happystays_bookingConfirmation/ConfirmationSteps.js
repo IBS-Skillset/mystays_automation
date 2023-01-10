@@ -25,9 +25,6 @@ import {
   And('I verify the hotel details displayed in confirm page',()=>{
     confirmPage.verifyDetails()
   })
-  And('I enter the user details in confirm page',()=>{
-
-  })
   And('I verify the payment options in confirm page',()=>{
 
   })

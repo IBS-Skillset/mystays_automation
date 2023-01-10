@@ -23,8 +23,6 @@ const searchResults = new SearchResultsPage()
 const roomDetails = new RoomDetailsPage()
 const confirmPage=new ConfirmationPage()
 
-
-
 After(() => {
   // runs once all tests are done
   common.verifyBrandBanner()
@@ -38,8 +36,7 @@ When('I enter username and password', function () {
   signinPage.typeFixturesUsername(this.data.username)
   signinPage.typeFixturesPassword(this.data.password)
 })
-When(
-  'I login into myStays.com application using {string} and {string}',
+When('I login into myStays.com application using {string} and {string}',
   (username, password) => {
     signinPage.typeUsername(username)
     signinPage.typePassword(password)
@@ -53,7 +50,7 @@ And('I click on Sign In button', () => {
 })
 Then('I am on Home Page', function () {
   homePage.verifyHomePage() // home page launched validation
-  // common.verifyUsername(this.data.UserFirstName)
+  // common.verifyUsername(this.data.UserFullName)
   cy.log('Successfully logged into application')
 })
 And('I verify the username displayed on top right', () => {
@@ -87,14 +84,17 @@ Then('I click on See Avaialbility button', () => {
 And('I verify the room details displayed', () => {
   roomDetails.verifyRoomType()
 })
-Then('I select room and click on Reserve button', () => {
+Then('I select refundable room and click on Reserve button', () => {
   roomDetails.getHotelDetails()
-  roomDetails.selectRoomAndHighlight()
-  roomDetails.verifyReserveButton()
+  roomDetails.selectRefundableRoomAndReserve()
 })
 And('I enter the details in confirm page',()=>{
   confirmPage.fillPaymentInfo()
 })
 And('I click on Confirm button',()=>{
   confirmPage.clickBookNowButton()
+})
+And('I verify the user details populated in confirm page',function (){
+  confirmPage.verifyUserDetails(this.data.userFirstName, this.data.userLastName, this.data.username, this.data.MobilePhone)
+  // common.verifyUserDetails("Soniya")
 })

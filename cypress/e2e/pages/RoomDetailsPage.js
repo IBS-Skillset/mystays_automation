@@ -1,4 +1,5 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
+import { should } from 'chai'
 import HomePage from './HomePage'
 const homePage = new HomePage()
 
@@ -52,18 +53,44 @@ class RoomDetailsPage {
     cy.scrollTo('bottom')
     this.elements.imagePopUpCloseButton().should('be.visible').click()
   }
-  verifyReserveButton(){
-    this.elements.reserveButton().click()
-  }
-  selectRoomAndHighlight(){
-    // this.elements.roomTypeSection().click()
-    this.elements.roomTypeSection().eq(1).click()
-    //verifying the selected room is highlighted or not
-    // cy.get('.modal-table.bg-white')
-    //   .find('tbody')
-    //   .find('tr')
-    //   // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
-    //   .and('have.attr','style')
+
+  selectRefundableRoomAndReserve(){
+    cy.wait(3000)
+    //select room based on Refundable text
+        // cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(2) > .refund').contains('Refundable').click()
+
+    //OR
+        // cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(2) > .refund').then(($refundableFlag)=>{
+        //   if($refundableFlag.text().includes('Refundable')){
+        //     cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(2) > .refund').click()
+        //   }
+        //   else{
+        //     cy.log('Room is not refundable')
+        //   }
+        // })
+
+    //select refundable room by verifying rooms one by one
+    cy.get('.refund.ml-2.mt-2').each(($refundableFlag,index, $list)=>{
+        cy.log($refundableFlag.text())
+        cy.log(index)
+        if($refundableFlag.text()==="Refundable"){
+          cy.wrap($refundableFlag).click()
+          // verify the selected room is highlighted or not
+                  // cy.get('.modal-table.bg-white')
+                  // .find('tbody')
+                  // .find('tr')
+                  // // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
+                  // .and('have.attr','style')
+          cy.wait(5000)
+          cy.scrollTo('right')
+          this.elements.reserveButton().should('be.visible').click()
+          return false
+        }
+        else{
+          cy.log('Room is not refundable')
+          cy.log($refundableFlag.text())
+        }
+      })
   }
   getHotelDetails(){
     cy.get('.hotelName').then(($name)=>{
