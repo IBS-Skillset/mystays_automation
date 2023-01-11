@@ -90,13 +90,17 @@ class SearchResultsPage {
     // cy.wait(150000)
   }
   clickOnSeeAvaialabilityButton() {
+    const hotelIndex=5 //Bonne Nouvelle hotel
     //get hotelCode
-    cy.get('a:contains("See availability")').eq(5).then(($link) => {
+    cy.get('a:contains("See availability")').eq(hotelIndex).then(($link) => {
       const href = $link.attr('href')
       cy.log(href)
       const hrefArray = href.split('/')
       const hotelCode = hrefArray[2]
       cy.log(hotelCode)
+    // cy.get().eq(hotelIndex).then(($hotelName)=>{
+    //   cy.log($hotelName.text())
+    // })
 
       //to get redux state
       cy.window()
@@ -115,7 +119,7 @@ class SearchResultsPage {
 
           //click See Availability button
           cy.get('a:contains("See availability")')
-            .eq(5)//Bonne Nouvelle hotel
+            .eq(hotelIndex)
             .invoke('removeAttr', 'target')
             .invoke('removeAttr', 'rel')
             .click()

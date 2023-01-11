@@ -53,6 +53,9 @@ Then('I am on Home Page', function () {
   // common.verifyUsername(this.data.UserFullName)
   cy.log('Successfully logged into application')
 })
+And('I select My Trips from the drop down',()=>{
+  homePage.selectMyTrips()
+})
 And('I verify the username displayed on top right', () => {
   common.getUsername()
 })
@@ -88,13 +91,12 @@ Then('I select refundable room and click on Reserve button', () => {
   roomDetails.getHotelDetails()
   roomDetails.selectRefundableRoomAndReserve()
 })
-And('I enter the details in confirm page',()=>{
-  confirmPage.fillPaymentInfo()
+And('I enter the payment details in confirm page',function(){
+  confirmPage.fillPaymentInfo(this.data.PaymentDetails.cardHolderName,this.data.PaymentDetails.cardNumber,this.data.PaymentDetails.expiryDate,this.data.PaymentDetails.cvv)
 })
-And('I click on Confirm button',()=>{
+And('I click on BookNow button',()=>{
   confirmPage.clickBookNowButton()
 })
 And('I verify the user details populated in confirm page',function (){
   confirmPage.verifyUserDetails(this.data.userFirstName, this.data.userLastName, this.data.username, this.data.MobilePhone)
-  // common.verifyUserDetails("Soniya")
 })

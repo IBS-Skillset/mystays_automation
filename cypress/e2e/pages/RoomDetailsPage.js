@@ -84,6 +84,7 @@ class RoomDetailsPage {
           cy.wait(5000)
           cy.scrollTo('right')
           this.elements.reserveButton().should('be.visible').click()
+          cy.wait(5000)
           return false
         }
         else{

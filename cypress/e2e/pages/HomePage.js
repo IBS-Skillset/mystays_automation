@@ -30,6 +30,8 @@ class HomePage {
     hotelFlightTab: () => cy.contains('HOTEL + FLIGHT'),
     hotelFlightCarTab: () => cy.contains('HOTEL + FLIGHT + CAR'),
     hotelCarTab: () => cy.contains('HOTEL + CAR'),
+
+    usernameIcon: () => cy.get('.text-white')
   }
 
   getDestinationField() {
@@ -103,6 +105,11 @@ class HomePage {
       const t = e.text()
       expect(t).to.contains(errorMessageForNoLocation)
     })
+  }
+  selectMyTrips(){
+    this.elements.usernameIcon().click()
+    cy.contains('My Trips').click()
+    cy.wait(3000)
   }
 }
 export default HomePage
