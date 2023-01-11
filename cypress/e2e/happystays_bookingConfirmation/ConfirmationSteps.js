@@ -25,11 +25,14 @@ import {
   And('I verify the hotel details displayed in confirm page',()=>{
     confirmPage.verifyDetails()
   })
-  And('I verify the payment options in confirm page',()=>{
+  And('I verify the validations displayed in Payment section',()=>{
 
   })
   And('I verify the hotel booking is successful',()=>{
     confirmPage.verifyBookingMessage()
+  })
+  And('I verify the details displayed in My Trips',()=>{
+
   })
   And('I verify the booked hotel is displayed in My Trips',()=>{
     confirmPage.verifyMyTrips()
