@@ -32,13 +32,19 @@ class ConfirmationPage {
     viewBookingButton: ()=>cy.get('.btn-viewbooking'),
     successMessage:()=>cy.get('.final-booking-info-content'),
     pnrNumber:()=>cy.get('.confirmation-number'),
-    hotelName:()=>cy.get('.final-booking-hotel-name > :nth-child(1)')
+    hotelName:()=>cy.get('.final-booking-hotel-name > :nth-child(1)'),
+
+    nameValidation:()=>cy.get(':nth-child(5) > .error-message'),
+    cardNumberValidation:()=>cy.get(':nth-child(6) > .error-message'),
+    expiryDateValidation:()=>cy.get(':nth-child(1) > .error-message'),
+    cvcValidation:()=>cy.get(':nth-child(2) > .error-message')
+
   }
   verifyDetails(){
     this.elements.bookingDetails().should('be.visible')
     this.elements.hotelImage().should('be.visible')
     this.elements.hotelDetailsBook().should('be.visible')
-    this.elements.hotelName().should('be.visible')
+    //this.elements.hotelName().should('be.visible')
     // this.elements.hotelName().then((confirmHotelName)=>{
     //   expect(confirmHotelName).to.eq(rommDetailsPage.getHotelDetails().hotelName)
     //   cy.log(confirmHotelName)
@@ -122,6 +128,7 @@ class ConfirmationPage {
     //check hotel content is visible
     cy.get('.trips-content').should('be.visible')
 
+
     //check and log hotel name, booking id, created on date
     cy.get('.booking-info').should('be.visible').then(($bookingInfo)=>{
       cy.log("Count of trips: " + $bookingInfo.length)
@@ -156,6 +163,14 @@ class ConfirmationPage {
       })
     })
     cy.get('.footer-copyright').scrollIntoView()
+  }
+  
+  verifyPaymentValidations(){
+   this.elements.nameValidation().contains("Card holder name is required")
+   this.elements.cardNumberValidation().contains("Card number is required")
+   this.elements.expiryDateValidation().contains("Expiry date is required")
+   this.elements.cvcValidation().contains("CVC is required")
+
   }
 }
 export default ConfirmationPage

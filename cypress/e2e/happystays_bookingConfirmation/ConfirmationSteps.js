@@ -26,7 +26,7 @@ import {
     confirmPage.verifyDetails()
   })
   And('I verify the validations displayed in Payment section',()=>{
-
+    confirmPage.verifyPaymentValidations()
   })
   And('I verify the hotel booking is successful',()=>{
     confirmPage.verifyBookingMessage()
