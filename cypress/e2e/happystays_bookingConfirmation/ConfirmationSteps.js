@@ -32,7 +32,7 @@ import {
     confirmPage.verifyBookingMessage()
   })
   And('I verify the details displayed in My Trips',()=>{
-
+    confirmPage.verifyMyTripsDetails()
   })
   And('I verify the booked hotel is displayed in My Trips',()=>{
     confirmPage.verifyMyTrips()

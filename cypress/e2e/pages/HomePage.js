@@ -109,7 +109,7 @@ class HomePage {
   selectMyTrips(){
     this.elements.usernameIcon().click()
     cy.contains('My Trips').click()
-    cy.wait(3000)
-  }
+    cy.get('.active-trips > button').should('be.visible')//checking for 'Upcoming' tab
+    }
 }
 export default HomePage

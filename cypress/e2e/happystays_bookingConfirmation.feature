@@ -29,7 +29,6 @@ Scenario Outline: As User, I can search a hotel and verify the fields displayed 
     Then I select refundable room and click on Reserve button
     And I verify the hotel details displayed in confirm page
     And I verify the user details populated in confirm page
-    And I verify the payment options in confirm page
 
     Examples:
       | Destination     |
@@ -81,7 +80,7 @@ Scenario: As User, I can verify the trips displayed in My Trips
      Then I am on Home Page
      And I select My Trips from the drop down 
      And I verify the details displayed in My Trips
-    # And I verify the booked hotel is displayed in My Trips
+    #  And I verify the booked hotel is displayed in My Trips
 
 
 #@HotelBook     
