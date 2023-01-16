@@ -80,14 +80,11 @@ class SearchResultsPage {
       .should('be.visible')
       .clear()
       .type('Paris, France')
-      .wait(10000)
     cy.get('#ChIJD7fiBh9u5kcRYJSMaMOCCwQ').click()
     homePage.elements.checkInDateField().should('be.visible')
     homePage.elements.checkOutDateField().should('be.visible')
     homePage.elements.TravellerNumberField().should('be.visible')
     this.elements.resultsSearchButton().should('be.visible')
-    //     .click()
-    // cy.wait(150000)
   }
   clickOnSeeAvaialabilityButton() {
     const hotelIndex=5 //Bonne Nouvelle hotel
@@ -157,9 +154,9 @@ class SearchResultsPage {
   }
   navigateFirstHotelImages() {
     this.elements.hotelImageList().should('be.visible')
-    cy.wait(10000)
     this.elements
       .firstHotelImageSwiper()
+      .should('be.visible')
       .click()
       .click()
       .click()
