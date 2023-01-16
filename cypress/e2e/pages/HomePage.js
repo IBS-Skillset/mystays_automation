@@ -31,7 +31,9 @@ class HomePage {
     hotelFlightCarTab: () => cy.contains('HOTEL + FLIGHT + CAR'),
     hotelCarTab: () => cy.contains('HOTEL + CAR'),
 
-    usernameIcon: () => cy.get('.text-white')
+    usernameIcon: () => cy.get('.text-white'),
+
+    locationDropDownList:()=>cy.get('.location-display-container')
   }
 
   getDestinationField() {
@@ -44,7 +46,7 @@ class HomePage {
       .should('be.visible')
       .and('be.enabled')
       .type(location)
-    cy.wait(10000)
+    this.elements.locationDropDownList().should('be.visible')
     this.elements.firstLocation().click()
   }
   //select date from react date picker
@@ -69,7 +71,7 @@ class HomePage {
   }
   clickSearchButton() {
     this.elements.searchButton().should('be.visible').and('be.enabled').click()
-    cy.wait(25000)
+    cy.wait(15000)
   }
   //to verify whether the home page loaded is correct or not
   verifyHomePage() {

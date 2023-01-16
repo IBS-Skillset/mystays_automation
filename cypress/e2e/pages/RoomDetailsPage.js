@@ -49,13 +49,11 @@ class RoomDetailsPage {
   }
   verifySeeMoreImages() {
     this.elements.seeMoreButton().should('be.visible').click()
-    cy.wait(2000)
     cy.scrollTo('bottom')
     this.elements.imagePopUpCloseButton().should('be.visible').click()
   }
 
   selectRefundableRoomAndReserve(){
-    cy.wait(3000)
     //select room based on Refundable text
         // cy.get(':nth-child(1) > .p-3.flex-col > :nth-child(2) > .refund').contains('Refundable').click()
 
@@ -81,10 +79,10 @@ class RoomDetailsPage {
                   // .find('tr')
                   // // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
                   // .and('have.attr','style')
-          cy.wait(5000)
+          cy.wait(3000)
           cy.scrollTo('right')
           this.elements.reserveButton().should('be.visible').click()
-          cy.wait(5000)
+          cy.wait(2000)
           return false
         }
         else{

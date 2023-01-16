@@ -9,7 +9,6 @@ class Common {
     userImage: () => cy.get('.pr-1'),
     dropdownList: () => cy.get('.dropdown-link'),
     logoutButton: () => cy.get('.dropdown-logout'),
-
   }
 
   getBrandBanner() {

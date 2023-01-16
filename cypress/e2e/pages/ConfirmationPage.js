@@ -50,11 +50,9 @@ class ConfirmationPage {
     //   cy.log(confirmHotelName)
     // })
     this.elements.hotelAddress().should('be.visible')
-    cy.wait(5000)
   }
 
   verifyUserDetails(userFirstName, userLastName, emailAddress, mobilePhone) {
-    cy.wait(2000)
     this.elements
     .userDetailsFields().eq(0)
     .should('be.visible')
@@ -77,19 +75,27 @@ class ConfirmationPage {
   }
   
   fillPaymentInfo(cardHolderName,cardNumber,expiryDate,cvv){
-    cy.wait(6000)
-    this.elements.cardHolderNameField().type(cardHolderName)
-    this.elements.cardNumberField().type(cardNumber)
-    this.elements.expiryDateField().type(expiryDate)
-    this.elements.cvvField().type(cvv)
+    this.elements.cardHolderNameField()
+    .should('be.visible')
+    .type(cardHolderName)
+    this.elements.cardNumberField()
+    .should('be.visible')
+    .type(cardNumber)
+    this.elements.expiryDateField()
+    .should('be.visible')
+    .type(expiryDate)
+    this.elements.cvvField()
+    .should('be.visible')
+    .type(cvv)
   }
 
   clickBookNowButton(){
-    this.elements.bookNowButton().click()
-    cy.wait(3000)
+    this.elements.bookNowButton()
+    .should('be.visible')
+    .click()
+    cy.wait(5000)
   }
   verifyBookingMessage(){
-    cy.wait(5000)
     // cy.get('.final-booking-info-content').should('have.text','Your trip has been successfully booked . Thank you for your reservation.')
     // cy.get('.final-booking-info-content').should('have.text','Your trip has been successfully booked . Thank you for your\n            reservation.')
 
@@ -101,19 +107,20 @@ class ConfirmationPage {
     //room nos night nos cy.get('.font-bold > .ml-2')
 
     this.elements.successMessage().then(($message)=>{
-      cy.writeFile('cypress/fixtures/bookedPNR.json',{SuccessMessage:$message.text()},{ flag: 'a+' })
+      cy.writeFile('cypress/fixtures/bookedPNR.json',{SuccessMessage:$message.text()})
     })
     this.elements.pnrNumber().then(($pnr)=>{
-      cy.writeFile('cypress/fixtures/bookedPNR.json',{PNR:$pnr.text(), Date: Date()},{ flag: 'a+' })
+      cy.writeFile('cypress/fixtures/bookedPNR.json',{PNR:$pnr.text(), Date: Date()})
     })
     this.elements.hotelName().then(($hotelName)=>{
-      cy.writeFile('cypress/fixtures/bookedPNR.json',{hotelName:$hotelName.text()},{ flag: 'a+' })
+      cy.writeFile('cypress/fixtures/bookedPNR.json',{hotelName:$hotelName.text()})
     })
   }
   verifyMyTrips(){
-    cy.wait(3000)
-    this.elements.viewBookingButton().click()
-    cy.wait(5000)
+    this.elements.viewBookingButton()
+    .should('be.visible')
+    .click()
+    cy.get('.trips-content').should('be.visible')
     cy.readFile('cypress/fixtures/bookedPNR.json').then(function($booked){
       cy.log($booked.PNR)
       // cy.contains($booked.hotelName)
@@ -170,7 +177,6 @@ class ConfirmationPage {
    this.elements.cardNumberValidation().contains("Card number is required")
    this.elements.expiryDateValidation().contains("Expiry date is required")
    this.elements.cvcValidation().contains("CVC is required")
-
   }
 }
 export default ConfirmationPage
