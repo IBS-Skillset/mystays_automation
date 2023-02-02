@@ -32,3 +32,14 @@ Scenario: Verify the field validations when no values are entered in 'Create an 
     Given I can access to myStays.com
     When I click on Create account button in Sign In page
     And I click on Continue button and verify the message displayed
+
+
+@Signup
+Scenario Outline: Verify error message when creating user with existing mail id
+    Given I can access to myStays.com
+    When I click on Create account button in Sign In page
+    And I enter valid "<Emailaddress>" and "<Firstname>" and "<Lastname>" and "<Phonenumber>" and "<Password>" 
+    And I click on Continue button and verify "<Message>" is displayed
+    Examples:
+    |Emailaddress   | Firstname         | Lastname         |Password | Phonenumber   |Message|
+    |test@gmail.com |TestFirstName      | TestLastName     |test     | 919567911083  |Account already exists! Please sign in|
