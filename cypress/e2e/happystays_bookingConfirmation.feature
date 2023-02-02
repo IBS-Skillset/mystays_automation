@@ -83,7 +83,7 @@ Scenario: As User, I can verify the trips displayed in My Trips
     #  And I verify the booked hotel is displayed in My Trips
 
 
-#@HotelBook     
+# @HotelBook     
 # Scenario Outline: As User, I can search, book & cancel Hotel with "<USER>"
 #     Given I can access to myStays.com
 #     When I enter username and password 
@@ -93,8 +93,8 @@ Scenario: As User, I can verify the trips displayed in My Trips
 #     Then I verify the hotel search results displayed
 #     Then I click on See Avaialbility button
 #     Then I select room and click on Reserve button
-#     # And I enter necessary details
-#     # And I click on Confirm button 
+#     And I enter necessary details
+#     And I click on Confirm button 
 
 #     Examples:
 #       | Destination | 

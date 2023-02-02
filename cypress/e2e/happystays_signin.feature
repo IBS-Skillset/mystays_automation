@@ -12,18 +12,19 @@ Scenario: As User, I can login into myStays.com application using valid credenti
 Scenario Outline: As User, verify myStays.com login using invalid credentials
     Given I can access to myStays.com
     When I enter username "<Username>" and password "<Password>" 
-    And I click on Sign In button and verify "<Message>" is displayed
+    And I click on Sign In button and verify "<Message>" is displayed for "<Password>"
 
     Examples:
-      | Username          | Password       | Message  |
+      | Username          | Password       | Message  | 
       | invalidusername   | test@123!@#    | Please include an '@' in the email address. 'invalidusername' is missing an '@'.|
       | invalidusername@  | test@123!@#    | Please enter a part following '@'. 'invalidusername@' is incomplete.|
+      | test@gmail.com    | invalidpwd     | Invalid Credentials. Please Sign in again! | 
 
 @SignIn
 Scenario Outline: As User, verify myStays.com login using empty username and valid password
     Given I can access to myStays.com
     When I enter password "<Password>" 
-    And I click on Sign In button and verify "<Message>" is displayed
+    And I click on Sign In button and verify "<Message>" is displayed for "<Password>"
 
     Examples:
        | Password    | Message  |
@@ -33,7 +34,7 @@ Scenario Outline: As User, verify myStays.com login using empty username and val
 Scenario Outline: As User, verify myStays.com login using valid username and empty password
     Given I can access to myStays.com
     When I enter password "<Password>" 
-    And I click on Sign In button and verify "<Message>" is displayed
+    And I click on Sign In button and verify "<Message>" is displayed for "<Password>"
 
     Examples:
       | Username           | Message |
@@ -42,7 +43,7 @@ Scenario Outline: As User, verify myStays.com login using valid username and emp
 @SignIn
 Scenario Outline: As User, verify myStays.com login using empty username and empty password
     Given I can access to myStays.com
-    And I click on Sign In button and verify "<Message>" is displayed
+    And I click on Sign In button and verify "<Message>" is displayed for "<Password>"
     
     Examples:
      | Message |

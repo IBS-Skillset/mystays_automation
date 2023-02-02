@@ -23,6 +23,6 @@ When(
 When('I enter password {string}', (password) => {
   signinPage.typePassword(password)
 })
-And('I click on Sign In button and verify {string} is displayed', (message) => {
-  signinPage.clickSigninButtonAndVerifyMessage(message)
+And('I click on Sign In button and verify {string} is displayed for {string}', (message, pwd) => {
+  signinPage.clickSigninButtonAndVerifyMessage(message,pwd)
 })
