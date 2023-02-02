@@ -24,7 +24,7 @@ class Common {
   verifyFooterPresent() {
     this.getPageFooter()
       .should('be.visible')
-      .and('have.text', 'Copyright © 2022. All rights reserved.HappyStays')
+      .and('have.text', 'Copyright © 2023. All rights reserved.HappyStays')
   }
   //to get the English/French language button displayed
   verifyLanguageSelectionField() {
