@@ -41,11 +41,22 @@ class SignInPage {
     this.elements.signinButton().should('be.visible').and('be.enabled').click()
   }
   //validation of login using invalid credentials
-  clickSigninButtonAndVerifyMessage(message) {
+  clickSigninButtonAndVerifyMessage(message,pwd) {
     this.elements.signinButton().should('be.visible').and('be.enabled').click()
-    this.elements.usernameField().then(($input) => {
-      expect($input[0].validationMessage).to.eq(message)
+    
+    if(pwd=='invalidpwd'){
+      //Invalid Credentials. Please Sign in again!
+    cy.get('.errorMsg').then(function (e) {
+      const t = e.text()
+      expect(t).to.contains(message)
     })
+    }
+
+    else{
+      this.elements.usernameField().then(($input) => {
+        expect($input[0].validationMessage).to.eq(message)
+      })
+    }
   }
   //button to create new user account
   clickCreateOneButton() {

@@ -84,7 +84,7 @@ class Common {
     this.elements
       .dropdownList()
       .invoke('text')
-      .should('eq', 'My ProfileMy TripsStays')
+      .should('eq', 'My ProfileMy Trips')
   }
   clickLogoutButton() {
     this.elements.logoutButton().click()
