@@ -13,7 +13,6 @@ phases:
       - echo $IMAGE_REPO_NAME
       - aws --version
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
-      - npx cypress verify
   build:
     commands:
       - docker pull 306472407007.dkr.ecr.ap-south-1.amazonaws.com/ibs-skillset-happystays/mystays_automation:4f7f8d6
