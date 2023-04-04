@@ -72,6 +72,7 @@ class SignupPage {
     }).then((result) => {
       console.log(result)
       cy.log(result)
+      // expect(result).to.equal(1)
       // expect(result.rows[0].email).to.have.string("test@gmail.com");
     })
 

@@ -1,7 +1,7 @@
 FROM cypress/included:11.0.1
-WORKDIR /app
-COPY package*.json ./
+WORKDIR /e2e/**/*.feature
+COPY package.json ./
+RUN npm install
 COPY . .
 
-RUN npm install
-ENTRYPOINT ["cypress", "run"]
+ENTRYPOINT ["cypress", "run" , "--headless"]
