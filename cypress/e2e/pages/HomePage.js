@@ -67,11 +67,11 @@ class HomePage {
     this.elements.checkOutDateField().click()
     this.elements.calendarNextButton()
 
-    cy.get(':nth-child(1) > .react-datepicker__day--004').click()
+    cy.get(':nth-child(2) > .react-datepicker__day--004').click()
   }
   clickSearchButton() {
     this.elements.searchButton().should('be.visible').and('be.enabled').click()
-    cy.wait(15000)
+    cy.wait(25000)
   }
   //to verify whether the home page loaded is correct or not
   verifyHomePage() {

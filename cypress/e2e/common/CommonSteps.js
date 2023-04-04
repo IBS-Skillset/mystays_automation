@@ -30,7 +30,9 @@ After(() => {
 })
 
 Given('I can access to myStays.com', () => {
-  cy.visit('http://127.0.0.1:3000/signin')
+  cy.visit(Cypress.env('url'))
+  // cy.visit('/')
+  // cy.viewport('iphone-6')
 })
 When('I enter username and password', function () {
   signinPage.typeFixturesUsername(this.data.username)

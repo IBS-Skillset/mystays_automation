@@ -7,12 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+
     "test:regression": "npx cypress run --env grepTags=\"@smoke\"",
-    "test:tags": "npx cypress run --env tags=\"@regression\"",
-    "test:tagsBrowser": "npx cypress run -e TAGS=\"@SignInTest\" --browser chrome",
-    "test:tagsHeaded": "npx cypress run -e TAGS=\"@smoke\" --headed --browser chrome",
     "test:title": " npx cypress run --env grep=\"credentials\"",
     "test:withoutTitle": "npx cypress run --env grep=\"-credentials\"",
+
+    "cypress:runTest": "npx cypress run --browser chrome --config baseUrl='http://127.0.0.1:3000/signin' ",
+    "cypress:runTestHeadless": "npx cypress run --headless --browser chrome --config baseUrl='http://127.0.0.1:3000/signin' ",
+
     "lint": "eslint --fix \"./cypress/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write \"./cypress/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
