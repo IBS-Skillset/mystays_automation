@@ -22,6 +22,7 @@ phases:
       - docker run $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
+      - npm install multiple-cucumber-html-reporter
       - node cucumberHTMLReport.js
 
 artifacts:
