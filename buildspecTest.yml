@@ -24,3 +24,5 @@ phases:
     commands:
       - node cucumberHTMLReport.js
 
+artifacts:
+  files: index.html
