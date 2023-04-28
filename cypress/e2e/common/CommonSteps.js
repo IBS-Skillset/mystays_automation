@@ -30,7 +30,7 @@ After(() => {
 })
 
 Given('I can access to myStays.com', () => {
-  cy.visit(Cypress.env('url'))
+  cy.visit(Cypress.env('awsurl'))
   // cy.visit('/')
   // cy.viewport('iphone-6')
 })

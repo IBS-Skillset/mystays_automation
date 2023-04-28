@@ -17,14 +17,20 @@ phases:
       - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME/mystays_automation
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - echo $REPOSITORY_URI
+      - echo $IMAGE_TAG
+      - echo $REPOSITORY_URI:$IMAGE_TAG
   build:
     commands:
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker run -it $REPOSITORY_URI:$IMAGE_TAG
+      - docker run $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
       - npm install multiple-cucumber-html-reporter
+      - cd cypress/reports/cucumber-json/
+      - ls
       - node cucumberHTMLReport.js
+      - cat index.html
 
 artifacts:
   files: index.html
