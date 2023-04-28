@@ -1,10 +1,11 @@
 {
-  "username":"sovarghese@gmail.com",
-  "password":"Soniy@123",
-  "UserFullName":"Soniya Varghese",
-  "userFirstName":"Soniya",
-  "userLastName":"Varghese",
+  "username":"testqa@gmail.com",
+  "password":"test@123",
+  "UserFullName":"Test User",
+  "userFirstName":"Test",
+  "userLastName":"User",
   "MobilePhone":"919567911083",
+  
   "PaymentDetails":{
     "cardHolderName": "Soniya Varghese",
     "cardNumber":"4111111111111111",

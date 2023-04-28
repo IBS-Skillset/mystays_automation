@@ -27,7 +27,10 @@ phases:
   post_build:
     commands:
       - npm install multiple-cucumber-html-reporter
+      - cd cypress/reports/cucumber-json/
+      - ls
       - node cucumberHTMLReport.js
+      - cat index.html
 
 artifacts:
   files: index.html
