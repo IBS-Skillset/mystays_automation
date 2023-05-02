@@ -97,5 +97,5 @@ Scenario: As User, I can verify the trips displayed in My Trips
 #     And I click on Confirm button 
 
 #     Examples:
-#       | Destination | 
+#       | Destination |
 #       | PARIS       |
