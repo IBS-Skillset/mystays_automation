@@ -41,4 +41,4 @@ phases:
       - cat cypress/reports/index.html
 
 artifacts:
-  files: index.html
+  files: cypress/reports/index.html
