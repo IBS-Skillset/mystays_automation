@@ -28,15 +28,13 @@ phases:
       - npm install multiple-cucumber-html-reporter
   post_build:
     commands:
-#       - npm install multiple-cucumber-html-reporter
-#       - mkdir -p cypress/reports/cucumber-json
-#       - cp -R cypress/reports/*.json cypress/reports/cucumber-json/
-#       - cd cypress/reports/cucumber-json/
       - ls cypress
       - find cypress -name '*.json'
-
       - ls cypress/reports
-#       - ls
+      - ls cypress/reports/assets
+      - ls cypress/reports/cucumber-json
+      - ls cypress/reports/features
+
       - node cucumberHTMLReport.js
       - cat cypress/reports/index.html
 
