@@ -38,7 +38,7 @@ phases:
       - ls cypress/reports
 #       - ls
       - node cucumberHTMLReport.js
-      - cat index.html
+      - cat cypress/reports/index.html
 
 artifacts:
   files: index.html
