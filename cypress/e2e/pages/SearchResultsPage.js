@@ -26,7 +26,7 @@ class SearchResultsPage {
       cy.get(
         ':nth-child(1) > picture > .hotel-image > .swiper-container > .swiper-list > :nth-child(1) > .swiper-img',
       ),
-    nightCount: () => cy.get(':nth-child(1) > :nth-child(3) > .text-sm'),
+    nightCount: () => cy.get(':nth-child(1) > .hotel-details > :nth-child(2) > .text-sm'),
     hotelAddress: () => cy.get('.address-field'),
   }
 
@@ -120,6 +120,7 @@ class SearchResultsPage {
             .invoke('removeAttr', 'target')
             .invoke('removeAttr', 'rel')
             .click()
+          cy.wait(5000)
 
           //to dispatch hotel description, hotel availability, night count, user details
           cy.window().its('store').invoke('dispatch', {
