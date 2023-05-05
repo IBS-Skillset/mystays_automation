@@ -28,8 +28,8 @@ phases:
       - npm install multiple-cucumber-html-reporter
   post_build:
     commands:
-      # - ls cypress
-      # - find cypress -name '*.json'
+      - ls cypress
+      - find cypress -name '*.json'
       - ls cypress/reports
       - ls cypress/reports/assets
       - ls cypress/reports/cucumber-json
@@ -38,6 +38,7 @@ phases:
       - node cucumberHTMLReport.js
       - cat cypress/reports/index.html
       - aws s3 cp cypress/reports/index.html s3://ibs-skillset-happystays-automation/testreport.html
+
 
 # artifacts:
 #   files: cypress/reports/index.html
