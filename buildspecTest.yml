@@ -32,6 +32,10 @@ phases:
       # - find cypress -name '*.json'
       - ls cypress/reports
       - ls cypress/reports/assets
+      - ls cypress/reports/assets/css
+      - ls cypress/reports/assets/fonts
+      - ls cypress/reports/assets/img
+      - ls cypress/reports/assets/ls
       - ls cypress/reports/cucumber-json
       - ls cypress/reports/features
 
