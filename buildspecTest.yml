@@ -39,4 +39,4 @@ phases:
 
       - node cucumberHTMLReport.js
 #       - cat cypress/reports/index.html
-      - aws s3 cp cypress/reports/index.html s3://ibs-skillset-happystays-automation/testreport.html
+      - aws s3 cp cypress/reports/* s3://ibs-skillset-happystays-automation/Execution Report/
