@@ -6,7 +6,7 @@ report.generate({
     metadata: {
         browser: {
             name: "Chrome",
-            version: "106.0.5249.119",
+            version: "109.0.5414.87",
         },
         device: "Mac",
         platform: {
@@ -17,8 +17,8 @@ report.generate({
      customData: {
         title: 'Execution details',
         data: [
-            {label: 'Project', value: 'myStays.com Application'},
-            {label: 'Release Version', value: 'test'},
+            {label: 'Project', value: 'HappyStays'},
+            {label: 'Release Version', value: 'TEST'},
             {label: 'Cypress Version', value: '11.0.1'},
             {label: 'Execution  Time', value: Date()},
         ]

@@ -6,7 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+
+    "test:regression": "npx cypress run --env grepTags=\"@smoke\"",
+    "test:title": " npx cypress run --env grep=\"credentials\"",
+    "test:withoutTitle": "npx cypress run --env grep=\"-credentials\"",
+
+    "cypress:runTest": "npx cypress run --browser chrome --config baseUrl='http://127.0.0.1:3000/signin' ",
+    "cypress:runTestHeadless": "npx cypress run --headless --browser chrome --config baseUrl='http://127.0.0.1:3000/signin' ",
+
+    "lint": "eslint --fix \"./cypress/**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"./cypress/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
   "repository": {
     "type": "git",
@@ -19,11 +29,21 @@
     "pg": "^8.8.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@cypress/grep": "^3.1.0",
+    "babel-eslint": "^10.1.0",
     "cypress": "^11.0.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-mochawesome-reporter": "^3.2.2",
     "cypress-plugin-tab": "^1.0.5",
-    "multiple-cucumber-html-reporter": "^2.0.0"
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^13.1.0",
+    "multiple-cucumber-html-reporter": "^2.0.0",
+    "prettier": "2.8.1"
   },
   "cypress-cucumber-preprocessor": {
     "step_definitions": "cypress/e2e",
@@ -34,5 +54,18 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "cypress/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "cypress/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   }
 }

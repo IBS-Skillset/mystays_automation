@@ -1,0 +1,13 @@
+{
+  "parser": "@babel/eslint-parser", //Custom parser for ESLint to track down errors
+  "parserOptions": {
+    "requireConfigFile": false, // Not have babel configuration here
+    "ecmaVersion": 2022, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module" // Allows for the use of imports
+  },
+  "extends": [
+    "plugin:cypress/recommended", //To Use the by default recommended configurations for cypress
+    "prettier", //Turns off some ESLint rules that conflict with Prettier.
+    "plugin:prettier/recommended" //Sets up prettier plugin and eslint-config-prettier in recommended way.
+  ]
+}

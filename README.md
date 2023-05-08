@@ -41,3 +41,9 @@
     cucumberHTMLReport.js: cucumber-HTML report configuration.
     cypress.json: main configuration file and we keep base URL, timeouts here. 
  
+# Docker commands 
+    Build the Docker image
+        docker build -t cypress/included:11.0.1 .
+
+    Run the Docker container
+        docker run -it -v ${PWD}:/e2e -w /e2e cypress/included:11.0.1 --config baseUrl=http://127.0.0.1:3000/signin

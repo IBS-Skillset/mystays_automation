@@ -1,7 +1,17 @@
 {
-  "username":"qauser@gmail.com",
-  "password":"TEST",
-  "UserFirstName":"TestFirstName",
+  "username":"testqa@gmail.com",
+  "password":"test@123",
+  "UserFullName":"Test User",
+  "userFirstName":"Test",
+  "userLastName":"User",
+  "MobilePhone":"919567911083",
+  
+  "PaymentDetails":{
+    "cardHolderName": "Soniya Varghese",
+    "cardNumber":"4111111111111111",
+    "expiryDate":"09/25",
+    "cvv":"123"
+  },
   "bookingDetails":{
      "destination":"Paris",
      "startDate":"Dec 01, 2022",

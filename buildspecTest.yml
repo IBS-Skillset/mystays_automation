@@ -1,0 +1,43 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - echo $AWS_DEFAULT_REGION
+      - echo $AWS_ACCOUNT_ID
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - echo $IMAGE_REPO_NAME
+      - echo $URL
+      - aws --version
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME/mystays_automation
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - echo $REPOSITORY_URI
+      - echo $IMAGE_TAG
+      - echo $REPOSITORY_URI:$IMAGE_TAG
+  build:
+    commands:
+      - npm install cypress-cucumber-preprocessor
+      - docker pull $REPOSITORY_URI:$IMAGE_TAG
+      - docker run $REPOSITORY_URI:$IMAGE_TAG
+      - npm install multiple-cucumber-html-reporter
+  post_build:
+    commands:
+      # - ls cypress
+      # - find cypress -name '*.json'
+      - ls cypress/reports
+      - ls cypress/reports/assets
+      - ls cypress/reports/cucumber-json
+      - ls cypress/reports/features
+
+      - node cucumberHTMLReport.js
+      - cat cypress/reports/index.html
+      - aws s3 cp cypress/reports/index.html s3://ibs-skillset-happystays-automation/testreport.html
+
+# artifacts:
+#   files: cypress/reports/index.html
