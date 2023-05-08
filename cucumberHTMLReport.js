@@ -19,8 +19,11 @@ report.generate({
         data: [
             {label: 'Project', value: 'HappyStays'},
             {label: 'Release Version', value: 'TEST'},
-            {label: 'Cypress Version', value: '11.0.1'},
-            {label: 'Execution  Time', value: Date()},
+            {label: 'Cypress Version', value: '11.0.1'},            
+            {label: 'Device', value: 'Mac'},
+            {label: 'OS', value: 'Monterey 12.2.1'},
+            {label: 'Browser', value: '112.0.5615.137'},
+            {label: 'Execution  Time', value: Date()}
         ]
     }
 });
