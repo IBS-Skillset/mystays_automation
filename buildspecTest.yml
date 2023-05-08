@@ -24,7 +24,7 @@ phases:
     commands:
       - npm install cypress-cucumber-preprocessor
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker run -a $REPOSITORY_URI:$IMAGE_TAG
+      - docker run -f $REPOSITORY_URI:$IMAGE_TAG
       - npm install multiple-cucumber-html-reporter
   post_build:
     commands:
