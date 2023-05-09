@@ -38,7 +38,7 @@ phases:
     commands:
       - npm install cypress-cucumber-preprocessor
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl='http://$URL'
+      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl='http://'$URL
       - npm install multiple-cucumber-html-reporter
   post_build:
     commands:
