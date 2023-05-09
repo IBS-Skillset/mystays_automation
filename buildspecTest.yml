@@ -32,7 +32,7 @@ phases:
       - echo $REPOSITORY_URI
       - echo $IMAGE_TAG
       - echo $REPOSITORY_URI:$IMAGE_TAG
-      - URL=kubectl get ingress -n beta-app ingress-mystays --output jsonpath=‘{.status.loadBalancer.ingress[0].hostname}’
+      - URL=$(kubectl get ingress -n beta-app ingress-mystays --output jsonpath=‘{.status.loadBalancer.ingress[0].hostname}’)
       - echo $URL
 
   build:
