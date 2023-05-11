@@ -4,4 +4,4 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-ENTRYPOINT ["cypress", "run"]
+ENTRYPOINT ["npx","cypress", "run"]

@@ -1,0 +1,49 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo Installing app dependencies...
+      - curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.7/2023-03-17/bin/windows/amd64/kubectl
+      - chmod +x ./kubectl
+      - echo 'Check kubectl version'
+      - kubectl version --short --client
+  pre_build:
+    commands:
+      - echo Logging in to Amazon EKS...
+      - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
+      - echo check config
+      - kubectl config view --minify
+      - echo check kubectl access
+      - kubectl get svc
+      - echo Logging in to Amazon ECR...
+      - echo $AWS_DEFAULT_REGION
+      - echo $AWS_ACCOUNT_ID
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+      - echo $IMAGE_REPO_NAME
+      - aws --version
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME/mystays_automation
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - echo $REPOSITORY_URI
+      - echo $IMAGE_TAG
+      - echo $REPOSITORY_URI:$IMAGE_TAG
+      - URL='http://'$(kubectl get ingress -n beta-app ingress-mystays --output jsonpath={.status.loadBalancer.ingress[0].hostname})
+      - echo $URL
+
+  build:
+    commands:
+      - npm install cypress-cucumber-preprocessor
+      - docker pull $REPOSITORY_URI:$IMAGE_TAG
+      - ls -la
+      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
+      - npm install multiple-cucumber-html-reporter
+  post_build:
+    commands:
+      - ls cypress/reports
+      - node cucumberHTMLReport.js
+#     - cat cypress/reports/index.html
+      - aws s3 cp cypress/reports/ s3://ibs-skillset-happystays-automation/ExecutionReport/ --recursive
