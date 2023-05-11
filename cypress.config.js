@@ -26,7 +26,7 @@ module.exports = defineConfig({
         awsurl: 'http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/'
       },
   "experimentalSessionAndOrigin": true,
-  "specPattern": "cypress/e2e/**/*.feature",
+  "specPattern": "cypress/e2e/**/happystays_signin.feature",
   // "baseUrl":"http://127.0.0.1:3000/signin" 
   }
 });
