@@ -28,7 +28,7 @@ Scenario Outline: As User, verify myStays.com login using empty username and val
 
     Examples:
        | Password    | Message  |
-       | test@123!@# | Please fill in this field.|
+       | test@123!@# | Please fill out this field.|
 
 @SignIn
 Scenario Outline: As User, verify myStays.com login using valid username and empty password
@@ -38,7 +38,7 @@ Scenario Outline: As User, verify myStays.com login using valid username and emp
 
     Examples:
       | Username           | Message |
-      | testuser@gmail.com | Please fill in this field.|
+      | testuser@gmail.com | Please fill out this field.|
 
 @SignIn
 Scenario Outline: As User, verify myStays.com login using empty username and empty password
@@ -47,4 +47,4 @@ Scenario Outline: As User, verify myStays.com login using empty username and emp
     
     Examples:
      | Message |
-     | Please fill in this field.|
+     | Please fill out this field.|
