@@ -26,7 +26,7 @@ phases:
 
   build:
     commands:
-      - npx cypress run 
+      - npx cypress run --env awsurl=$URL
   post_build:
     commands:
       - ls cypress/reports
