@@ -8,7 +8,6 @@ phases:
       - echo Installing app dependencies...
       - curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.7/2023-03-17/bin/windows/amd64/kubectl
       - chmod +x ./kubectl
-      - echo 'Check kubectl version'
       - kubectl version --short --client
       - npm install cypress-cucumber-preprocessor
       - npm install multiple-cucumber-html-reporter
@@ -18,18 +17,17 @@ phases:
     commands:
       - echo Logging in to Amazon EKS...
       - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $AWS_CLUSTER_NAME
-      - echo check config
       - kubectl config view --minify
-      - echo check kubectl access
       - URL='http://'$(kubectl get ingress -n beta-app ingress-mystays --output jsonpath={.status.loadBalancer.ingress[0].hostname})
       - echo $URL
 
   build:
     commands:
+      - echo Test execution starts...
       - npx cypress run --env awsurl=$URL
   post_build:
     commands:
-      - ls cypress/reports
+      - echo Test execution report generation...
       - node cucumberHTMLReport.js
       - ls cypress/reports
       - aws s3 cp cypress/reports/ s3://ibs-skillset-happystays-automation/ExecutionReport/ --recursive
