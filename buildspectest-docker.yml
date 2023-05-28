@@ -37,7 +37,7 @@ phases:
     commands:
       - echo Test execution starts...
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
+      - docker run -v /cypress/reports:/cypress/reports $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
   post_build:
     commands:
       - echo Test execution report generation...
