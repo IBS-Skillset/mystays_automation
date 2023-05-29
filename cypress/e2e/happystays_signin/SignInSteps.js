@@ -26,3 +26,6 @@ When('I enter password {string}', (password) => {
 And('I click on Sign In button and verify {string} is displayed for {string}', (message, pwd) => {
   signinPage.clickSigninButtonAndVerifyMessage(message,pwd)
 })
+And('I click on Sign In button and verify {string} or {string} is displayed', (message1, message2) => {
+  signinPage.clickSigninButtonAndVerifyMessages(message1, message2)
+})

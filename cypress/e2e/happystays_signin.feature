@@ -24,27 +24,27 @@ Scenario Outline: As User, verify myStays.com login using invalid credentials
 Scenario Outline: As User, verify myStays.com login using empty username and valid password
     Given I can access to myStays.com
     When I enter password "<Password>" 
-    And I click on Sign In button and verify "<Message>" is displayed for "<Password>"
+    And I click on Sign In button and verify "<Message1>" or "<Message2>" is displayed
 
     Examples:
-       | Password    | Message  |
-       | test@123!@# | Please fill in this field.|
+       | Password    | Message1                  | Message2                    |
+       | test@123!@# | Please fill in this field.| Please fill out this field. |
 
 @SignIn
 Scenario Outline: As User, verify myStays.com login using valid username and empty password
     Given I can access to myStays.com
     When I enter password "<Password>" 
-    And I click on Sign In button and verify "<Message>" is displayed for "<Password>"
+    And I click on Sign In button and verify "<Message1>" or "<Message2>" is displayed
 
     Examples:
-      | Username           | Message |
-      | testuser@gmail.com | Please fill in this field.|
+      | Username           | Message1                   | Message2                    |
+      | testuser@gmail.com | Please fill in this field. | Please fill out this field. |
 
 @SignIn
 Scenario Outline: As User, verify myStays.com login using empty username and empty password
     Given I can access to myStays.com
-    And I click on Sign In button and verify "<Message>" is displayed for "<Password>"
+    And I click on Sign In button and verify "<Message1>" or "<Message2>" is displayed
     
     Examples:
-     | Message |
-     | Please fill in this field.|
+     | Message1                  | Message2                   |
+     | Please fill in this field.| Please fill out this field.|

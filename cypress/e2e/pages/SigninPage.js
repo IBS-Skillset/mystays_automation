@@ -58,6 +58,14 @@ class SignInPage {
       })
     }
   }
+
+   //validation of login using invalid/empty username or password
+   clickSigninButtonAndVerifyMessages(message1, message2) {
+    this.elements.usernameField().then(($input) => {
+      expect(($input[0].validationMessage).includes(message1) || ($input[0].validationMessage).includes(message2)).to.be.true;
+    })
+  }
+
   //button to create new user account
   clickCreateOneButton() {
     this.elements.signinButton().should('be.visible').and('be.enabled')
