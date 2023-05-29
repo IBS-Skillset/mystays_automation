@@ -81,7 +81,7 @@ class RoomDetailsPage {
                   // // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
                   // .and('have.attr','style')
           cy.wait(3000)
-          cy.scrollTo('right')
+          cy.scrollTo('bottom')
           this.elements.reserveButton().should('be.visible').click()
           cy.wait(2000)
           return false
