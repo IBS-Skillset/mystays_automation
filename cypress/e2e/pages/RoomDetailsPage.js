@@ -50,7 +50,7 @@ class RoomDetailsPage {
   verifySeeMoreImages() {
     cy.scrollTo('right')
     this.elements.seeMoreButton().should('be.visible').click()
-    cy.scrollTo('bottom')
+    cy.get('.image-grid').scrollTo('bottom')
     this.elements.imagePopUpCloseButton().should('be.visible').click()
   }
 
@@ -107,6 +107,11 @@ class RoomDetailsPage {
                   // .find('tr')
                   // // .should('have.class','<tr.border-b-2.border-gray-100.cursor-pointer.selected>')
                   // .and('have.attr','style')
+  }
+
+  verifyReserveButton(){
+    cy.scrollTo('bottom')
+    this.elements.reserveButton().should('be.visible')
   }
 }
 export default RoomDetailsPage
