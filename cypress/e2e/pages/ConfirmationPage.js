@@ -103,10 +103,14 @@ class ConfirmationPage {
     this.elements.pnrNumber() 
         .invoke('text')
             .then((pnrNumber) => {
+              const currentTime = new Date().toISOString(); // Get the current time in ISO format
+              const data = `${currentTime}: ${pnrNumber}`; // Format the data to include time and PNR number
+
               cy.readFile('cypress/reports/PNR.txt').then((existingContent) => {
-                const updatedContent = existingContent + '\n' + pnrNumber; // Append the PNR number to the existing content
+                const updatedContent = existingContent + '\n' + data; // Append the PNR number and time to the existing content
               // Access the PNR number and perform further actions
               cy.log('Booked PNR number:', pnrNumber);
+              cy.log('Booked PNR number:', updatedContent);
               // You can store the PNR number for cancellation or use it for further verification
               cy.writeFile('cypress/reports/PNR.txt', updatedContent);
               });
