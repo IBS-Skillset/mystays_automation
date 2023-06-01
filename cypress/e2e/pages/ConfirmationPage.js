@@ -100,41 +100,36 @@ class ConfirmationPage {
     // cy.get('.final-booking-info-content').should('have.text','Your trip has been successfully booked . Thank you for your\n            reservation.')
 
     cy.get('.final-booking-hotel-name > .flex > .font-medium').should('have.text','Booked') //status
-    //cy.get('.final-booking-hotel-name > :nth-child(1)') //hotel name
-    //cy.get('.confirmation-number')//pnr
-    //checkin date cy.get('.font-bold > .ml-20')
-    //check out date cy.get('.check-out-date')
-    //room nos night nos cy.get('.font-bold > .ml-2')
-
-    this.elements.successMessage().then(($message)=>{
-      cy.writeFile('cypress/fixtures/bookedPNR.json',{SuccessMessage:$message.text()})
-    })
-    this.elements.pnrNumber().then(($pnr)=>{
-      cy.writeFile('cypress/fixtures/bookedPNR.json',{PNR:$pnr.text(), Date: Date()})
-    })
-    this.elements.hotelName().then(($hotelName)=>{
-      cy.writeFile('cypress/fixtures/bookedPNR.json',{hotelName:$hotelName.text()})
-    })
+    this.elements.pnrNumber() 
+        .invoke('text')
+            .then((pnrNumber) => {
+              cy.readFile('cypress/reports/PNR.txt').then((existingContent) => {
+                const updatedContent = existingContent + '\n' + pnrNumber; // Append the PNR number to the existing content
+              // Access the PNR number and perform further actions
+              cy.log('Booked PNR number:', pnrNumber);
+              // You can store the PNR number for cancellation or use it for further verification
+              cy.writeFile('cypress/reports/PNR.txt', updatedContent);
+              });
+            });
   }
+
   verifyMyTrips(){
     this.elements.viewBookingButton()
     .should('be.visible')
     .click()
     cy.get('.trips-content').should('be.visible')
-    cy.readFile('cypress/fixtures/bookedPNR.json').then(function($booked){
-      cy.log($booked.PNR)
-      // cy.contains($booked.hotelName)
-      // cy.contains($booked.PNR)
-      // cy.get('.text-gray-500').then(($bookingID)=>{
-      //   const bookingIDAndPNR=$bookingID.text()
-      //   expect(bookingIDAndPNR.includes($booked.PNR)).to.be.true
-      // })
-    })
+
+    // cy.readFile('cypress/reports/PNR.txt').then((content) => {
+    // const pnrNumbers = content.split('\n'); // Split the content into an array of PNR numbers
+    // // Compare the PNR numbers with the expected value or perform any other checks
+    // expect(pnrNumbers).to.include('PNRNumber'); // Replace 'ABC123' with the value you want to compare
+    // cy.log('Read PNR numbers:', pnrNumbers);
+    // });
+
   }
   verifyMyTripsDetails(){
     //check hotel content is visible
     cy.get('.trips-content').should('be.visible')
-
 
     //check and log hotel name, booking id, created on date
     cy.get('.booking-info').should('be.visible').then(($bookingInfo)=>{
