@@ -9,8 +9,10 @@ phases:
       - curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.7/2023-03-17/bin/windows/amd64/kubectl
       - chmod +x ./kubectl
       - kubectl version --short --client
-      - npm install cypress-cucumber-preprocessor
-      - npm install multiple-cucumber-html-reporter
+      # - npm install cypress-cucumber-preprocessor
+      # - npm install multiple-cucumber-html-reporter
+      - yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2 nss libXScrnSaver alsa-lib
+
 
 
   pre_build:
@@ -37,7 +39,10 @@ phases:
     commands:
       - echo Test execution starts...
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker run -v cypress/reports/:cypress/reports/ $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
+      - docker ps -a
+      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL && docker cp cypress/reports/:cypress/reports/
+      - docker ps -a
+
   post_build:
     commands:
       - echo Test execution report generation...

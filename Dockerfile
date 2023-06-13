@@ -4,4 +4,5 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-ENTRYPOINT ["npx","cypress", "run"]
+ENTRYPOINT ["bash", "-c", "npm install cypress-cucumber-preprocessor && npm install multiple-cucumber-html-reporter && npx cypress run"]
+
