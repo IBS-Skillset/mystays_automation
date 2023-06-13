@@ -39,7 +39,9 @@ phases:
     commands:
       - echo Test execution starts...
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL && docker cp cypress/reports/:cypress/reports/
+      - docker volume create my_volume
+      - docker run -v my_volume:cypress/reports/ $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
+      - ls my_volume
       - docker ps -a
 
   post_build:
@@ -48,3 +50,4 @@ phases:
       - node cucumberHTMLReport.js
       - ls cypress/reports
       - aws s3 cp cypress/reports/ s3://ibs-skillset-happystays-automation/ExecutionReport/ --recursive
+      - aws s3 cp my_volume s3://ibs-skillset-happystays-automation/ExecutionReport/ --recursive
