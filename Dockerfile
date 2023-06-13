@@ -5,3 +5,4 @@ RUN npm install
 COPY . .
 
 ENTRYPOINT ["npx","cypress", "run"]
+
