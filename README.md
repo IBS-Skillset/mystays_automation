@@ -43,7 +43,7 @@
  
 # Docker commands 
     Build the Docker image
-        docker build -t cypress/included:11.0.1 .
+        docker build -t cypresstest .
 
     Run the Docker container
         docker run -it -v ${PWD}:/e2e -w /e2e cypress/included:11.0.1 --config baseUrl=http://127.0.0.1:3000/signin
