@@ -1,0 +1,26 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=-31531
+END=4785
+title=Confirmation Page As User, I can search a hotel and verify the hotel details in confirm page (example #1)
+[CHAPTER]
+TIMEBASE=1/1000
+START=41131
+END=41131
+title=Confirmation Page As User, I can search a hotel and verify the fields displayed in confirm page (example #1)
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=null
+title=Confirmation Page As User, I can verify the payment field validations in confirm page (example #1)
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=null
+title=Confirmation Page As User, I can search and book a hotel (example #1)
+[CHAPTER]
+TIMEBASE=1/1000
+START=0
+END=null
+title=Confirmation Page As User, I can verify the trips displayed in My Trips

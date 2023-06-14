@@ -1,0 +1,456 @@
+[
+  {
+    "description": "    Testing myStays.com hotel description page  ",
+    "keyword": "Feature",
+    "name": "Room Details",
+    "line": 1,
+    "id": "room-details",
+    "tags": [],
+    "uri": "happystays_roomdetails.feature",
+    "elements": [
+      {
+        "id": "room-details;as-user,-i-can-search-hotel-and-verify-the-hotel-description-page",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "As User, I can search Hotel and verify the hotel description page",
+        "tags": [
+          {
+            "name": "@HotelDescription",
+            "line": 4
+          },
+          {
+            "name": "@RoomDetails",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 1868000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I enter username and password",
+            "result": {
+              "status": "passed",
+              "duration": 1657000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click on Sign In button",
+            "result": {
+              "status": "passed",
+              "duration": 811000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I am on Home Page",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter location as \"Paris, France\" and click on Search button",
+            "result": {
+              "status": "passed",
+              "duration": 29882000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I verify the hotel search results displayed",
+            "result": {
+              "status": "passed",
+              "duration": 7932000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I click on See Avaialbility button",
+            "result": {
+              "status": "passed",
+              "duration": 333000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I verify Overview tab is active by default",
+            "result": {
+              "status": "passed",
+              "duration": 82000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I verify the room details displayed",
+            "result": {
+              "status": "passed",
+              "duration": 8002000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "room-details;as-user,-i-can-search-hotel-and-verify-the-option-to-see-hotel-images",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "As User, I can search Hotel and verify the option to see hotel images",
+        "tags": [
+          {
+            "name": "@HotelDescription",
+            "line": 20
+          },
+          {
+            "name": "@RoomDetails",
+            "line": 20
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 227000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I enter username and password",
+            "result": {
+              "status": "passed",
+              "duration": 1013000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click on Sign In button",
+            "result": {
+              "status": "passed",
+              "duration": 474000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I am on Home Page",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I enter location as \"Paris, France\" and click on Search button",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.location-display-container`, but never found it.\n    at HomePage.typeAndSelectLocation (cypress/e2e/pages/HomePage.js:49:41)\n    at Context.eval (cypress/e2e/common/CommonSteps.js:66:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I verify the hotel search results displayed",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I click on See Avaialbility button",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I verify the option to see hotel images",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "room-details;as-user,-i-can-search-hotel-and-verify-the-facilities-displayed",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "As User, I can search Hotel and verify the Facilities displayed",
+        "tags": [
+          {
+            "name": "@HotelDescription",
+            "line": 35
+          },
+          {
+            "name": "@RoomDetails",
+            "line": 35
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 277000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I enter username and password",
+            "result": {
+              "status": "passed",
+              "duration": 1034000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I click on Sign In button",
+            "result": {
+              "status": "passed",
+              "duration": 469000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "I am on Home Page",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I enter location as \"Paris, France\" and click on Search button",
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `.location-display-container`, but never found it.\n    at HomePage.typeAndSelectLocation (cypress/e2e/pages/HomePage.js:49:41)\n    at Context.eval (cypress/e2e/common/CommonSteps.js:66:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "I verify the hotel search results displayed",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "I click on See Avaialbility button",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I verify Overview tab is active by default",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I verify the address displayed in Overview section",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I verify maximum 12 facilities displayed in description page",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "room-details;as-user,-i-can-search-hotel-and-verify-the-reserve",
+        "keyword": "Scenario",
+        "line": 66,
+        "name": "As User, I can search Hotel and verify the Reserve",
+        "tags": [
+          {
+            "name": "@HotelDescription",
+            "line": 52
+          },
+          {
+            "name": "@RoomDetails",
+            "line": 52
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 54,
+            "name": "I can access to myStays.com",
+            "result": {
+              "status": "passed",
+              "duration": 263000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 55,
+            "name": "I enter username and password",
+            "result": {
+              "status": "passed",
+              "duration": 937000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I click on Sign In button",
+            "result": {
+              "status": "passed",
+              "duration": 455000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "I am on Home Page",
+            "result": {
+              "status": "passed",
+              "duration": 281000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I enter location as \"Paris, France\" and click on Search button",
+            "result": {
+              "status": "passed",
+              "duration": 29763000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "I verify the hotel search results displayed",
+            "result": {
+              "status": "passed",
+              "duration": 152000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "I click on See Avaialbility button",
+            "result": {
+              "status": "passed",
+              "duration": 1398000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "I select room and verify selected room is highlighted",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "I verify Reserve button is displayed",
+            "result": {
+              "status": "failed",
+              "error_message": "TypeError: roomDetails.verifyReserveButton is not a function\n    at Context.eval (cypress/e2e/happystays_roomdetails/RoomDetailsSteps.js:39:14)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)\nFrom previous event:\n    at Context.thenFn (http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/__cypress/runner/cypress_runner.js:139258:63)\n    at Context.then (http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/__cypress/runner/cypress_runner.js:139680:21)\n    at wrapped (http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/__cypress/runner/cypress_runner.js:157603:19)\n    at <unknown> (http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/__cypress/runner/cypress_runner.js:156335:15)\nFrom previous event:\n    at CommandQueue.runCommand (http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/__cypress/runner/cypress_runner.js:156313:8)\n    at next (http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/__cypress/runner/cypress_runner.js:156460:19)\n    at <unknown> (http://k8s-betaapp-ingressm-29790a68fa-1285978643.ap-south-1.elb.amazonaws.com/__cypress/runner/cypress_runner.js:156489:16)"
+            },
+            "embeddings": [
+              {
+                "mime_type": "image/png"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
