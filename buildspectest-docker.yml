@@ -36,11 +36,7 @@ phases:
     commands:
       - echo Test execution starts...
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
-      - docker ps -f "status=exited"  
-      - CONTAINER_ID=$(docker ps -aqf "status=exited")
-      - echo $CONTAINER_ID
-      - docker cp $CONTAINER_ID:/e2e/\*\*/\*.feature/cypress/reports/cucumber-json cypress/reports/cucumber-json
+      - docker run -v $PWD:/e2e/**/*.feature $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
 
   post_build:
     commands:
