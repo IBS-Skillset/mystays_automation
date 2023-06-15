@@ -11,9 +11,6 @@ phases:
       - kubectl version --short --client
       - npm install cypress-cucumber-preprocessor
       - npm install multiple-cucumber-html-reporter
-      - yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2 nss libXScrnSaver alsa-lib
-
-
 
   pre_build:
     commands:
@@ -39,10 +36,11 @@ phases:
     commands:
       - echo Test execution starts...
       - docker pull $REPOSITORY_URI:$IMAGE_TAG
-      - docker volume create my_volume
-      - docker run -v my_volume:cypress/reports/ $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
-      - ls my_volume
-      - docker ps -a
+      - docker run $REPOSITORY_URI:$IMAGE_TAG -e awsurl=$URL
+      - docker ps -f "status=exited"  
+      - CONTAINER_ID=$(docker ps -aqf "status=exited")
+      - echo $CONTAINER_ID
+      - docker cp $CONTAINER_ID:/e2e/\*\*/\*.feature/cypress/reports/cucumber-json cypress/reports/cucumber-json
 
   post_build:
     commands:
@@ -50,4 +48,3 @@ phases:
       - node cucumberHTMLReport.js
       - ls cypress/reports
       - aws s3 cp cypress/reports/ s3://ibs-skillset-happystays-automation/ExecutionReport/ --recursive
-      - aws s3 cp my_volume s3://ibs-skillset-happystays-automation/ExecutionReport/ --recursive
