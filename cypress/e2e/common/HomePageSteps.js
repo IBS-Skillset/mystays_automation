@@ -22,7 +22,7 @@ After(() => {
 })
 
 And('I verify the travel type headers displayed', () => {
-  homePage.verifyTravelTypeHeaders()
+  homePage.verifyTravelTypeHeaders();
 })
 And('I verify the destination field in Home page', () => {
   homePage.verifyDestinationField()
@@ -39,14 +39,11 @@ And('I verify the travellers input box', () => {
 And('I verify the Search button displayed', () => {
   homePage.verifySearchButton()
 })
-And(
-  'I verify the validation when clicked on Search button without entering Location',
-  () => {
+And('I verify the validation when clicked on Search button without entering Location',() => {
     homePage.clickSearchButton()
     const errorMessage = '*Location is required'
     homePage.getValidationMessageforNoLocation(errorMessage)
-  },
-)
+})
 And('I verify the language selection displayed on top', () => {
   common.verifyLanguageSelectionField()
 })
@@ -70,12 +67,9 @@ Then('I verify the home page is displayed in Français', () => {
 Then('I verify the home page is displayed in English', () => {
   common.verifyEnglishHomePage()
 })
-And(
-  'I click on the username drop down and verify the options displayed in the drop down',
-  () => {
-    common.clickuserNameDropdown()
-  },
-)
+And('I click on the username drop down and verify the options displayed in the drop down',() => {
+    common.clickuserNameDropdown();
+})
 And('I click on the username drop down', () => {
   common.clickUsername()
 })

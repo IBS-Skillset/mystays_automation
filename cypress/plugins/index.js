@@ -33,4 +33,5 @@ module.exports = (on, config) => {
       return client.query(sql)
     },
   })
+  return config
 }
